@@ -32,43 +32,43 @@
                 <li class="slide">
                     <a class="side-menu__item has-link" href="{{ route('dashboard') }}">
                         <i class="side-menu__icon ri-home-4-line"></i>
-                        Home
+                        <span class="side-menu__label">Home</span>
                     </a>
                 </li>
                 <li class="slide">
                     <a class="side-menu__item has-link" href="{{ route('dashboard') }}">
                         <i class="side-menu__icon ri-store-line"></i>
-                        Business Profile
+                        <span class="side-menu__label">Business Profile</span>
                     </a>
                 </li>
                 <li class="slide">
                     <a class="side-menu__item has-link" href="{{ route('dashboard') }}">
                         <i class="side-menu__icon ri-map-pin-line"></i>
-                        Listings
+                        <span class="side-menu__label">Listings</span>
                     </a>
                 </li>
                 <li class="slide">
                     <a class="side-menu__item has-link" href="{{ route('dashboard') }}">
                         <i class="side-menu__icon ri-checkbox-circle-line"></i>
-                        Check-ins
+                        <span class="side-menu__label">Check-ins</span>
                     </a>
                 </li>
                 <li class="slide">
                     <a class="side-menu__item has-link" href="{{ route('dashboard') }}">
                         <i class="side-menu__icon ri-mail-star-line"></i>
-                        Reputation
+                        <span class="side-menu__label">Reputation</span>
                     </a>
                 </li>
                 <li class="slide">
                     <a class="side-menu__item has-link" href="{{ route('dashboard') }}">
                         <i class="side-menu__icon ri-group-line"></i>
-                        Social Media
+                        <span class="side-menu__label">Social Media</span>
                     </a>
                 </li>
                 <li class="slide">
                     <a class="side-menu__item has-link" href="{{ route('dashboard') }}">
                         <i class="side-menu__icon ri-sparkling-line"></i>
-                        AI Tools
+                        <span class="side-menu__label">AI Tools</span>
                     </a>
                 </li>
             </ul>
