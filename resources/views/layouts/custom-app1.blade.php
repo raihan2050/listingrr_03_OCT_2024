@@ -53,7 +53,7 @@
         <!-- END PAGE-->
 
         <!-- SCRIPTS -->
-        
+
         @include('layouts.components.custom-scripts')
 
         <!-- STICKY JS -->
@@ -65,7 +65,7 @@
 
         <!-- APP JS -->
 		@vite('resources/js/app.js')
-        
+
 
         <!-- END SCRIPTS -->
 

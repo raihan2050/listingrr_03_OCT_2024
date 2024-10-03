@@ -376,24 +376,34 @@
 															<span class="text-muted fs-12">Administrator</span>
 														</div>
 													</div>
-													<a class="dropdown-item text-dark fw-semibold border-top" href="{{url('profile')}}">
-														<i class="dropdown-icon fe fe-user"></i> Profile
-													</a>
-													<a class="dropdown-item text-dark fw-semibold" href="{{url('email-inbox')}}">
-														<i class="dropdown-icon fe fe-mail"></i> Inbox
-														<span class="badge bg-success float-end">3</span>
-													</a>
-													<a class="dropdown-item text-dark fw-semibold" href="{{url('settings')}}">
-														<i class="dropdown-icon fe fe-settings"></i> Settings
-													</a>
-													<a class="dropdown-item text-dark fw-semibold" href="{{url('faq')}}">
-														<i class="dropdown-icon fe fe-alert-triangle"></i>
-														Support ?
-													</a>
-													<a class="dropdown-item text-dark fw-semibold" href="{{url('login')}}">
-														<i class="dropdown-icon fe fe-log-out"></i> Sign
-														out
-													</a>
+                                                    @auth
+                                                        <a class="dropdown-item text-dark fw-semibold border-top" href="{{url('profile')}}">
+                                                            <i class="dropdown-icon fe fe-user"></i> Profile
+                                                        </a>
+                                                        <a class="dropdown-item text-dark fw-semibold" href="{{url('email-inbox')}}">
+                                                            <i class="dropdown-icon fe fe-mail"></i> Inbox
+                                                            <span class="badge bg-success float-end">3</span>
+                                                        </a>
+                                                        <a class="dropdown-item text-dark fw-semibold" href="{{url('settings')}}">
+                                                            <i class="dropdown-icon fe fe-settings"></i> Settings
+                                                        </a>
+                                                        <a class="dropdown-item text-dark fw-semibold" href="{{url('faq')}}">
+                                                            <i class="dropdown-icon fe fe-alert-triangle"></i>
+                                                            Support ?
+                                                        </a>
+                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                            @csrf
+                                                        </form>
+                                                        <a class="dropdown-item text-dark fw-semibold" href="#"
+                                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                            <i class="dropdown-icon fe fe-log-out"></i> Sign out
+                                                        </a>
+                                                    @endauth
+                                                    @guest
+                                                        <a class="dropdown-item text-dark fw-semibold" href="{{url('login')}}">
+                                                            <i class="dropdown-icon fe fe-log-out"></i> Sign out
+                                                        </a>
+                                                    @endguest
 												</div>
 											</div>
 										</div>
