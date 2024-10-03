@@ -54,7 +54,7 @@
                 <!-- END MAIN-HEADER -->
 
                 <!-- NEWS-TICKER -->
-                @include('layouts.components.news-ticker')
+                {{-- @include('layouts.components.news-ticker') --}}
 
                 <!-- END NEWS-TICKER -->
 

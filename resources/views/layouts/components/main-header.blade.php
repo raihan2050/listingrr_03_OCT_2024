@@ -12,11 +12,11 @@
 									alt="Sparic logo">
 							</a>
 							<!-- LOGO -->
-							<div class="main-header-center ms-3 d-none d-lg-block">
+							{{-- <div class="main-header-center ms-3 d-none d-lg-block">
 								<input type="text" class="form-control" id="typehead" placeholder="Search for results..."
 									autocomplete="off">
 								<button class="btn px-2"><i class="fe fe-search" aria-hidden="true"></i></button>
-							</div>
+							</div> --}}
 							<div class="d-flex order-lg-2 ms-auto header-right-icons">
 								<div class="dropdown d-none">
 									<a href="javascript:void(0)" class="nav-link icon" data-bs-toggle="dropdown">
@@ -77,7 +77,7 @@
 												</a>
 											</div>
 											<!-- Theme-Layout -->
-											<div class="dropdown d-flex shopping-cart">
+											<div class="dropdown d-flex1 shopping-cart d-none">
 												<a class="nav-link icon text-center" data-bs-toggle="dropdown">
 													<i class="ri-shopping-bag-line"></i><span
 														class="badge bg-secondary header-badge">4</span>
@@ -195,8 +195,8 @@
 											</div>
 											<!-- FULL-SCREEN -->
 											<div class="dropdown d-flex notifications nav-link-notify">
-												<a class="nav-link icon" data-bs-toggle="dropdown"><i
-														class="ri-notification-line"></i><span class=" pulse"></span>
+												<a class="nav-link icon" data-bs-toggle="dropdown">
+                                                    <i class="ri-notification-line"></i><span class=" pulse"></span>
 												</a>
 												<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow ">
 													<div class="drop-heading border-bottom">
@@ -355,7 +355,7 @@
 												</div>
 											</div>
 											<!-- MESSAGE-BOX -->
-											<div class="dropdown d-flex header-settings">
+											<div class="dropdown d-flex1 d-none header-settings">
 												<a class="nav-link icon siderbar-link" data-bs-toggle="sidebar-right"
 													data-bs-target=".sidebar-right">
 													<i class="ri-menu-fold-fill"></i>
