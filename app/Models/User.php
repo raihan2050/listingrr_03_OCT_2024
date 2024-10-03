@@ -11,15 +11,57 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+	/**
+	 * The table associated with the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'users';
+
+	/**
+	 * Indicates if the model should be timestamped.
+	 *
+	 * @var boolean
+	 */
+	public $timestamps = true;
+
+	/**
+	 * The attributes that aren't mass assignable.
+	 *
+	 * @var array<int, string>
+	 */
+	protected $guarded = ['id'];
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+		'country_code',
+		'language_code',
+		'name',
+		'photo',
+		'auth_field',
+		'email',
+		'phone',
+		'phone_national',
+		'phone_country',
+		'phone_hidden',
+		'password',
+		'remember_token',
+		// 'can_be_impersonate',
+		'create_from_ip',
+		'latest_update_ip',
+		'provider',
+		'provider_id',
+		'email_token',
+		'phone_token',
+		'email_verified_at',
+		'phone_verified_at',
+		'dark_mode',
+		'time_zone',
+		'blocked',
     ];
 
     /**
@@ -39,9 +81,13 @@ class User extends Authenticatable
      */
     protected function casts(): array
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+		return [
+			'email_verified_at' => 'datetime',
+			'phone_verified_at' => 'datetime',
+			'created_at'        => 'datetime',
+			'updated_at'        => 'datetime',
+			'last_login_at'     => 'datetime',
+			'password' => 'hashed',
+		];
     }
 }

@@ -87,7 +87,7 @@
             @include('layouts.components.main-footer')
 
             <!-- END MAIN-FOOTER -->
-
+            @include('layouts.components.alert_message')
 		</div>
         <!-- END PAGE-->
 
@@ -105,7 +105,14 @@
         <!-- APP JS -->
 		@vite('resources/js/app.js')
 
-
+        @if(session('alert_message'))
+            <script>
+                $(function(){
+                    const alertMessage = new bootstrap.Toast(document.getElementById('alertMessage'))
+                    alertMessage.show();
+                });
+            </script>
+        @endif
         <!-- END SCRIPTS -->
 
 	</body>
