@@ -18,6 +18,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/clear', [ConfigController::class, 'clear'])->name('clear');
 });
 
-Route::group(['prefix' => config('app.admin_name'), 'as' => 'admin.'], function() {
+Route::group(['prefix' => config('app.admin_url'), 'as' => 'admin.'], function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });

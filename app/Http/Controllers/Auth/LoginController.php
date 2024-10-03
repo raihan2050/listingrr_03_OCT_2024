@@ -41,6 +41,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
 
-        $this->redirectTo = config('app.admin_name') . '/dashboard';
+        $this->redirectTo = config('app.admin_url') . '/dashboard';
     }
 }

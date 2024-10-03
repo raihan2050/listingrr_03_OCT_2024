@@ -2,7 +2,7 @@
 
 return [
 
-    'admin_name' => env('ADMIN_NAME', 'admin'),
+    'admin_url' => env('ADMIN_URL', 'admin'),
 
     /*
     |--------------------------------------------------------------------------

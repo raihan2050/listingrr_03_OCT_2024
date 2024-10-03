@@ -38,7 +38,7 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-        $this->redirectTo = config('app.admin_name') . '/dashboard';
+        $this->redirectTo = config('app.admin_url') . '/dashboard';
     }
 
     /**
