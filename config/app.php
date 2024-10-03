@@ -2,6 +2,8 @@
 
 return [
 
+    'admin_name' => env('ADMIN_NAME', 'admin'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

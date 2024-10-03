@@ -7,6 +7,14 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
+    use AuthenticatesUsers;
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo;
+
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -20,12 +28,8 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/dashboard';
+
+    // protected $redirectTo = config('app.admin_name').'/dashboard';
 
     /**
      * Create a new controller instance.
@@ -36,5 +40,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
+
+        $this->redirectTo = config('app.admin_name') . '/dashboard';
     }
 }

@@ -29,24 +29,4 @@ class ConfigController extends Controller
             'msg' => 'All caches cleared successfully.',
         ]);
     }
-
-    public function down()
-    {
-        Artisan::call('down');
-        return redirect()->back()->with('alert_message', [
-            'status' => 'success',
-            'title' => 'Maintenance',
-            'msg' => 'Application is now down.',
-        ]);
-    }
-
-    public function up()
-    {
-        Artisan::call('up');
-        return redirect()->back()->with('alert_message', [
-            'status' => 'success',
-            'title' => 'Maintenance',
-            'msg' => 'Application is now live.',
-        ]);
-    }
 }

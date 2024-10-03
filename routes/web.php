@@ -13,19 +13,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware('auth')->group(function () {
-    Route::get('/maintenance/enable', [MaintenanceController::class, 'enable'])->name('maintenance.enable');
-    Route::get('/maintenance/disable', [MaintenanceController::class, 'disable'])->name('maintenance.disable');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/migrate', [ConfigController::class, 'migrate'])->name('migrate');
+    Route::get('/clear', [ConfigController::class, 'clear'])->name('clear');
 });
 
-Route::middleware(['auth'])
-    ->group(function () {
-        Route::get('/migrate', [ConfigController::class, 'migrate'])->name('migrate');
-        Route::get('/clear', [ConfigController::class, 'clear'])->name('clear');
-        Route::get('/down', [ConfigController::class, 'down'])->name('down');
-        Route::get('/up', [ConfigController::class, 'up'])->name('up');
-    });
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::group(['prefix' => config('app.admin_name'), 'as' => 'admin.'], function() {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
