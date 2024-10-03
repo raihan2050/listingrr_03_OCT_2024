@@ -12,6 +12,10 @@
         "cross-env": "^7.0.3",
         "laravel-vite-plugin": "^1.0",
         "sass": "^1.56.1",
-        "vite": "^5.4.8"
+        "vite": "^5.4.8",
+        "vite-plugin-static-copy": "^1.0.6"
+    },
+    "dependencies": {
+        "apexcharts": "^3.54.0"
     }
 }

@@ -1,12 +1,249 @@
 {
-  "resources/js/app.js": {
-    "file": "assets/app-CrG75o6_.js",
-    "name": "app",
-    "src": "resources/js/app.js",
+  "_switcher-styles-BkFkFqGb.js": {
+    "file": "assets/switcher-styles-BkFkFqGb.js",
+    "name": "switcher-styles"
+  },
+  "resources/assets/js/accordiation.js": {
+    "file": "assets/accordiation-BshGsRQn.js",
+    "name": "accordiation",
+    "src": "resources/assets/js/accordiation.js",
     "isEntry": true
   },
+  "resources/assets/js/advancedform.js": {
+    "file": "assets/advancedform-BdkjK4h8.js",
+    "name": "advancedform",
+    "src": "resources/assets/js/advancedform.js",
+    "isEntry": true
+  },
+  "resources/assets/js/alerts.js": {
+    "file": "assets/alerts-CsUFauYi.js",
+    "name": "alerts",
+    "src": "resources/assets/js/alerts.js",
+    "isEntry": true
+  },
+  "resources/assets/js/blog-edit.js": {
+    "file": "assets/blog-edit-hjLvEnIW.js",
+    "name": "blog-edit",
+    "src": "resources/assets/js/blog-edit.js",
+    "isEntry": true
+  },
+  "resources/assets/js/carousel.js": {
+    "file": "assets/carousel-wmA5dE0A.js",
+    "name": "carousel",
+    "src": "resources/assets/js/carousel.js",
+    "isEntry": true
+  },
+  "resources/assets/js/cart.js": {
+    "file": "assets/cart-B5GmCsek.js",
+    "name": "cart",
+    "src": "resources/assets/js/cart.js",
+    "isEntry": true
+  },
+  "resources/assets/js/chart.js": {
+    "file": "assets/chart-uxVjvQRl.js",
+    "name": "chart",
+    "src": "resources/assets/js/chart.js",
+    "isEntry": true
+  },
+  "resources/assets/js/chat.js": {
+    "file": "assets/chat-DeRimCRF.js",
+    "name": "chat",
+    "src": "resources/assets/js/chat.js",
+    "isEntry": true
+  },
+  "resources/assets/js/checkout.js": {
+    "file": "assets/checkout-DLfk_6iq.js",
+    "name": "checkout",
+    "src": "resources/assets/js/checkout.js",
+    "isEntry": true
+  },
+  "resources/assets/js/colorpicker.js": {
+    "file": "assets/colorpicker-BVGEAsaV.js",
+    "name": "colorpicker",
+    "src": "resources/assets/js/colorpicker.js",
+    "isEntry": true
+  },
+  "resources/assets/js/echarts.js": {
+    "file": "assets/echarts-BOSaIz8B.js",
+    "name": "echarts",
+    "src": "resources/assets/js/echarts.js",
+    "isEntry": true
+  },
+  "resources/assets/js/flatpickr.js": {
+    "file": "assets/flatpickr-CfSDcSmz.js",
+    "name": "flatpickr",
+    "src": "resources/assets/js/flatpickr.js",
+    "isEntry": true
+  },
+  "resources/assets/js/flot.js": {
+    "file": "assets/flot-BTm_A4Cf.js",
+    "name": "flot",
+    "src": "resources/assets/js/flot.js",
+    "isEntry": true
+  },
+  "resources/assets/js/form-editor2.js": {
+    "file": "assets/form-editor2-B8rQ-F07.js",
+    "name": "form-editor2",
+    "src": "resources/assets/js/form-editor2.js",
+    "isEntry": true
+  },
+  "resources/assets/js/form-elements.js": {
+    "file": "assets/form-elements-BgOmx-3n.js",
+    "name": "form-elements",
+    "src": "resources/assets/js/form-elements.js",
+    "isEntry": true
+  },
+  "resources/assets/js/form-validation.js": {
+    "file": "assets/form-validation-CVrTzkRi.js",
+    "name": "form-validation",
+    "src": "resources/assets/js/form-validation.js",
+    "isEntry": true
+  },
+  "resources/assets/js/formelementadvnced.js": {
+    "file": "assets/formelementadvnced-NWzwiwGP.js",
+    "name": "formelementadvnced",
+    "src": "resources/assets/js/formelementadvnced.js",
+    "isEntry": true
+  },
+  "resources/assets/js/fullcalendar.js": {
+    "file": "assets/fullcalendar-BxOxQ20d.js",
+    "name": "fullcalendar",
+    "src": "resources/assets/js/fullcalendar.js",
+    "isEntry": true
+  },
+  "resources/assets/js/index1.js": {
+    "file": "assets/index1-Dfcx30YU.js",
+    "name": "index1",
+    "src": "resources/assets/js/index1.js",
+    "isEntry": true
+  },
+  "resources/assets/js/index2.js": {
+    "file": "assets/index2-BzP9Dxmx.js",
+    "name": "index2",
+    "src": "resources/assets/js/index2.js",
+    "isEntry": true
+  },
+  "resources/assets/js/index3.js": {
+    "file": "assets/index3-CNden8_Y.js",
+    "name": "index3",
+    "src": "resources/assets/js/index3.js",
+    "isEntry": true
+  },
+  "resources/assets/js/index4.js": {
+    "file": "assets/index4-Bie1Qcxe.js",
+    "name": "index4",
+    "src": "resources/assets/js/index4.js",
+    "isEntry": true
+  },
+  "resources/assets/js/index5.js": {
+    "file": "assets/index5-RGesPLoc.js",
+    "name": "index5",
+    "src": "resources/assets/js/index5.js",
+    "isEntry": true
+  },
+  "resources/assets/js/jquery.sparkline.js": {
+    "file": "assets/jquery.sparkline-BTvaGv-v.js",
+    "name": "jquery.sparkline",
+    "src": "resources/assets/js/jquery.sparkline.js",
+    "isEntry": true
+  },
+  "resources/assets/js/jvectormap.js": {
+    "file": "assets/jvectormap-DBZ9EbK3.js",
+    "name": "jvectormap",
+    "src": "resources/assets/js/jvectormap.js",
+    "isEntry": true
+  },
+  "resources/assets/js/map-leafleft.js": {
+    "file": "assets/map-leafleft-DHJJwMKA.js",
+    "name": "map-leafleft",
+    "src": "resources/assets/js/map-leafleft.js",
+    "isEntry": true
+  },
+  "resources/assets/js/mapelmaps.js": {
+    "file": "assets/mapelmaps-BLArUBRq.js",
+    "name": "mapelmaps",
+    "src": "resources/assets/js/mapelmaps.js",
+    "isEntry": true
+  },
+  "resources/assets/js/modal.js": {
+    "file": "assets/modal-bKJr8Eu_.js",
+    "name": "modal",
+    "src": "resources/assets/js/modal.js",
+    "isEntry": true
+  },
+  "resources/assets/js/morris.js": {
+    "file": "assets/morris-BdzdcwpS.js",
+    "name": "morris",
+    "src": "resources/assets/js/morris.js",
+    "isEntry": true
+  },
+  "resources/assets/js/nvd3.js": {
+    "file": "assets/nvd3-CxWYupCy.js",
+    "name": "nvd3",
+    "src": "resources/assets/js/nvd3.js",
+    "isEntry": true
+  },
+  "resources/assets/js/rangeslider.js": {
+    "file": "assets/rangeslider-DzVpXd-E.js",
+    "name": "rangeslider",
+    "src": "resources/assets/js/rangeslider.js",
+    "isEntry": true
+  },
+  "resources/assets/js/select2.js": {
+    "file": "assets/select2-BFhi9WKi.js",
+    "name": "select2",
+    "src": "resources/assets/js/select2.js",
+    "isEntry": true
+  },
+  "resources/assets/js/summernote.js": {
+    "file": "assets/summernote-DGsRi0xo.js",
+    "name": "summernote",
+    "src": "resources/assets/js/summernote.js",
+    "isEntry": true
+  },
+  "resources/assets/js/sweet-alert.js": {
+    "file": "assets/sweet-alert-FI_uZJrh.js",
+    "name": "sweet-alert",
+    "src": "resources/assets/js/sweet-alert.js",
+    "isEntry": true
+  },
+  "resources/assets/js/table-data.js": {
+    "file": "assets/table-data-Bc-BB40m.js",
+    "name": "table-data",
+    "src": "resources/assets/js/table-data.js",
+    "isEntry": true
+  },
+  "resources/assets/js/themeColors.js": {
+    "file": "assets/themeColors-BRkUFDU3.js",
+    "name": "themeColors",
+    "src": "resources/assets/js/themeColors.js",
+    "isEntry": true,
+    "imports": [
+      "_switcher-styles-BkFkFqGb.js"
+    ]
+  },
+  "resources/assets/switcher/js/switcher.js": {
+    "file": "assets/switcher-BasLt8Zn.js",
+    "name": "switcher",
+    "src": "resources/assets/switcher/js/switcher.js",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DZdXNcNv.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-C62gL6cL.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_switcher-styles-BkFkFqGb.js"
+    ]
+  },
   "resources/sass/app.scss": {
-    "file": "assets/app-DBEl1KqF.css",
+    "file": "assets/app-e0An_kaz.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

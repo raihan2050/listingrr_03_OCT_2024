@@ -1,80 +1,112 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+		<!-- META DATA -->
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="Description" content="Sparic - Sparic - Laravel Multipurpose Responsive Bootstrap5 Dashboard Template">
+        <meta name="Author" content="Spruko Technologies Private Limited">
+        <meta name="keywords" content="admin dashboard, admin dashboard laravel, admin panel template, blade template, blade template laravel, bootstrap template, dashboard laravel, laravel admin, laravel admin dashboard, laravel admin panel, laravel admin template, laravel bootstrap admin template, laravel bootstrap template, laravel template, vite laravel template, vite admin template, vite laravel admin, vite laravel admin dashboard, vite laravel bootstrap admin template">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        <!-- TITLE -->
+		<title> Sparic - Laravel Multipurpose Responsive Bootstrap5 Dashboard Template</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+        <!-- FAVICON -->
+        <link rel="icon" href="{{asset('build/assets/images/brand/favicon.ico')}}" type="image/x-icon" >
+		<link rel="shortcut icon" href="{{asset('build/assets/images/brand/favicon.ico')}}" type="image/x-icon">
 
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- BOOTSTRAP CSS -->
+	    <link id="style" href="{{asset('build/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+        <!-- APP SCSS -->
+        @vite(['resources/sass/app.scss'])
 
-                    </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+        <!-- ICONS CSS -->
+        <link href="{{asset('build/assets/iconfonts/icons.css')}}" rel="stylesheet">
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+        <!-- ANIMATE CSS -->
+        <link href="{{asset('build/assets/iconfonts/animated.css')}}" rel="stylesheet">
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+        <!-- APP CSS -->
+        @vite(['resources/css/app.css'])
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+        @yield('styles')
+
+	</head>
+
+	<body class="app sidebar-mini ltr">
+
+		<!--- GLOBAL LOADER -->
+		<div id="global-loader" >
+			<img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="loader">
+		</div>
+		<!--- END GLOBAL LOADER -->
+
+        <!-- PAGE -->
+		<div class="page">
+            <div class="page-main">
+
+                <!-- MAIN-HEADER -->
+                @include('layouts.components.main-header')
+
+                <!-- END MAIN-HEADER -->
+
+                <!-- NEWS-TICKER -->
+                @include('layouts.components.news-ticker')
+
+                <!-- END NEWS-TICKER -->
+
+                <!-- MAIN-SIDEBAR -->
+                @include('layouts.components.main-sidebar')
+
+                <!-- END MAIN-SIDEBAR -->
+
+                <!-- MAIN-CONTENT -->
+                <div class="main-content app-content">
+                    <div class="side-app">
+                        <!-- CONTAINER -->
+                        <div class="main-container container-fluid">
+                                @yield('content')
+                        </div>
+                    </div>
+                    @yield('modal-page-content')
                 </div>
+                <!-- END MAIN-CONTENT -->
             </div>
-        </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-</body>
+            @yield('modal-page-content1')
+
+            <!-- RIGHT-SIDEBAR -->
+            @include('layouts.components.right-sidebar')
+
+            <!-- END RIGHT-SIDEBAR -->
+
+            <!-- MAIN-FOOTER -->
+            @include('layouts.components.main-footer')
+
+            <!-- END MAIN-FOOTER -->
+
+		</div>
+        <!-- END PAGE-->
+
+        <!-- SCRIPTS -->
+
+        @include('layouts.components.scripts')
+
+        <!-- STICKY JS -->
+		<script src="{{asset('build/assets/sticky.js')}}"></script>
+
+        <!-- THEMECOLOR JS -->
+        @vite('resources/assets/js/themeColors.js')
+
+
+        <!-- APP JS -->
+		@vite('resources/js/app.js')
+
+
+        <!-- END SCRIPTS -->
+
+	</body>
 </html>
