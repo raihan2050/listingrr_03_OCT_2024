@@ -16,6 +16,7 @@
         "vite-plugin-static-copy": "^1.0.6"
     },
     "dependencies": {
-        "apexcharts": "^3.54.0"
+        "apexcharts": "^3.54.0",
+        "remixicon": "^4.3.0"
     }
 }
