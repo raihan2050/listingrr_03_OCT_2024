@@ -72,8 +72,8 @@
 											<!-- COUNTRY -->
 											<div class="d-flex country">
 												<a class="nav-link icon theme-layout nav-link-bg layout-setting">
-													<span class="dark-layout mt-1"><i class="ri-moon-clear-line"></i></span>
-													<span class="light-layout mt-1"><i class="ri-sun-line"></i></span>
+													<span class="dark-layout mt-0"><i class="ri-moon-clear-line"></i></span>
+													<span class="light-layout mt-0"><i class="ri-sun-line"></i></span>
 												</a>
 											</div>
 											<!-- Theme-Layout -->
