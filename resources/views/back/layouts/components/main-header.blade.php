@@ -32,7 +32,6 @@
             @include('back.layouts.components.header.cart')
             @include('back.layouts.components.header.notifications')
             @include('back.layouts.components.header.message')
-            @include('back.layouts.components.header.message')
             @include('back.layouts.components.header.fscreen')
             @include('back.layouts.components.header.user')
         </div>

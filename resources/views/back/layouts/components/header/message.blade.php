@@ -73,13 +73,103 @@
                         </span>
                     </div>
                     <div class="flex-grow-1 d-flex align-items-center justify-content-between">
-                    <div class="d-flex flex-column justify-content-between">
-                    <a href="chat.html">
-                    <p class=" mb-0 fw-semibold fs-14 text-dark">Madeleine</p>
-                    <p class="fs-11 mb-0">Just completed <span class="text-info">Project</span></p>
-                    </a>
+                        <div class="d-flex flex-column justify-content-between">
+                            <a href="chat.html">
+                                <p class=" mb-0 fw-semibold fs-14 text-dark">Madeleine</p>
+                                <p class="fs-11 mb-0">Just completed <span class="text-info">Project</span></p>
+                            </a>
+                        </div>
+                        <span class="fs-10 text-muted">2min ago</span>
                     </div>
-                    <span class="fs-10 text-muted">2min ago</span>
+                </div>
+            </li>
+            <li class="dropdown-item">
+                <div class="d-flex align-items-start">
+                    <div class="pe-2">
+                        <span class="avatar avatar-md bg-info-transparent avatar-rounded">
+                            <img src="{{asset('build/assets/images/faces/5.jpg')}}" alt="">
+                        </span>
+                    </div>
+                    <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column justify-content-between">
+                            <a href="chat.html">
+                                <p class=" mb-0 fw-semibold fs-14 text-dark">Madeleine</p>
+                                <p class="fs-11 mb-0">Just completed <span class="text-info">Project</span></p>
+                            </a>
+                        </div>
+                        <span class="fs-10 text-muted">2min ago</span>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-item">
+                <div class="d-flex align-items-start">
+                    <div class="pe-2">
+                        <span class="avatar avatar-md bg-info-transparent avatar-rounded">
+                            <img src="{{asset('build/assets/images/faces/5.jpg')}}" alt="">
+                        </span>
+                    </div>
+                    <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column justify-content-between">
+                            <a href="chat.html">
+                                <p class=" mb-0 fw-semibold fs-14 text-dark">Madeleine</p>
+                                <p class="fs-11 mb-0">Just completed <span class="text-info">Project</span></p>
+                            </a>
+                        </div>
+                        <span class="fs-10 text-muted">2min ago</span>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-item">
+                <div class="d-flex align-items-start">
+                    <div class="pe-2">
+                        <span class="avatar avatar-md bg-info-transparent avatar-rounded">
+                            <img src="{{asset('build/assets/images/faces/5.jpg')}}" alt="">
+                        </span>
+                    </div>
+                    <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column justify-content-between">
+                            <a href="chat.html">
+                                <p class=" mb-0 fw-semibold fs-14 text-dark">Madeleine</p>
+                                <p class="fs-11 mb-0">Just completed <span class="text-info">Project</span></p>
+                            </a>
+                        </div>
+                        <span class="fs-10 text-muted">2min ago</span>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-item">
+                <div class="d-flex align-items-start">
+                    <div class="pe-2">
+                        <span class="avatar avatar-md bg-info-transparent avatar-rounded">
+                            <img src="{{asset('build/assets/images/faces/5.jpg')}}" alt="">
+                        </span>
+                    </div>
+                    <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column justify-content-between">
+                            <a href="chat.html">
+                                <p class=" mb-0 fw-semibold fs-14 text-dark">Madeleine</p>
+                                <p class="fs-11 mb-0">Just completed <span class="text-info">Project</span></p>
+                            </a>
+                        </div>
+                        <span class="fs-10 text-muted">2min ago</span>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-item">
+                <div class="d-flex align-items-start">
+                    <div class="pe-2">
+                        <span class="avatar avatar-md bg-info-transparent avatar-rounded">
+                            <img src="{{asset('build/assets/images/faces/5.jpg')}}" alt="">
+                        </span>
+                    </div>
+                    <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column justify-content-between">
+                            <a href="chat.html">
+                                <p class=" mb-0 fw-semibold fs-14 text-dark">Madeleine</p>
+                                <p class="fs-11 mb-0">Just completed <span class="text-info">Project</span></p>
+                            </a>
+                        </div>
+                        <span class="fs-10 text-muted">2min ago</span>
                     </div>
                 </div>
             </li>
