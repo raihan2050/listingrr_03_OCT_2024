@@ -4,6 +4,7 @@ use App\Http\Controllers\Back\AdminMaintenanceController;
 use App\Http\Controllers\Back\Auth\AdminAuthController;
 use App\Http\Controllers\Back\ConfigController;
 use App\Http\Controllers\Back\DashboardController;
+use App\Http\Controllers\Back\SystemSetting;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => config('app.super_admin_url'), 'as' => 'super.'], function() {
@@ -22,4 +23,6 @@ Route::group(['prefix' => config('app.super_admin_url'), 'as' => 'super.', 'midd
     Route::get('/clear', [ConfigController::class, 'clear'])->name('clear');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/setting/system', [SystemSetting::class, 'index'])->name('system.settings');
 });
