@@ -43,11 +43,11 @@ button {
 
 @media (min-width: 992px) {
   .app-content {
-    min-height: calc(100vh - 12.5rem);
+    min-height: calc(100vh - 10.5rem);
     margin-block-end: 0;
-    margin-block-start: 8.1rem;
+    margin-block-start: 6.1rem;
     margin-inline-start: 15.7rem;
-    transition: all 0.05s ease;
+    transition: all .05s ease;
   }
 }
 
