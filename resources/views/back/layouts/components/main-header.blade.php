@@ -63,10 +63,8 @@
 													<div class="drop-heading border-bottom">
 														<h6 class="mt-1 mb-0 fs-14 fw-semibold text-dark"> Choose Language</h6>
 													</div>
-													<a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"> <img src="{{asset('build/assets/images/flag-images/3.png')}}" alt="img" class="me-2 country language-img"> <span class="fs-13 text-wrap text-dark fw-semibold"> Germany</span> </a>
-													<a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"> <img src="{{asset('build/assets/images/flag-images/5.png')}}" alt="img" class="me-2 country language-img"> <span class="fs-13 text-wrap text-dark fw-semibold"> Russia</span> </a>
-													<a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"> <img src="{{asset('build/assets/images/flag-images/6.png')}}" alt="img" class="me-2 country language-img"> <span class="fs-13 text-wrap text-dark fw-semibold"> United Kingdom</span> </a>
-													<a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"> <img src="{{asset('build/assets/images/flag-images/2.png')}}" alt="img" class=" me-2 country language-img"> <span class="fs-13 text-wrap text-dark fw-semibold"> Canada</span> </a>
+                                                    <a class="dropdown-item d-flex align-items-center" href="{{ route('switch.language', 'en') }}""> <img src="{{asset('build/assets/images/flag-images/5.png')}}" alt="img" class="me-2 country language-img"> <span class="fs-13 text-wrap text-dark fw-semibold"> English</span> </a>
+													<a class="dropdown-item d-flex align-items-center" href="{{ route('switch.language', 'bn') }}"> <img src="{{asset('build/assets/images/flag-images/3.png')}}" alt="img" class="me-2 country language-img"> <span class="fs-13 text-wrap text-dark fw-semibold"> Bangla</span> </a>
 												</div>
 											</div>
 											<!-- COUNTRY -->

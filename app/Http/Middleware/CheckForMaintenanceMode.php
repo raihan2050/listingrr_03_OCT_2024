@@ -19,6 +19,8 @@ class CheckForMaintenanceMode
         $exceptions = [
             'super*',
             'super/*',
+            'switch-language*',
+            'switch-language/*',
         ];
 
         // Check if the application is in maintenance mode and the request does not match any exception

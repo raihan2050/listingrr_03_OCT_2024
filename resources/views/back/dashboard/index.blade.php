@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+@lang('super.goodbye')
 @endsection
 
 @section('scripts')
