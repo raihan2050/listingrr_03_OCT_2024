@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-xl-8 col-md-12">
             <div class="card custom-card">
-                <div class="card-body p-0 product-checkout">
+                <div class="card-body p-0 system-settings">
                     <ul class="nav nav-tabs tab-style-2 d-sm-flex d-block border-bottom border-block-end-dashed" role="tablist">
                         @php
                             $systemSettingLis = [
