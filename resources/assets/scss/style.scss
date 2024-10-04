@@ -136,12 +136,17 @@ License        :   Licensed under ThemeForest License
 @import "custom/timeline";
 @import "custom/navs_tabs";
 @import "custom/system-settings";
+@import "custom/border";
+@import "custom/custom";
 
 /* ######## LAYOUT-STYLES ######## */
 @import "layout/footer";
 @import "layout/header";
 @import "layout/sidemenu";
 @import "layout/horizontal-menu";
+@import "menu-styles/vertical";
+@import "menu-styles/simplebar";
+@import "menu-styles/icon_overlay";
 
 /* ######## LIB-STYLES ######## */
 @import "lib/datepicker";

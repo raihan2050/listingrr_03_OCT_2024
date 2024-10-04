@@ -59,7 +59,7 @@ body.dark-mode {
     .accordion .accordion-header, .accordion .accordion-header:hover {
         background-color: $dark-theme;
     }
-    
+
     .accordion-button:not(.collapsed), .panel-heading {
         background-color: $white-05;
         box-shadow: var(--dark-border);
@@ -94,7 +94,7 @@ body.dark-mode {
                 &.darklogo {
                   display: block;
                 }
-                
+
                 &.main-logo {
                   display: none;
                 }
@@ -147,7 +147,7 @@ body.dark-mode {
     }
 
     mark {
-        background-color: rgba($warning, 0.2);
+        background-color: rgba(var(--warning-rgb), 0.2);
         color: $white-7;
     }
 
@@ -354,7 +354,7 @@ body.dark-mode {
                 }
 
                 .latest-timeline .timeline {
-                
+
                     &:before {
                         border: 1px dashed $dark-border;
                     }
@@ -639,7 +639,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .buynow {
-    
+
         .dropdown-item {
 
             color: $dark-color2;
@@ -647,7 +647,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
             &:hover {
                 background-color: $white-05;
                 color: $dark-color;
-                
+
                 &:first-child {
                     border-start-start-radius: 5px;
                     border-start-end-radius: 5px;
@@ -1017,7 +1017,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         &.main-logo {
             display: none;
         }
-    
+
         &.darklogo {
             display: inline-flex;
         }
@@ -1317,7 +1317,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     .dropdown-menu-arrow.dropdown-menu-end:after,
     .dropdown-menu-arrow.dropdown-menu-start:after {
         border-block-end-color: $dark-theme;
-       
+
     }
 
     .dropdown-menu-arrow.dropdown-menu-end:before,
@@ -1388,7 +1388,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     .text-dark {
         color: $dark-color !important;
     }
-    
+
     .btn-light {
         color: $dark-color;
         background-color: $dark-theme;
@@ -1704,7 +1704,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     .navbar-light .navbar-brand {
         color: #dedefd;
     }
-    
+
     .navbar.navbar-expand-lg.bg-light {
         .collapse.navbar-collapse.bg-light {
             background: none !important;
@@ -1716,7 +1716,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
             color: $dark-color2;
         }
     }
-    
+
     .nav-pills .nav-link.active,
     .nav-pills .show > .nav-link {
         color: $white;
@@ -1836,7 +1836,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         }
     }
     .modal-dialog.modal-dialog-centered.modal-lg {
-        
+
         .modal-content {
             .btn-close {
                 filter: invert(100%);
@@ -1844,7 +1844,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         }
     }
 
-    .msb-reply textarea { 
+    .msb-reply textarea {
         background: $dark-body;
 
 		&::placeholder {
@@ -2292,7 +2292,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
                 }
             }
         }
-        
+
         .richText-form {
             input[type="text"], input[type="number"] {
                 color: $white;
@@ -2330,7 +2330,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         &.active {
           border: 1px solid $dark-border;
         }
-      
+
         border: 1px solid $dark-border;
     }
 
@@ -2345,8 +2345,8 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     .panel-default.fullscreen .note-editable {
         background-color: $dark-theme;
     }
- 
-    
+
+
     .richText {
         border-color: $dark-border;
         background-color: $dark-body;
@@ -2359,7 +2359,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
         .richText-help-popup .richtext-info {
             background-color: var(--dark-theme) !important;
-        } 
+        }
 
         .richText-editor table td {
             border: $dark-border solid 1px;
@@ -3162,7 +3162,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
     .notification .notification-body {
         background-color: $white-05;
-      
+
         &:before {
           border-inline-end-color: $white-05;
         }
@@ -3215,11 +3215,11 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         .clndr-controls {
           border: 1px solid $dark-border;
         }
-      
+
         .clndr-table tr .day {
           border-inline-start: 1px solid $dark-border;
           border-block-start: 1px solid $dark-border;
-      
+
           &:last-child {
             border-inline-end: 1px solid $dark-border;
           }
@@ -3261,14 +3261,14 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         border-block-start: 1px solid rgb(255 255 255 / 10%);
     }
 
-    .btn-default {	
-        color: $white;	
-        background: rgba(255, 255, 255, 0.05);	
-        border-color: $dark-border;	
-        &:hover, &:focus, &:active {	
-            color: $white;	
-            background-color: $dark-theme !important;	
-            border-color: $dark-border !important;	
+    .btn-default {
+        color: $white;
+        background: rgba(255, 255, 255, 0.05);
+        border-color: $dark-border;
+        &:hover, &:focus, &:active {
+            color: $white;
+            background-color: $dark-theme !important;
+            border-color: $dark-border !important;
         }
     }
 
@@ -3378,55 +3378,55 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     .panel-primary .list-group-item.active {
 
         background-color: $primary;
-    
+
         &:hover {
             background-color: #1e64c7;
             border-color: #1760c5;
         }
     }
-    
+
     .panel-success .list-group-item.active {
 
         background-color: $green;
-    
+
         &:hover {
             background-color: #1cb55a;
             border-color: #18b958;
         }
     }
-    
+
     .panel-info .list-group-item.active {
 
         background-color: $info;
-    
+
         &:hover {
             background-color: #1aadd0;
             border-color: #17a5c7;
         }
     }
-    
+
     .panel-warning .list-group-item.active {
 
         background-color: $warning;
-    
+
         &:hover {
             background-color: #cea70c;
             border-color: #cea70c;
         }
     }
-    
+
     .panel-danger .list-group-item.active {
 
         background-color: $danger;
-    
+
         &:hover {
             background-color: #d6434c;
             border-color: #d6434c;
         }
     }
-    
+
     .panel-default .list-group-item.active {
-    
+
         &:hover,
         &:focus {
             color: $default-color;
@@ -3460,7 +3460,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         }
        }
     }
-    
+
     .offcanvas-start.show .offcanvas-header {
         .btn-close {
             filter: invert(100%) !important;
@@ -3474,7 +3474,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
                 color: $black;
             }
         }
-       
+
         background-color: $dark-body;
         border-color: $dark-border;
         box-shadow: 0 4px 25px 0 $dark-shadow;
@@ -3501,7 +3501,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
                 color: $white-7;
             }
         }
-    } 
+    }
 
     .navbar-example2 {
         background-color: $dark-body;
@@ -3751,7 +3751,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .note-btn {
-    
+
         &.btn-default:not(:disabled):not(.disabled).active {
             background-color: $white-05;
         }
@@ -3935,15 +3935,15 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     .tabs-style6{
         >.panel-head > .nav-tabs{
           background: $white-05;
-      
+
           >.nav-item > .nav-link{
             color: $dark-color2;
-      
+
             &:not(.active):hover{
               color: $primary;
               background: none;
             }
-      
+
             &.active{
               background: $dark-body;
               color: $primary !important;
@@ -3959,7 +3959,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         color: $dark-color2;
     }
     //badge styels end
-   
+
 }
 
 .dark-mode.app {

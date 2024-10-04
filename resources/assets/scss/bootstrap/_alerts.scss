@@ -72,8 +72,8 @@
 
 .alert-secondary {
 	color: $secondary;
-	background-color: rgba($secondary, 0.2);
-	border-color: rgba($secondary, 0.3);
+	background-color: rgba(var(--secondary-rgb), 0.2);
+	border-color: rgba(var(--secondary-rgb), 0.3);
 
 	.btn-close {
 		background-image: none;
@@ -93,8 +93,8 @@
 
 .alert-success {
 	color: $success;
-	background-color: rgba($success, 0.2);
-	border-color: rgba($success, 0.3);
+	background-color: rgba(var(--success-rgb), 0.2);
+	border-color: rgba(var(--success-rgb), 0.3);
 
 	.btn-close {
 		background-image: none;
@@ -117,8 +117,8 @@
 
 .alert-info {
 	color: $info;
-	background-color: rgba($info, 0.2);
-	border-color: rgba($info, 0.3);
+	background-color: rgba(var(--info-rgb), 0.2);
+	border-color: rgba(var(--info-rgb), 0.3);
 
 	.btn-close {
 		background-image: none;
@@ -135,8 +135,8 @@
 
 .alert-warning {
 	color: $warning;
-	background-color: rgba($warning, 0.2);
-	border-color: rgba($warning, 0.3);
+	background-color: rgba(var(--warning-rgb), 0.2);
+	border-color: rgba(var(--warning-rgb), 0.3);
 
 	.btn-close {
 		background-image: none;
@@ -154,8 +154,8 @@
 
 .alert-danger {
 	color: $danger;
-	background-color: rgba($danger, 0.2);
-	border-color: rgba($danger, 0.3);
+	background-color: rgba(var(--danger-rgb), 0.2);
+	border-color: rgba(var(--danger-rgb), 0.3);
 
 	.btn-close {
 		background-image: none;

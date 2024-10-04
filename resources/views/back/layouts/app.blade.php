@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en"
+        dir="ltr">
 	<head>
 
 		<!-- META DATA -->
@@ -36,7 +37,7 @@
 
 	</head>
 
-	<body class="app sidebar-mini ltr">
+	<body class="">
 
 		<!--- GLOBAL LOADER -->
 		<div id="global-loader" >
@@ -46,22 +47,18 @@
 
         <!-- PAGE -->
 		<div class="page">
-            <div class="page-main">
 
                 <!-- MAIN-HEADER -->
                 @include('back.layouts.components.main-header')
-
                 <!-- END MAIN-HEADER -->
-
-                <!-- NEWS-TICKER -->
-                {{-- @include('back.layouts.components.news-ticker') --}}
-
-                <!-- END NEWS-TICKER -->
 
                 <!-- MAIN-SIDEBAR -->
                 @include('back.layouts.components.main-sidebar')
-
                 <!-- END MAIN-SIDEBAR -->
+
+                <!-- NEWS-TICKER -->
+                {{-- @include('back.layouts.components.news-ticker') --}}
+                <!-- END NEWS-TICKER -->
 
                 <!-- MAIN-CONTENT -->
                 <div class="main-content app-content">
@@ -74,7 +71,7 @@
                     @yield('modal-page-content')
                 </div>
                 <!-- END MAIN-CONTENT -->
-            </div>
+
 
             @yield('modal-page-content1')
 
