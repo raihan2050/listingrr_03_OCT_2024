@@ -6,20 +6,20 @@
   align-content: flex-start;
   align-items: flex-start;
 
-  &.simplebar-dragging {
-    .simplebar-content {
+  &.lsimplebar-dragging {
+    .lsimplebar-content {
       pointer-events: none;
       user-select: none;
       -webkit-user-select: none;
     }
 
-    .simplebar-track {
+    .lsimplebar-track {
       pointer-events: all;
     }
   }
 }
 
-.simplebar-wrapper {
+.lsimplebar-wrapper {
   overflow: hidden;
   width: inherit;
   height: inherit;
@@ -27,7 +27,7 @@
   max-height: inherit;
 }
 
-.simplebar-mask {
+.lsimplebar-mask {
   direction: inherit;
   position: absolute;
   overflow: hidden;
@@ -42,7 +42,7 @@
   z-index: 0;
 }
 
-.simplebar-offset {
+.lsimplebar-offset {
   direction: inherit !important;
   box-sizing: inherit !important;
   resize: none !important;
@@ -56,7 +56,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.simplebar-content-wrapper {
+.lsimplebar-content-wrapper {
   direction: inherit;
   box-sizing: border-box !important;
   position: relative;
@@ -69,27 +69,27 @@
   -ms-overflow-style: none;
 
   &::-webkit-scrollbar,
-  &.simplebar-hide-scrollbar::-webkit-scrollbar {
+  &.lsimplebar-hide-scrollbar::-webkit-scrollbar {
     display: none;
     width: 0;
     height: 0;
   }
 }
 
-.simplebar-content:after,
-.simplebar-content:before {
+.lsimplebar-content:after,
+.lsimplebar-content:before {
   content: " ";
   display: table;
 }
 
-.simplebar-placeholder {
+.lsimplebar-placeholder {
   max-height: 100%;
   max-width: 100%;
   width: 100%;
   pointer-events: none;
 }
 
-.simplebar-height-auto-observer-wrapper {
+.lsimplebar-height-auto-observer-wrapper {
   box-sizing: inherit !important;
   height: 100%;
   width: 100%;
@@ -107,7 +107,7 @@
   flex-basis: 0;
 }
 
-.simplebar-height-auto-observer {
+.lsimplebar-height-auto-observer {
   box-sizing: inherit;
   display: block;
   opacity: 0;
@@ -123,7 +123,7 @@
   z-index: -1;
 }
 
-.simplebar-track {
+.lsimplebar-track {
   z-index: 1;
   position: absolute;
   right: 0;
@@ -131,27 +131,27 @@
   pointer-events: none;
   overflow: hidden;
 
-  &.simplebar-vertical {
+  &.lsimplebar-vertical {
     top: 0;
     width: 11px;
 
-    .simplebar-scrollbar:before {
+    .lsimplebar-scrollbar:before {
       top: 2px;
       bottom: 2px;
     }
   }
 
-  &.simplebar-horizontal {
+  &.lsimplebar-horizontal {
     left: 0;
     height: 11px;
 
-    .simplebar-scrollbar:before {
+    .lsimplebar-scrollbar:before {
       height: 100%;
       left: 2px;
       right: 2px;
     }
 
-    .simplebar-scrollbar {
+    .lsimplebar-scrollbar {
       right: auto;
       left: 0;
       top: 2px;
@@ -163,7 +163,7 @@
   }
 }
 
-.simplebar-scrollbar {
+.lsimplebar-scrollbar {
   position: absolute;
   left: 0;
   right: 0;
@@ -179,15 +179,15 @@
     opacity: 0;
     transition: opacity 0.2s linear;
 
-    &.simplebar-visible {
+    &.lsimplebar-visible {
       opacity: 0.5;
       transition: opacity 0s linear;
     }
   }
 }
 
-[data-simplebar-direction="rtl"] {
-  .simplebar-track.simplebar-vertical {
+[data-lsimplebar-direction="rtl"] {
+  .lsimplebar-track.lsimplebar-vertical {
     right: auto;
     left: 0;
   }
@@ -204,7 +204,7 @@
   overflow-x: scroll;
 }
 
-.simplebar-hide-scrollbar {
+.lsimplebar-hide-scrollbar {
   position: fixed;
   left: 0;
   visibility: hidden;

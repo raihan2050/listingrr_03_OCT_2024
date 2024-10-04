@@ -11,14 +11,14 @@
     </div>
     <!-- End::main-sidebar-header --> <!-- Start::main-sidebar -->
     <div class="main-sidebar" id="sidebar-scroll" data-simplebar="init">
-       <div class="simplebar-wrapper" style="margin: 0px 0px -80px;">
-          <div class="simplebar-height-auto-observer-wrapper">
-             <div class="simplebar-height-auto-observer"></div>
+       <div class="lsimplebar-wrapper" style="margin: 0px 0px -80px;">
+          <div class="lsimplebar-height-auto-observer-wrapper">
+             <div class="lsimplebar-height-auto-observer"></div>
           </div>
-          <div class="simplebar-mask">
-             <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;">
-                   <div class="simplebar-content" style="padding: 0px 0px 80px;">
+          <div class="lsimplebar-mask">
+             <div class="lsimplebar-offset" style="right: 0px; bottom: 0px;">
+                <div class="lsimplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;">
+                   <div class="lsimplebar-content" style="padding: 0px 0px 80px;">
                       <!-- Start::nav -->
                       <nav class="main-menu-container nav nav-pills flex-column sub-open open active">
                          <div class="slide-left active d-none" id="slide-left">
@@ -26,7 +26,7 @@
                                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
                             </svg>
                          </div>
-                         <ul class="main-menu side-menu" style="display: block; margin-left: 0px; margin-right: 0px;">
+                         <ul class="main-menu" style="display: block; margin-left: 0px; margin-right: 0px;">
                             <!-- Start::slide__category -->
                             <li class="slide__category"><span class="category-name">Main</span></li>
                             <!-- End::slide__category --> <!-- Start::slide -->
@@ -364,13 +364,13 @@
                 </div>
              </div>
           </div>
-          <div class="simplebar-placeholder" style="width: auto; height: 1478px;"></div>
+          <div class="lsimplebar-placeholder" style="width: auto; height: 1478px;"></div>
        </div>
-       <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-          <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+       <div class="lsimplebar-track lsimplebar-horizontal" style="visibility: hidden;">
+          <div class="lsimplebar-scrollbar" style="width: 0px; display: none;"></div>
        </div>
-       <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
-          <div class="simplebar-scrollbar" style="height: 604px; display: block; transform: translate3d(0px, 0px, 0px);"></div>
+       <div class="lsimplebar-track lsimplebar-vertical" style="visibility: visible;">
+          <div class="lsimplebar-scrollbar" style="height: 604px; display: block; transform: translate3d(0px, 0px, 0px);"></div>
        </div>
     </div>
     <!-- End::main-sidebar -->
