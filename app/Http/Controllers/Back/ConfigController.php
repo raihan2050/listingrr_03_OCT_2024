@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Back;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Artisan;
 
 class ConfigController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('super');
     }
     public function migrate()
     {

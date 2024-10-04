@@ -1,4 +1,4 @@
-@extends('layouts.custom-app1')
+@extends('back.layouts.custom-app1')
 
 @section('styles')
 
@@ -24,7 +24,7 @@
                                 </div>
                                 <h3>Login</h3>
                                 <p class="text-muted">Sign In to your account</p>
-                                <form method="POST" action="{{ route('login') }}">
+                                <form method="POST" action="{{ route('super.login') }}">
                                     @csrf
                                     <div class="input-group mb-3">
                                         <span class="input-group-addon bg-white">

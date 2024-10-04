@@ -28,6 +28,15 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showLoginForm()
+    {
+        return view('front.auth.login');
+    }
 
     // protected $redirectTo = config('app.admin_name').'/dashboard';
 

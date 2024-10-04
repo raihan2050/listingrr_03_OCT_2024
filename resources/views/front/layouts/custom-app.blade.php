@@ -5,7 +5,7 @@
 		<!-- META DATA -->
         <meta charset="UTF-8">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <meta name="Description" content="Sparic - Sparic - Laravel Multipurpose Responsive Bootstrap5 Dashboard Template">
+        <meta name="Description" content="Sparic - Laravel Multipurpose Responsive Bootstrap5 Dashboard Template">
         <meta name="Author" content="Spruko Technologies Private Limited">
         <meta name="keywords" content="admin dashboard, admin dashboard laravel, admin panel template, blade template, blade template laravel, bootstrap template, dashboard laravel, laravel admin, laravel admin dashboard, laravel admin panel, laravel admin template, laravel bootstrap admin template, laravel bootstrap template, laravel template, vite laravel template, vite admin template, vite laravel admin, vite laravel admin dashboard, vite laravel bootstrap admin template">
 
@@ -36,7 +36,7 @@
 
 	</head>
 
-	<body class="app sidebar-mini ltr">
+	<body class="bg-account">
 
 		<!--- GLOBAL LOADER -->
 		<div id="global-loader" >
@@ -45,55 +45,18 @@
 		<!--- END GLOBAL LOADER -->
 
         <!-- PAGE -->
-		<div class="page">
-            <div class="page-main">
+        @yield('custom-error')
 
-                <!-- MAIN-HEADER -->
-                @include('layouts.components.main-header')
-
-                <!-- END MAIN-HEADER -->
-
-                <!-- NEWS-TICKER -->
-                {{-- @include('layouts.components.news-ticker') --}}
-
-                <!-- END NEWS-TICKER -->
-
-                <!-- MAIN-SIDEBAR -->
-                @include('layouts.components.main-sidebar')
-
-                <!-- END MAIN-SIDEBAR -->
-
-                <!-- MAIN-CONTENT -->
-                <div class="main-content app-content">
-                    <div class="side-app">
-                        <!-- CONTAINER -->
-                        <div class="main-container container-fluid">
-                                @yield('content')
-                        </div>
-                    </div>
-                    @yield('modal-page-content')
-                </div>
-                <!-- END MAIN-CONTENT -->
+            <!-- MAIN-CONTENT -->
+            <div class="page h-100">
+                @yield('content')
             </div>
-
-            @yield('modal-page-content1')
-
-            <!-- RIGHT-SIDEBAR -->
-            @include('layouts.components.right-sidebar')
-
-            <!-- END RIGHT-SIDEBAR -->
-
-            <!-- MAIN-FOOTER -->
-            @include('layouts.components.main-footer')
-
-            <!-- END MAIN-FOOTER -->
-            @include('layouts.components.alert_message')
-		</div>
+            <!-- END MAIN-CONTENT -->
         <!-- END PAGE-->
 
         <!-- SCRIPTS -->
-
-        @include('layouts.components.scripts')
+        
+        @include('front.layouts.components.custom-scripts')
 
         <!-- STICKY JS -->
 		<script src="{{asset('build/assets/sticky.js')}}"></script>
@@ -105,14 +68,7 @@
         <!-- APP JS -->
 		@vite('resources/js/app.js')
 
-        @if(session('alert_message'))
-            <script>
-                $(function(){
-                    const alertMessage = new bootstrap.Toast(document.getElementById('alertMessage'))
-                    alertMessage.show();
-                });
-            </script>
-        @endif
+
         <!-- END SCRIPTS -->
 
 	</body>

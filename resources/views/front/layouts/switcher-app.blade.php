@@ -36,7 +36,7 @@
 
 	</head>
 
-	<body class="bg-account app sidebar-mini ltr">
+	<body class="app sidebar-mini ltr">
 
 		<!--- GLOBAL LOADER -->
 		<div id="global-loader" >
@@ -45,16 +45,52 @@
 		<!--- END GLOBAL LOADER -->
 
         <!-- PAGE -->
-		<div class="page h-100">
-            <!-- MAIN-CONTENT -->
-                @yield('content')
-            <!-- END MAIN-CONTENT -->
-        </div>
+		<div class="page">
+            <div class="page-main">
+
+                <!-- MAIN-HEADER -->
+                @include('front.layouts.components.main-header')
+
+                <!-- END MAIN-HEADER -->
+
+                <!-- NEWS-TICKER -->
+                @include('front.layouts.components.news-ticker')
+
+                <!-- END NEWS-TICKER -->
+
+                <!-- MAIN-SIDEBAR -->
+                @include('front.layouts.components.main-sidebar')
+
+                <!-- END MAIN-SIDEBAR -->
+
+                <!-- MAIN-CONTENT -->
+                <div class="main-content app-content">
+                    <div class="side-app">
+                        <!-- CONTAINER -->
+                        <div class="main-container container-fluid">
+                                @yield('content')
+                        </div>
+                    </div>
+                </div>
+                <!-- END MAIN-CONTENT -->
+            </div>
+            
+            <!-- RIGHT-SIDEBAR -->
+            @include('front.layouts.components.right-sidebar')
+
+            <!-- END RIGHT-SIDEBAR -->
+
+            <!-- MAIN-FOOTER -->
+            @include('front.layouts.components.main-footer')
+
+            <!-- END MAIN-FOOTER -->
+
+		</div>
         <!-- END PAGE-->
 
         <!-- SCRIPTS -->
-
-        @include('layouts.components.custom-scripts')
+        
+        @include('front.layouts.components.scripts')
 
         <!-- STICKY JS -->
 		<script src="{{asset('build/assets/sticky.js')}}"></script>
@@ -65,6 +101,10 @@
 
         <!-- APP JS -->
 		@vite('resources/js/app.js')
+
+
+        <!-- SWITCHER JS -->
+        @vite('resources/assets/switcher/js/switcher.js')
 
 
         <!-- END SCRIPTS -->

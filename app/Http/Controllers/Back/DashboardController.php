@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Back;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -13,7 +14,7 @@ class DashboardController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('super');
     }
 
     /**
@@ -23,6 +24,6 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        return view('back.dashboard.index');
     }
 }

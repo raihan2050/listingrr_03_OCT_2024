@@ -56,7 +56,7 @@
 
         <!-- SCRIPTS -->
         
-        @include('layouts.components.custom-scripts')
+        @include('back.layouts.components.custom-scripts')
 
         <!-- STICKY JS -->
 		<script src="{{asset('build/assets/sticky.js')}}"></script>

@@ -3,6 +3,7 @@
 return [
 
     'admin_url' => env('ADMIN_URL', 'admin'),
+    'super_admin_url' => env('ADMIN_URL', 'super'),
 
     /*
     |--------------------------------------------------------------------------

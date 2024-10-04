@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Auth;
 if (!function_exists('isSuperAdmin')) {
     function isSuperAdmin()
     {
-        $user = Auth::user();
-        return $user && $user->is_admin === 1;
+        $adminUser = Auth::guard('admin')->user();
+        return $adminUser && $adminUser->is_admin === 1;
     }
 }
 

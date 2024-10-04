@@ -29,9 +29,9 @@
                 </svg>
             </div>
             @if (isSuperAdmin())
-                @include('layouts.components.main-sidebar_admin')
+                @include('back.front.layouts.components.main-sidebar_admin')
             @else
-                @include('layouts.components.main-sidebar_user')
+                @include('back.front.layouts.components.main-sidebar_user')
             @endif
             <div class="slide-right" id="slide-right">
                 <svg xmlns="http://www.w3.org/2000/svg"
