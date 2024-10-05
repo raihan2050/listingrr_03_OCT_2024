@@ -64,7 +64,7 @@
                     setTimeout(() => {
                         loader.classList.add("d-none");
                         afterLoadShown.classList.add("d-block");
-                    }, 300);
+                    }, 100);
                 }
 
                 window.addEventListener("load", hideLoader);
