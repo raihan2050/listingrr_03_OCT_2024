@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-
-@endsection
 <div class="row authentication mx-0">
     <div class="col-xxl-5 col-xl-5 col-lg-5 d-xl-block d-none px-0">
         <div class="authentication-cover">
@@ -121,6 +119,7 @@
         </div>
     </div>
 </div>
+@endsection
 @section('scripts')
 <script>
     function showHidePassword(inputId) {

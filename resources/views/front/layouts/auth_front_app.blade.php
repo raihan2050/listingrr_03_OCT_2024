@@ -44,8 +44,32 @@
 
 	<body class="bg-white">
 
-            @yield('content')
+		<!--- GLOBAL LOADER -->
+        <div id="loader">
+            <img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="">
+        </div>
+		<!--- END GLOBAL LOADER -->
 
+        <div style="display: none;" id="afterLoadShown">
+            @yield('content')
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script>
+            $(function() {
+                function hideLoader() {
+                    const loader = document.getElementById("loader");
+                    const afterLoadShown = document.getElementById("afterLoadShown");
+
+                    setTimeout(() => {
+                        loader.classList.add("d-none");
+                        afterLoadShown.classList.add("d-block");
+                    }, 300);
+                }
+
+                window.addEventListener("load", hideLoader);
+            });
+        </script>
 
         @yield('scripts')
 	</body>
