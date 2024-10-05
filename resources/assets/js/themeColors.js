@@ -18,7 +18,7 @@ const handleThemeUpdate = (cssVars) => {
 
 function dynamicPrimaryColor(primaryColor) {
     'use strict'
-    
+
     primaryColor.forEach((item) => {
         item.addEventListener('input', (e) => {
             const cssPropName = `--primary-${e.target.getAttribute('data-id')}`;
@@ -26,7 +26,7 @@ function dynamicPrimaryColor(primaryColor) {
             const cssPropName2 = `--primary-${e.target.getAttribute('data-id2')}`;
             handleThemeUpdate({
                 [cssPropName]: e.target.value,
-                // 95 is used as the opacity 0.95  
+                // 95 is used as the opacity 0.95
                 [cssPropName1]: e.target.value + 95,
                 [cssPropName2]: e.target.value,
             });
@@ -50,9 +50,9 @@ function dynamicPrimaryBackground(bgColor) {
 (function() {
     'use strict'
 
-    // Light theme color picker 
+    // Light theme color picker
     const dynamicPrimaryLight = document.querySelectorAll('input.color-primary-light');
-    
+
     const dynamicBackground = document.querySelectorAll('input.background-primary-light');
 
     // themeSwitch(LightThemeSwitchers);
@@ -60,12 +60,30 @@ function dynamicPrimaryBackground(bgColor) {
     dynamicPrimaryBackground(dynamicBackground);
 
     localStorageBackup();
-        
+    hideLoader();
 })();
 
-function localStorageBackup() {
-    'use strict'
+function hideLoader() {
+    const loader = document.getElementById("loader");
+    loader.classList.add("d-none")
+}
 
+function localStorageBackup() {
+
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = localStorage.getItem(key);
+        console.log(`Key: ${key}, Value: ${value}`);
+    }
+
+    toggleTheme();
+    return false;
+    'use strict'
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = localStorage.getItem(key);
+        console.log(`Key: ${key}, Value: ${value}`);
+    }
     // if there is a value stored, update color picker and background color
     // Used to retrive the data from local storage
     if (localStorage.sparicprimaryColor) {
@@ -74,7 +92,7 @@ function localStorageBackup() {
         document.querySelector('html').style.setProperty('--primary-bg-hover', localStorage.sparicprimaryHoverColor);
         document.querySelector('html').style.setProperty('--primary-bg-border', localStorage.sparicprimaryBorderColor);
     }
-    
+
     if (localStorage.sparicbgColor) {
         // document.getElementById('bgID').value = localStorage.sparicthemeColor;
         document.querySelector('html').style.setProperty('--dark-body', localStorage.sparicbgColor);
@@ -197,7 +215,7 @@ function localStorageBackup() {
     if(localStorage.sparicmontserratfontfamily) {
         document.querySelector('body').classList.add('font-family-4')
     }
-    
+
     if(localStorage.sparicrrobotofontfamily) {
         document.querySelector('body').classList.add('font-family-5')
     }
@@ -248,7 +266,7 @@ const getAlphafloat = (a, alpha) => {
         }
         return alpha
     }
-    // convertion of hex code to rgba code 
+    // convertion of hex code to rgba code
 function hexToRgba(hexValue, alpha) {
     'use strict'
 
@@ -364,3 +382,68 @@ export function names() {
 
 names()
 
+  /* header theme toggle */
+  function toggleTheme() {
+    let html = document.querySelector("html");
+    if (localStorage.SparicHeader === "dark") {
+      html.setAttribute("data-theme-mode", "light");
+      html.setAttribute("data-header-styles", "light");
+      html.setAttribute("data-menu-styles", "light");
+      if (!localStorage.getItem("primaryRGB")) {
+        html.setAttribute("style", "");
+      }
+      html.removeAttribute("data-bg-theme");
+      document.querySelector("#switcher-light-theme").checked = true;
+      document.querySelector("#switcher-menu-light").checked = true;
+      document
+        .querySelector("html")
+        .style.removeProperty("--body-bg-rgb", localStorage.bodyBgRGB);
+      checkOptions();
+      html.style.removeProperty("--body-bg-rgb2");
+      html.style.removeProperty("--light-rgb");
+      html.style.removeProperty("--form-control-bg");
+      html.style.removeProperty("--input-border");
+      document.querySelector("#switcher-header-light").checked = true;
+      document.querySelector("#switcher-menu-light").checked = true;
+      document.querySelector("#switcher-light-theme").checked = true;
+      document.querySelector("#switcher-background4").checked = false;
+      document.querySelector("#switcher-background3").checked = false;
+      document.querySelector("#switcher-background2").checked = false;
+      document.querySelector("#switcher-background1").checked = false;
+      document.querySelector("#switcher-background").checked = false;
+      localStorage.removeItem("Sparicdarktheme");
+      localStorage.removeItem("SparicMenu");
+      localStorage.removeItem("SparicHeader");
+      localStorage.removeItem("bodylightRGB");
+      localStorage.removeItem("bodyBgRGB");
+      if (localStorage.getItem("Spariclayout") != "horizontal") {
+        html.setAttribute("data-menu-styles", "dark");
+      }
+      html.setAttribute("data-header-styles", "light");
+      html.setAttribute("data-menu-styles", "light");
+    } else {
+      html.setAttribute("data-theme-mode", "dark");
+      html.setAttribute("data-header-styles", "dark");
+      if (!localStorage.getItem("primaryRGB")) {
+        html.setAttribute("style", "");
+      }
+      html.setAttribute("data-menu-styles", "dark");
+      document.querySelector("#switcher-dark-theme").checked = true;
+      document.querySelector("#switcher-menu-dark").checked = true;
+      document.querySelector("#switcher-header-dark").checked = true;
+      checkOptions();
+      document.querySelector("#switcher-menu-dark").checked = true;
+      document.querySelector("#switcher-header-dark").checked = true;
+      document.querySelector("#switcher-dark-theme").checked = true;
+      document.querySelector("#switcher-background4").checked = false;
+      document.querySelector("#switcher-background3").checked = false;
+      document.querySelector("#switcher-background2").checked = false;
+      document.querySelector("#switcher-background1").checked = false;
+      document.querySelector("#switcher-background").checked = false;
+      localStorage.setItem("Sparicdarktheme", "true");
+      localStorage.setItem("SparicMenu", "dark");
+      localStorage.setItem("SparicHeader", "dark");
+      localStorage.removeItem("bodylightRGB");
+      localStorage.removeItem("bodyBgRGB");
+    }
+  }

@@ -16,7 +16,10 @@
         "vite-plugin-static-copy": "^1.0.6"
     },
     "dependencies": {
+        "@simonwep/pickr": "^1.9.1",
         "apexcharts": "^3.54.0",
-        "remixicon": "^4.3.0"
+        "node-waves": "^0.7.6",
+        "remixicon": "^4.3.0",
+        "simplebar": "^6.2.7"
     }
 }

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"
-        dir="ltr">
+        dir="ltr"
+        data-nav-layout="vertical"
+        data-theme-mode="light"
+        data-header-styles="light"
+        data-menu-styles="light"
+        {{-- loader="disable" --}}
+        data-vertical-style="">
 	<head>
 
 		<!-- META DATA -->
@@ -39,10 +45,12 @@
 
 	<body class="">
 
+        @include('back.layouts.components.offcanvas')
+
 		<!--- GLOBAL LOADER -->
-		<div id="global-loader" >
-			<img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="loader">
-		</div>
+        <div id="loader" class="d-none">
+            <img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="">
+        </div>
 		<!--- END GLOBAL LOADER -->
 
         <!-- PAGE -->
@@ -79,6 +87,8 @@
             @include('back.layouts.components.right-sidebar')
 
             <!-- END RIGHT-SIDEBAR -->
+
+            <div class="scrollToTop" style="display: flex;"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>
 
             <!-- MAIN-FOOTER -->
             @include('back.layouts.components.main-footer')
