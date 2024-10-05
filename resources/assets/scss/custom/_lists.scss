@@ -5,7 +5,7 @@
 	list-style: none;
 
 	li {
-		border-block-end: 1px solid $border;
+		border-block-end: 1px solid $default-border;
 	}
 }
 
@@ -50,7 +50,7 @@
 }
 
 .list-group-transparent.file-manager.file-manager-border .list-group-item {
-	border: 1px solid $border  !important;
+	border: 1px solid $default-border  !important;
 	border-radius: 3px !important;
 }
 
@@ -59,9 +59,9 @@
 	display: block;
 	padding: 0.75rem;
 	margin-block-end: -1px;
-	color: $default-color;
+	color: $default-text-color;
 	background-color: $white;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 }
 
 .listorder {
@@ -69,7 +69,7 @@
 	padding: 0.75rem 1.25rem;
 	margin-block-end: -1px;
 	background-color: $white;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	list-style-type: decimal;
 	list-style-position: inside;
 }
@@ -79,7 +79,7 @@
 	padding: 0.75rem 1.25rem;
 	margin-block-end: -1px;
 	background-color: $white;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	list-style-type: upper-alpha;
 	list-style-position: inside;
 }
@@ -89,7 +89,7 @@
 	padding: 0.75rem 1.25rem;
 	margin-block-end: -1px;
 	background-color: $white;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	list-style-type: circle;
 	list-style-position: inside;
 }
@@ -99,7 +99,7 @@
 	padding: 0.75rem 1.25rem;
 	margin-block-end: -1px;
 	background-color: $white;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	list-style-type: square;
 	list-style-position: inside;
 }
@@ -123,9 +123,9 @@
 
 	&.active {
 		z-index: 2;
-		background-color: $background;
+		background-color: $default-background;
 		color: var(--primary-bg-color);
-		border: 1px solid $border;
+		border: 1px solid $default-border;
 	}
 }
 
@@ -285,7 +285,7 @@
 }
 
 .list-group-item-dark {
-	color: $default-color;
+	color: $default-text-color;
 	background-color: #c6c8ca;
 
 	&.list-group-item-action {
@@ -338,7 +338,7 @@
 		background: rgba(70, 127, 207, 0.1);
 		font-weight: 600;
 		color: #212529;
-		border: 0px solid $border;
+		border: 0px solid $default-border;
 	}
 }
 

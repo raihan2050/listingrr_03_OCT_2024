@@ -8,14 +8,14 @@
 	margin-inline: 0;
 	margin-block-start: 1rem;
 	margin-block-end: 2rem;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	font-size: 0.9375rem;
 	max-height: 40rem;
 	overflow: auto;
 	background: #fcfcfc;
 	pre {
 		margin-block-end: 0;
-		background-color: $background;
+		background-color: $default-background;
 	}
 	.hll {
 		background-color: #ffc;
@@ -116,7 +116,7 @@
 		color: #033;
 	}
 	.ow {
-		color: $default-color;
+		color: $default-text-color;
 	}
 	.w {
 		color: #bbb;

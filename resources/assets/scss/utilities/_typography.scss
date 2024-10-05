@@ -372,11 +372,11 @@ a.text-light {
 	}
 }
 .text-dark {
-	color: $default-color !important;
+	color: $default-text-color !important;
 }
 a.text-dark {
 	&:hover, &:focus {
-		color: $default-color !important;
+		color: $default-text-color !important;
 	}
 }
 .text-body {

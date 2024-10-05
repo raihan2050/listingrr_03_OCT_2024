@@ -252,7 +252,7 @@
 
   .flatpickr-prev-month:hover,
   .flatpickr-next-month:hover {
-    color: $border;
+    color: $default-border;
   }
 
   .flatpickr-prev-month:hover svg,
@@ -614,7 +614,7 @@ span.flatpickr-weekday {
   border-radius: 4px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: $default-color;
+  color: $default-text-color;
   cursor: pointer;
   font-weight: 500;
   width: 14.2857143%;

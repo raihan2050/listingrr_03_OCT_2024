@@ -44,8 +44,8 @@ body.rtl {
 		transform: translate(-100%, 0);
 	}
 	.dropdown-menu-arrow:before {
-		border-inline-start: 0 solid $border;
-		border-inline-end: 1px solid $border;
+		border-inline-start: 0 solid $default-border;
+		border-inline-end: 1px solid $default-border;
 	}
 
 	.ah-actions {

@@ -31,7 +31,7 @@
         line-height: 2em;
         color: #17171b;
         position: relative;
-        border: 1px solid $border;
+        border: 1px solid $default-border;
         margin: 10px 0;
         border-radius: 5px;
         line-height: 30px;
@@ -112,5 +112,5 @@
 .irs-min,
 .irs-max,
 .tree li i {
-	color: $default-color;
+	color: $default-text-color;
 }

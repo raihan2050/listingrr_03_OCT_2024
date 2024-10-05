@@ -526,7 +526,7 @@
         height: 35px;
         padding: 3px 5px;
         width: 35px;
-        border: 1px solid $border;
+        border: 1px solid $default-border;
         background: #f8f8ff;
         border-inline-end: 0;
         color: #858398;
@@ -534,7 +534,7 @@
 
     &.ql-toolbar button:last-child,
     .ql-toolbar button:last-child {
-        border-inline-end: 1px solid $border;
+        border-inline-end: 1px solid $default-border;
 
         /* border-radius: 0 3px 3px 0; */
     }
@@ -1096,7 +1096,7 @@
 }
 
 .ql-toolbar.ql-snow {
-    border: 1px solid $border;
+    border: 1px solid $default-border;
     box-sizing: border-box;
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding: 8px;

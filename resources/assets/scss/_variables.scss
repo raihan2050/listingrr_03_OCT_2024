@@ -80,14 +80,6 @@
 	--black-9:											rgba(0,0,0, 0.9);
 }
 
-$default-color: #495057;
-$default-color2: #454e60;
-$background: #f4f5f7;
-$color: #424e79;
-$border: #eff0f6;
-$azure: #28afd0;
-$lime: #7bd235;
-
 
 /*Font Family*/
 $default-font-family:									var(--default-font-family);
@@ -101,6 +93,7 @@ $default-font-weight:									var(--default-font-weight);
 /*Body & Text colors*/
 $default-body-color: 									var(--default-body-bg-color);
 $default-text-color:									var(--default-text-color);
+$default-text-color2: #454e60;
 
 /*Default Background Color*/
 $default-background: 									var(--default-background);
@@ -201,7 +194,6 @@ $gray-8:												var(--gray-8);
 $gray-9:												var(--gray-9);
 
 /*white set*/
-$white-0:											  rgba(255, 255, 255, 0);
 $white-1:												var(--white-1);
 $white-2:												var(--white-2);
 $white-3:												var(--white-3);
@@ -211,10 +203,6 @@ $white-6:												var(--white-6);
 $white-7:												var(--white-7);
 $white-8:												var(--white-8);
 $white-9:												var(--white-9);
-$white-05:												rgba(255, 255, 255, 0.05);
-$white-08:												rgba(255, 255, 255, 0.08);
-$white-09:												rgba(255, 255, 255, 0.09);
-$white-75:												rgba(255, 255, 255, 0.075);
 
 /*black set*/
 $black-1:												var(--black-1);
@@ -226,21 +214,6 @@ $black-6:												var(--black-6);
 $black-7:												var(--black-7);
 $black-8:												var(--black-8);
 $black-9:												var(--black-9);
-$black-05:												rgba(0, 0, 0, 0.05);
-$black-01:												rgba(0, 0, 0, 0.01);
-
-/*shadow variables*/
-$shadow: 0 6px 12px rgba(0, 0, 0, .10);
-$bg-hover: #f9fcff;
-
-/* dark variales */
-$dark-theme: var(--dark-theme);
-$dark-theme2: var(--dark-theme2);
-$dark-body: var(--dark-body);
-$dark-color: var(--dark-color);
-$dark-color2: var(--dark-color2);
-$dark-border: var(--dark-border);
-$dark-shadow: var(--dark-shadow);
 
 /* dark mode */
 [data-theme-mode="dark"] {
@@ -301,3 +274,19 @@ $dark-shadow: var(--dark-shadow);
 	--black-8:											rgba(255,255,255,0.8);
 	--black-9:											rgba(255,255,255,0.9);
 }
+
+/* dark variales */
+$dark-theme: var(--dark-theme);
+$dark-theme2: var(--dark-theme2);
+$dark-body: var(--dark-body);
+$dark-color: var(--dark-color);
+$dark-color2: var(--dark-color2);
+$dark-border: var(--dark-border);
+$dark-shadow: var(--dark-shadow);
+
+$azure: #28afd0;
+$lime: #7bd235;
+
+/*shadow variables*/
+$shadow: 0 6px 12px rgba(0, 0, 0, .10);
+$bg-hover: #f9fcff;

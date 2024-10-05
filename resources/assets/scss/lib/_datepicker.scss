@@ -31,7 +31,7 @@
 		border-start-end-radius: 3px;
 		.ui-datepicker-next, .ui-datepicker-prev {
 			text-indent: -99999px;
-			color: $default-color;
+			color: $default-text-color;
 			inset-block-start: 1px;
 		}
 		.ui-datepicker-next::before, .ui-datepicker-prev::before {

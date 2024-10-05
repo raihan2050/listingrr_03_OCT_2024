@@ -35,7 +35,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    border: 1px solid $border;
+    border: 1px solid $default-border;
 
     .month {
       float: left;
@@ -103,7 +103,7 @@
         font-size: 16px;
 
         &:last-child {
-          border-inline-end: 1px solid $border;
+          border-inline-end: 1px solid $default-border;
         }
       }
     }
@@ -135,7 +135,7 @@
           box-sizing: border-box;
           text-align: center;
           font-size: 14px;
-          // color: $default-color2;
+          // color: $default-text-color2;
         }
       }
 
@@ -158,7 +158,7 @@
       .empty:last-child,
       .my-empty:last-child,
       .my-adjacent-month:last-child {
-        border-block-end: 1px solid $border;
+        border-block-end: 1px solid $default-border;
       }
 
       &:last-child {
@@ -167,7 +167,7 @@
         .my-day,
         .empty,
         .my-empty {
-          border-block-end: 1px solid $border;
+          border-block-end: 1px solid $default-border;
         }
       }
     }

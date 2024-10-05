@@ -8,8 +8,8 @@
 	--dark-theme2: rgb(10, 26, 49);
 	--dark-body: #001027;
 	--dark-color: #edf0f5;
-	--dark-color2: rgba(255, 255, 255, 0.4); 
-	--dark-border: rgba(255, 255, 255, 0.1);                            
+	--dark-color2: rgba(255, 255, 255, 0.4);
+	--dark-border: rgba(255, 255, 255, 0.1);
 	--dark-shadow: rgba(38, 43, 72, 0.11);
 	--lightpink-red: #ff7088;
 	--lightgreen: #26eda2;
@@ -82,9 +82,9 @@ body {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 1.5;
-	color: $default-color;
+	color: $default-text-color;
 	text-align: start;
-	background: $background;
+	background: $default-background;
 
 	* {
 		&::-webkit-scrollbar {
@@ -550,13 +550,13 @@ pre {
 	}
 
 	.badge {
-		border: 1px solid $default-color;
+		border: 1px solid $default-border;
 	}
 
 	.table,
 	.text-wrap table {
 		border-collapse: collapse !important;
-		color: $default-color;
+		color: $default-text-color;
 	}
 
 	.table td,
@@ -570,7 +570,7 @@ pre {
 	.text-wrap table th,
 	.table-bordered td,
 	.text-wrap table td {
-		border: 1px solid $border !important;
+		border: 1px solid $default-border !important;
 	}
 }
 
@@ -649,11 +649,11 @@ pre code {
 
 hr {
 	margin-block: 2rem;
-	border-block-start: 1px solid $border  !important;
+	border-block-start: 1px solid $default-border  !important;
 }
 
 pre {
-	color: $azure;
+	color: $default-text-color;
 	padding: 1rem;
 	overflow: auto;
 	font-size: 85%;

@@ -393,7 +393,7 @@ div.online-status .status.online {
 		align-content: center;
 	}
 	.search {
-		color: $default-color !important;
+		color: $default-text-color !important;
 		&:focus {
 			box-shadow: none !important;
 			outline: 0px !important;
@@ -441,7 +441,7 @@ div.online-status .status.online {
 	}
 
 	.list-group .list-group-item a{
-		color: $default-color;
+		color: $default-text-color;
 	}
 }
 .chat-box-single-line {
@@ -482,7 +482,7 @@ user_info {
 	margin-block-start: auto;
 	margin-block-end: auto;
 	margin-inline-start: 10px;
-	background-color: $background;
+	background-color: $default-background;
 	padding: 10px;
 	position: relative;
 }

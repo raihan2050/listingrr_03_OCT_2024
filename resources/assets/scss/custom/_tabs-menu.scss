@@ -6,10 +6,10 @@
 	margin-inline-end: 0;
 	margin-inline-start: 14px;
 	display: block;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	line-height: 17px;
 	border-radius: 5px;
-	color: $default-color;
+	color: $default-text-color;
 }
 
 .tabs-menu1 ul li a {
@@ -21,7 +21,7 @@
 
 .tabs-menu-body {
 	padding: 15px;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 
 	p:last-child {
 		margin-block-end: 0;
@@ -30,7 +30,7 @@
 
 .tab-menu-heading {
 	padding: 20px;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	border-block-end: 0;
 }
 
@@ -41,30 +41,30 @@
 
 	>ul {
 		li {
-			border: 1px solid $border;
-			border-block-start: 1px solid $border;
+			border: 1px solid $default-border;
+			border-block-start: 1px solid $default-border;
 		}
 
-		border-block-end: 1px solid $border;
+		border-block-end: 1px solid $default-border;
 	}
 
 	&.right_side {
 		.content_wrapper {
-			border: 1px solid $border;
+			border: 1px solid $default-border;
 		}
 
 		>ul {
 			li {
 				&.active {
-					border-color: $border;
+					border-color: $default-border;
 				}
 
 				&:after {
-					background: $border;
+					background: $default-border;
 				}
 			}
 
-			border-block-end: 1px solid $border;
+			border-block-end: 1px solid $default-border;
 		}
 	}
 }
@@ -86,7 +86,7 @@
 
 .tab-bordered .tab-pane {
 	padding: 15px !important;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	margin-block-start: -1px;
 }
 
@@ -109,7 +109,7 @@
 .tabs-style6{
 	>.panel-head > .nav-tabs{
 	  padding: 0.25rem !important;
-	  background: $background;
+	  background: $default-background;
 	  border-radius: 5px;
 	  border-block-end: 0;
 
@@ -121,7 +121,7 @@
 		padding: 0.25rem 1rem;
 		border-radius: 30px;
 		border: none;
-		color: $default-color2;
+		color: $default-text-color2;
   
 		&:not(.active):hover{
 		  color: $primary;

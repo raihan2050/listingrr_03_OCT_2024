@@ -274,7 +274,7 @@ img {
 .gallery a img {
 	float: left;
 	height: auto;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	-webkit-transition: -webkit-transform .15s ease;
 	-moz-transition: -moz-transform .15s ease;
 	-o-transition: -o-transform .15s ease;
@@ -369,7 +369,7 @@ img {
 	margin-block-end: 1.5rem;
 
 	a img {
-		border: 1px solid $border;
+		border: 1px solid $default-border;
 	}
 }
 

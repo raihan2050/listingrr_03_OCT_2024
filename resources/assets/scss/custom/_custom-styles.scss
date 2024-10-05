@@ -1697,7 +1697,7 @@ label.control-label {
 
 .defaultheader {
 	.input-icon-addon {
-		color: $default-color !important;
+		color: $default-text-color !important;
 	}
 
 	.form-control.header-search::placeholder {
@@ -1894,7 +1894,7 @@ a.chip:hover {
 	height: 1.75rem;
 	border: 1px solid rgba(107, 122, 144, 0.3);
 	color: $white;
-	box-shadow: 0 1px 2px 0 $black-05;
+	box-shadow: 0 1px 2px 0 $black-5;
 	border-radius: 4px;
 
 	&:before {
@@ -2023,13 +2023,13 @@ ul {
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.5;
-	color: $default-color;
+	color: $default-text-color;
 	opacity: 0.5;
 	transition: 0.3s color;
 
 	&:hover,
 	&:focus {
-		color: $default-color;
+		color: $default-text-color;
 		text-decoration: none;
 		opacity: 0.75;
 	}
@@ -3760,7 +3760,7 @@ a {
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 21px;
-		color: $default-color;
+		color: $default-text-color;
 		margin: 0px;
 		float: left;
 		width: 100%;
@@ -3797,7 +3797,7 @@ a {
 	inset-block-end: -30px;
 	line-height: 30px;
 	padding: 5px;
-	color: $default-color;
+	color: $default-text-color;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -3941,7 +3941,7 @@ div {
 
 .projects-list h5 {
 	font-size: 1.1rem;
-	// color: $default-color;
+	// color: $default-text-color;
 }
 
 .dash2 img {
@@ -3960,7 +3960,7 @@ div {
 		margin-block-start: 0;
 		margin-block-end: 20px;
 		position: relative;
-		color: $default-color;
+		color: $default-text-color;
 
 		&:after {
 			content: "";
@@ -3986,7 +3986,7 @@ div {
 			margin-block-start: 1em;
 			display: block;
 			line-height: 1em;
-			color: $default-color;
+			color: $default-text-color;
 		}
 	}
 }
@@ -5393,10 +5393,10 @@ body.boxed {
 	width: 30px;
 	height: 30px;
 	display: block;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	line-height: 30px;
 	border-radius: 50%;
-	color: $default-color;
+	color: $default-text-color;
 
 	&:hover {
 		background-color: $primary;
@@ -5909,7 +5909,7 @@ body.boxed {
 		width: 1px;
 		inset-block-start: 1px;
 		inset-block-end: 0px;
-		background-color: $border;
+		background-color: $default-border;
 	}
 }
 .sales-activity {
@@ -5965,7 +5965,7 @@ body.boxed {
 	border-radius: 6px;
 }
 .amount-drop-down {
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 }
 .form-floating input {
 	&.form-control {
@@ -5989,7 +5989,7 @@ body.boxed {
 
 	&:before {
 		content: " ";
-		background: $border;
+		background: $default-border;
 		display: inline-block;
 		position: absolute;
 		inset-inline-start: 10px;
@@ -6033,7 +6033,7 @@ body.boxed {
 }
 .activity {
 	position: relative;
-	border-inline-start: 1px solid $border;
+	border-inline-start: 1px solid $default-border;
 	margin-inline: 20px;
 
 	.img-activity {
@@ -6124,7 +6124,7 @@ body.boxed {
 		border-end-start-radius: 3px;
 	}
 	.btn-white {
-		border: 1px solid $border !important;
+		border: 1px solid $default-border !important;
 	}
 	input {
 		float: left;
@@ -6233,7 +6233,7 @@ body.boxed {
 	display: inline-table;
 	margin: 20px;
 	position: relative;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	border-radius: 5px;
 
 	&:hover {
@@ -6386,10 +6386,10 @@ div.dt-button-collection {
 div.dt-button-collection div.dropdown-menu {
 	display: block;
 	z-index: 2002;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	.dropdown-item {
 		background: $white;
-		color: $default-color;
+		color: $default-text-color;
 		&:hover {
 			background-color: $primary-02;
 			color: $primary;
@@ -6417,7 +6417,7 @@ div.dt-button-info {
     height: 1px;
     margin: 30px 0;
     overflow: hidden;
-    background-color: $border;
+    background-color: $default-border;
 }
 ::selection {
 	background-color: $primary;

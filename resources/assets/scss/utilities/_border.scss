@@ -122,23 +122,23 @@
 /*------Borders -------*/
 
 .border {
-	border: 1px solid $border  !important;
+	border: 1px solid $default-border  !important;
 }
 
 .border-top {
-	border-block-start: 1px solid $border  !important;
+	border-block-start: 1px solid $default-border  !important;
 }
 
 .border-bottom {
-	border-block-end: 1px solid $border  !important;
+	border-block-end: 1px solid $default-border  !important;
 }
 
 .border-start {
-	border-inline-start: 1px solid $border  !important;
+	border-inline-start: 1px solid $default-border  !important;
 }
 
 .border-end {
-	border-inline-end: 1px solid $border  !important;
+	border-inline-end: 1px solid $default-border  !important;
 }
 
 .border-0 {

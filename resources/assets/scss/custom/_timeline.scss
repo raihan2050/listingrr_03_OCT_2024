@@ -30,7 +30,7 @@
 		position: absolute;
 		inset-block: 0;
 		inset-inline-start: 32px;
-		border: 1px dashed $border;
+		border: 1px dashed $default-border;
 		background: rgba(152, 166, 173, 0.3);
 		margin: 0;
 		border-radius: 2px;
@@ -63,7 +63,7 @@
 		}
 		>.timelineleft-item {
 			-webkit-box-shadow: 0 1px 1px rgba(107, 122, 144, 0.3);
-			border: 1px solid $border;
+			border: 1px solid $default-border;
     		box-shadow: 0 4px 25px 0 rgb(168 180 208 / 10%);
 			margin-block-start: 0;
 			background: $white;
@@ -82,7 +82,7 @@
 				.timelineleft-header {
 					margin: 0;
 					color: #555;
-					border-block-end: 1px solid $border;
+					border-block-end: 1px solid $default-border;
 					padding: .75rem 1.25rem;
 					font-size: 16px;
 					line-height: 1.1;

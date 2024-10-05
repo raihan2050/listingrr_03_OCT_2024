@@ -32,7 +32,7 @@
 .news-ticker {
 	position: fixed;
 	z-index: 1054;
-	border-block: 1px solid $border !important;
+	border-block: 1px solid $default-border !important;
 	inset-inline-start: 0;
 	inset-block-start: 71px;
 	inset-inline-end: 0;
@@ -83,7 +83,7 @@
 			position: absolute;
 			width: 100%;
 			display: none;
-			color: $default-color;
+			color: $default-text-color;
 
 			a {
 				white-space: nowrap;

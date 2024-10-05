@@ -39,14 +39,14 @@
 .expanel {
 	margin-block-end: 20px !important;
 	background-color: $white  !important;
-	border: 1px solid $border !important;
-	-webkit-box-shadow: 0 1px 1px $black-01  !important;
-	box-shadow: 0 1px 1px $black-01  !important;
+	border: 1px solid $default-border !important;
+	-webkit-box-shadow: 0 1px 1px $black-1  !important;
+	box-shadow: 0 1px 1px $black-1  !important;
 }
 
 .expanel-default>.expanel-heading {
-	background-color: $background !important;
-	border-color: 1px solid $border !important;
+	background-color: $default-background !important;
+	border-color: 1px solid $default-border !important;
 }
 
 .expanel-heading {
@@ -56,7 +56,7 @@
 .expanel-footer {
 	padding: 10px 15px !important;
 	background-color: #f9f9f9 !important;
-	margin-block-start: 1px solid $border !important;
+	margin-block-start: 1px solid $default-border !important;
 }
 
 .expanel-body {
@@ -122,7 +122,7 @@
 .panel-footer {
 	padding: 10px 15px;
 	background-color: #f7f7f7;
-	margin-block-start: 1px solid $border;
+	margin-block-start: 1px solid $default-border;
 }
 
 .panel.price .btn {
@@ -133,7 +133,7 @@
 .panel-group .panel {
 	border-radius: 0;
 	box-shadow: none;
-	border-color: $border;
+	border-color: $default-border;
 }
 
 .panel-default>.panel-heading {
@@ -154,7 +154,7 @@
 }
 
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 }
 
 .panel>.list-group {
@@ -171,9 +171,9 @@
 }
 
 .panel-default .list-group-item.active {
-	color: $default-color;
-	background-color: $background;
-	border-color: $border;
+	color: $default-text-color;
+	background-color: $default-background;
+	border-color: $default-border;
 }
 
 .panel-primary .list-group-item.active {
@@ -257,8 +257,8 @@
 
 	&:hover,
 	&:focus {
-		color: $default-color;
-		background-color: $background;
+		color: $default-text-color;
+		background-color: $default-background;
 		border-color: #f9f9f9;
 	}
 }
@@ -313,7 +313,7 @@
 }
 
 .panel-group1 .panel-body {
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 }
 
 .panel-title1 a {

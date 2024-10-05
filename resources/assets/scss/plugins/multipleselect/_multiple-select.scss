@@ -14,7 +14,7 @@
     width: 100%;
     height: calc(2.25rem + 2px);
     padding: .375rem .75rem;
-    background-color: $background;
+    background-color: $default-background;
     background-clip: padding-box;
     border: 1px solid rgba(107, 122, 144, 0.1);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;

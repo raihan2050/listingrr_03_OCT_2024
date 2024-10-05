@@ -36,7 +36,7 @@
 	line-height: 20px;
 	font-size: 20px !important;
 	&:hover {
-		color: $default-color;
+		color: $default-text-color;
 	}
 }
 .selectize-dropdown.plugin-optgroup_columns {
@@ -85,7 +85,7 @@
 				box-sizing: border-box;
 
 				&:hover {
-					background: $black-05;
+					background: $black-5;
 				}
 			}
 			&.active .remove {

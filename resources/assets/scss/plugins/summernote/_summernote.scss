@@ -333,7 +333,7 @@
 
     &.note-airframe,
     &.note-frame {
-        border: 1px solid $border;
+        border: 1px solid $default-border;
     }
 
     &.note-airframe.codeview .note-editing-area .note-editable,
@@ -374,7 +374,7 @@
         font-family: Menlo, Monaco, monospace, sans-serif;
         font-size: 14px;
         color: #4a4952;
-        background-color: $background;
+        background-color: $default-background;
         resize: none;
         outline: none;
         -ms-box-sizing: border-box;
@@ -995,12 +995,12 @@
 
 .note-editor.note-frame.panel.panel-default .panel-heading {
     background-color: $white;
-    border-block-end: 1px solid $border;
+    border-block-end: 1px solid $default-border;
 }
 
 .note-btn.btn-default {
     background-color: $white;
-    border-color: $border;
+    border-color: $default-border;
 }
 
 .note-editor {

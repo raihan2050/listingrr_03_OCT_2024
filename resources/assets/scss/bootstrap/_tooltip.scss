@@ -90,7 +90,7 @@
 	border-inline-width: 0.4rem;
 	border-block-start-width: 0.4rem;
 	border-block-end-width: 0;
-	border-block-start-color: $default-color;
+	border-block-start-color: $default-text-color;
 }
 .bs-tooltip-end, .bs-tooltip-auto[x-placement^="right"] {
 	padding: 0 0.4rem;
@@ -105,7 +105,7 @@
 	border-block-width: 0.4rem;
 	border-inline-end-width: 0.4rem;
 	border-inline-start-width: 0;
-	border-inline-end-color: $default-color;
+	border-inline-end-color: $default-text-color;
 }
 .bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"] {
 	padding: 0.4rem 0;
@@ -116,7 +116,7 @@
 .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .tooltip-arrow::before {
     bottom: 0;
     border-width: 0 0.4rem 0.4rem;
-    border-block-end-color: $default-color;
+    border-block-end-color: $default-text-color;
 }
 .bs-tooltip-start, .bs-tooltip-auto[x-placement^="left"] {
 	padding: 0 0.4rem;
@@ -131,7 +131,7 @@
 	border-block-width: 0.4rem;
 	border-inline-end-width: 0;
 	border-inline-start-width: 0.4rem;
-	border-inline-start-color: $default-color;
+	border-inline-start-color: $default-text-color;
 }
 .tooltip-inner {
 	max-width: 200px;

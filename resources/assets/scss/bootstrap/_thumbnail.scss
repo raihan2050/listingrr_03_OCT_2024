@@ -6,7 +6,7 @@
 	margin-block-end: 20px;
 	line-height: 1.42857143;
 	background-color: $white;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	-webkit-transition: border .2s ease-in-out;
 	-o-transition: border .2s ease-in-out;
 	transition: border .2s ease-in-out;
@@ -49,7 +49,7 @@
 			display: block;
 			position: relative;
 			color: #6b6f80;
-			border: 1px solid $border;
+			border: 1px solid $default-border;
 			transition: all 500ms ease-in-out;
 			border-radius: 5px;
 		}
@@ -98,7 +98,7 @@
 	}
 
 	>li>a:hover .duration {
-		background-color: $default-color;
+		background-color: $default-text-color;
 	}
 }
 

@@ -6,7 +6,7 @@
 }
 
 .footer {
-	border-block-start: 1px solid $border;
+	border-block-start: 1px solid $default-border;
 	font-size: 0.875rem;
 	padding: 1.25rem 0;
 	background-color: $white;
@@ -67,12 +67,12 @@
 
 	img {
 		width: 80px;
-		border: 1px solid $border;
+		border: 1px solid $default-border;
 		padding: 2px;
 		height: 80px;
 
 		&:hover {
-			color: $border;
+			color: $default-border;
 			opacity: .6;
 		}
 	}

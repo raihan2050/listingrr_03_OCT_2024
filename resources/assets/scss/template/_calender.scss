@@ -25,12 +25,12 @@
 	.clndr {
 		.clndr-table {
 			.header-days .header-day {
-				border-inline-start: 1px solid $border;
+				border-inline-start: 1px solid $default-border;
 			}
 			tr {
 				.empty, .adjacent-month, .my-empty, .my-adjacent-month {
-					border-inline-start: 1px solid $border;
-					border-block-start: 1px solid $border;
+					border-inline-start: 1px solid $default-border;
+					border-block-start: 1px solid $default-border;
 					background: #f9f9f9;
 				}
 				.day {
@@ -40,10 +40,10 @@
 					// &.event:hover, &.my-event:hover {
 					// 	background: #f9f9f9 !important;
 					// }
-					border-inline-start: 1px solid $border;
-					border-block-start: 1px solid $border;
+					border-inline-start: 1px solid $default-border;
+					border-block-start: 1px solid $default-border;
 					&:last-child {
-						border-inline-end: 1px solid $border;
+						border-inline-end: 1px solid $default-border;
 					}
 					// &:hover {
 					// 	background: #f9f9f9;

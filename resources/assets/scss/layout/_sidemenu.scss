@@ -186,7 +186,7 @@
 //     display: -ms-flexbox;
 //     display: flex;
 //     z-index: 1055 !important;
-//     border-block-end: 1px solid $border;
+//     border-block-end: 1px solid $default-border;
 //     background: $white;
 //     transition: padding-inline-start 0.3s ease;
 // }
@@ -251,7 +251,7 @@
 //     position: fixed;
 //     inset-block: 0;
 //     inset-inline-start: 0;
-//     color: $default-color;
+//     color: $default-text-color;
 //     z-index: 1055;
 //     background: $white;
 //     -webkit-box-shadow: 0 8px 24px rgba(168, 180, 208, .1);
@@ -259,7 +259,7 @@
 //     -webkit-transition: inset-inline-start 450ms ease, width 450ms ease;
 //     transition: inset-inline-start 450ms ease, width 450ms ease;
 //     -o-transition: inset-inline-start 450ms ease, width 450ms ease;
-//     border-inline-end: 1px solid $border;
+//     border-inline-end: 1px solid $default-border;
 
 //     &::-webkit-scrollbar {
 //         width: 6px;
@@ -366,7 +366,7 @@
 //     -webkit-transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
 //     -o-transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
 //     transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
-//     color: $default-color2;
+//     color: $default-text-color2;
 //     margin: 2px 0px;
 //     white-space: nowrap;
 
@@ -879,8 +879,8 @@
 
 // .side-header {
 //     display: flex;
-//     border-block-end: 1px solid $border;
-//     border-inline-end: 1px solid $border;
+//     border-block-end: 1px solid $default-border;
+//     border-inline-end: 1px solid $default-border;
 //     padding: 19px 17px;
 //     align-items: center;
 //     -webkit-transition: inset-inline-start 0.3s ease, width 450ms ease;
@@ -1363,7 +1363,7 @@
 //                 background: $white;
 //                 transition: none !important;
 //                 box-shadow: 8px 8px 17px rgb(0 0 0 / 5%);
-//                 border: 1px solid $border;
+//                 border: 1px solid $default-border;
 
 //                 .sidemenu-list {
 //                     margin-block-start: 10px;
@@ -1556,7 +1556,7 @@
 //                 background: $white;
 //                 transition: none !important;
 //                 box-shadow: 8px 8px 17px rgb(0 0 0 / 10%);
-//                 border: 1px solid $border;
+//                 border: 1px solid $default-border;
 //             }
 //         }
 
@@ -1658,7 +1658,7 @@
 //             display: block !important;
 //             font-size: 14px;
 //             font-weight: 500;
-//             border-block-end: 1px solid $border;
+//             border-block-end: 1px solid $default-border;
 //             padding: 10px 20px !important;
 //             margin-block-end: 6px;
 //         }
@@ -1776,7 +1776,7 @@
 //                 z-index: 999;
 //                 inset-inline-start: 80px;
 //                 width: 200px;
-//                 border: 1px solid $border;
+//                 border: 1px solid $default-border;
 //                 transition: none !important;
 //                 display: block !important;
 //                 box-shadow: none;
@@ -2042,7 +2042,7 @@
 //                 border-radius: 0 !important;
 //                 border-block-start: 0;
 //                 overflow:hidden scroll;
-//                 border-inline-end: 1px solid $border;
+//                 border-inline-end: 1px solid $default-border;
 //             }
 
 //             .side-menu .sub-category {
@@ -2126,7 +2126,7 @@
 //                 margin: 3px;
 //                 font-size: 13px;
 //                 text-align: center;
-//                 border: 1px solid $border !important;
+//                 border: 1px solid $default-border !important;
 //                 color: $color !important;
 //             }
 

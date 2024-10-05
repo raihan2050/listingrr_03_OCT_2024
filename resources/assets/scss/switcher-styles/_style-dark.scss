@@ -4,7 +4,7 @@ body.dark-mode {
     background: $dark-body;
 
     *::-webkit-scrollbar-thumb {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 }
 .dark-mode {
@@ -21,7 +21,7 @@ body.dark-mode {
         background-color: $dark-theme2 !important;
     }
     .list-group-item:hover {
-        background: $white-05;
+        background: $white-5;
     }
     input {
         background: $dark-body;
@@ -61,7 +61,7 @@ body.dark-mode {
     }
 
     .accordion-button:not(.collapsed), .panel-heading {
-        background-color: $white-05;
+        background-color: $white-5;
         box-shadow: var(--dark-border);
     }
     border-success {
@@ -109,7 +109,7 @@ body.dark-mode {
     }
 
     .bg-primary-light {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .form-control::placeholder {
@@ -161,12 +161,12 @@ body.dark-mode {
 
     .sidebar {
         .sidebar-icon {
-            background-color: $white-05;
+            background-color: $white-5;
         }
     }
 
     .avatar-status {
-        border: 2px solid $white-05;
+        border: 2px solid $white-5;
     }
 
     .blockquote-footer {
@@ -645,7 +645,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
             color: $dark-color2;
 
             &:hover {
-                background-color: $white-05;
+                background-color: $white-5;
                 color: $dark-color;
 
                 &:first-child {
@@ -710,7 +710,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .custom-switch-indicator {
-        background-color: $white-05;
+        background-color: $white-5;
 
         &:before {
             background-color: $dark-theme;
@@ -860,7 +860,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         color: $dark-color;
 
         &:hover {
-            background: $white-05;
+            background: $white-5;
         }
     }
 
@@ -1290,13 +1290,13 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
     .dropdown-item:hover,
     .dropdown-item:focus {
-        background-color: $white-05;
+        background-color: $white-5;
         color: var(--primary-bg-color);
     }
 
     #world-map-markers {
         path {
-            fill: $white-05;
+            fill: $white-5;
             stroke: $dark-theme;
         }
         circle {
@@ -1306,7 +1306,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .jvectormap-zoomin, .jvectormap-zoomout, .jvectormap-goback {
-        background: $white-05;
+        background: $white-5;
         color: $dark-color;
     }
 
@@ -1354,14 +1354,14 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         border-block-start-color: $dark-border;
     }
     .table-striped tbody tr:nth-of-type(odd) {
-        background: $white-05;
+        background: $white-5;
     }
 
     div.dt-button-collection div.dropdown-menu {
         .dropdown-item {
             color: $dark-color;
             &:hover {
-                background-color: $white-05 !important;
+                background-color: $white-5 !important;
                 color: $primary;
             }
         }
@@ -1378,7 +1378,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .progress {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .activity {
@@ -1630,7 +1630,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .chat .msg_cotainer {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .chat .msg_cotainer:before {
@@ -1698,7 +1698,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .bg-light {
-        background-color: $white-05 !important;
+        background-color: $white-5 !important;
     }
 
     .navbar-light .navbar-brand {
@@ -1754,7 +1754,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     .list-group-item-action:hover,
     .list-group-item-action:focus {
         color: $dark-color;
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .list-group-transparent .list-group-item.active {
@@ -1786,7 +1786,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .fc .fc-daygrid-day.fc-day-today {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .fc-timegrid-event-harness-inset .fc-timegrid-event,
@@ -1805,7 +1805,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .fc .fc-list-event:hover td {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .fc-h-event {
@@ -1927,7 +1927,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     .alert-default {
         color: $white;
         border-color: $dark-border;
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .popover-header {
@@ -1954,11 +1954,11 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .selectgroup-input:checked+.selectgroup-button, .selectgroup-input:focus+.selectgroup-button {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .card-pay .tabs-menu li a {
-        background: $white-05;
+        background: $white-5;
     }
 
     .ff_fileupload_wrap .ff_fileupload_dropzone {
@@ -2006,11 +2006,11 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
     .ff_fileupload_wrap table.ff_fileupload_uploads td.ff_fileupload_actions button {
         border-color: $dark-border;
-        background-color: $white-05;
+        background-color: $white-5;
         color: $dark-color;
 
         &:hover {
-            background-color: $white-05;
+            background-color: $white-5;
             color: $dark-color;
             border-color: $dark-border;
         }
@@ -2035,7 +2035,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .select2-container--default .select2-selection--multiple .select2-selection__choice {
-        background-color: $white-05 !important;
+        background-color: $white-5 !important;
         border-color: $dark-border !important;
     }
 
@@ -2230,11 +2230,11 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .sw-theme-dots > ul.step-anchor > li > a:before {
-        background: $white-05;
+        background: $white-5;
     }
 
     .sw-theme-dots > ul.step-anchor:before {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .sw-theme-dots > ul.step-anchor > li.active > a:after {
@@ -2280,12 +2280,12 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         .richText-toolbar {
             border-block-end-color: $dark-border;
             border-block-start-color: $dark-border;
-            background: $white-05;
+            background: $white-5;
             border-block-end: 1px solid $dark-border;
 
             ul li a {
                 border-inline-end: $dark-border solid 1px !important;
-                background-color: $white-05 !important;
+                background-color: $white-5 !important;
 
                 &:hover {
                     background-color: $dark-theme !important;
@@ -2409,7 +2409,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .ql-snow .ql-tooltip {
-        background-color: $white-05;
+        background-color: $white-5;
         border: 1px solid $dark-border;
         color: $dark-color;
         box-shadow: 0px 0px 5px $dark-shadow;
@@ -2480,7 +2480,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     pre {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .highlight {
@@ -2515,7 +2515,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .tree li.branch {
-        background: $white-05;
+        background: $white-5;
     }
 
     .tree li a {
@@ -2549,7 +2549,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .dataTables_wrapper .selected {
-        background: $white-05;
+        background: $white-5;
     }
 
     .html-code {
@@ -2586,11 +2586,11 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .breadcrumb1 {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .breadcrumb-arrow {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .breadcrumb-arrow li span {
@@ -2617,7 +2617,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .footer .social .social-icon {
-        background: $white-05;
+        background: $white-5;
         border-color: $dark-border;
         i {
             color: $dark-color;
@@ -2630,7 +2630,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
     .panel-default .list-group-item.active {
         color: $dark-color;
-        background-color: $white-05;
+        background-color: $white-5;
         border-color: $dark-border;
     }
 
@@ -2742,7 +2742,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         color: $dark-color;
         border-color: $dark-border;
         &::after {
-            border-inline-end-color: $white-05;
+            border-inline-end-color: $white-5;
         }
     }
 
@@ -3133,7 +3133,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         color: $white;
     }
     .btn-default.dropdown-toggle:after {
-        color: $default-color;
+        color: $default-text-color;
     }
 }
 
@@ -3161,19 +3161,19 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .notification .notification-body {
-        background-color: $white-05;
+        background-color: $white-5;
 
         &:before {
-          border-inline-end-color: $white-05;
+          border-inline-end-color: $white-5;
         }
     }
 
     .notification .notification-icon a {
-        background: $white-05;
+        background: $white-5;
     }
 
     .cal1 .clndr .clndr-table tr .adjacent-month {
-        background: $white-05;
+        background: $white-5;
     }
 
     .cal1 .clndr .clndr-table .header-days .header-day {
@@ -3185,11 +3185,11 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .cal1 .clndr .clndr-table tr .day:hover {
-        // background: $white-05;
+        // background: $white-5;
     }
 
     .cal1 .clndr .clndr-table tr .day.event {
-        // background: $white-05;
+        // background: $white-5;
     }
 
     .cal1 .clndr .clndr-table tr .day.event:hover {
@@ -3235,7 +3235,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .fc-theme-standard .fc-list-day-cushion {
-        background-color: $white-05;
+        background-color: $white-5;
     }
     .fc-direction-ltr .fc-list-day-text, .fc-direction-rtl .fc-list-day-text {
         color: $white;
@@ -3253,7 +3253,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
     .chat abbr.timestamp,
     .msg_cotainer_send {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .main-footer {
@@ -3277,7 +3277,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         background: transparent;
         border-color: rgba(255, 255, 255, 0.1);
         &:hover {
-            background-color: $white-05;
+            background-color: $white-5;
         }
 
         &:not(:disabled):not(.disabled) {
@@ -3371,7 +3371,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .list-group-item.active {
-        background-color: $white-05;
+        background-color: $white-5;
         border: 1px solid $dark-border;
     }
 
@@ -3429,15 +3429,15 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
         &:hover,
         &:focus {
-            color: $default-color;
-            background-color: $background;
+            color: $default-text-color;
+            background-color: $default-background;
             border-color: #f9f9f9;
         }
     }
 
     #form .list-group-item+.list-group-item {
         &:hover, &:focus {
-            background-color: $white-05;
+            background-color: $white-5;
         }
     }
 
@@ -3576,7 +3576,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
     .email-app .toolbar .btn {
         border: 1px solid $dark-border;
-        background: $white-05;
+        background: $white-5;
         color: $white;
 
         &:hover {
@@ -3611,7 +3611,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .flatpickr-calendar.arrowBottom:before {
-        border-block-start-color: $white-05;
+        border-block-start-color: $white-5;
     }
 
     .flatpickr-weekwrapper span.flatpickr-day {
@@ -3619,7 +3619,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .flatpickr-calendar.arrowBottom:after {
-        border-block-start-color: $white-05;
+        border-block-start-color: $white-5;
     }
 
     .ckbox input[type=checkbox] {
@@ -3746,14 +3746,14 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
     .note-editor {
         .btn-default:not(:disabled):not(.disabled):active {
-            background-color: $white-05;
+            background-color: $white-5;
         }
     }
 
     .note-btn {
 
         &.btn-default:not(:disabled):not(.disabled).active {
-            background-color: $white-05;
+            background-color: $white-5;
         }
     }
 
@@ -3780,7 +3780,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .acc-1 .accordion-header {
-        background: $white-05;
+        background: $white-5;
     }
 
     .acc-1 .accordion-body {
@@ -3866,15 +3866,15 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .irs-line-mid, .irs-line-left, .irs-line-right {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .irs-min, .irs-max {
-        background: $white-05;
+        background: $white-5;
     }
 
     .irs-modern .irs-slider {
-        background-color: $white-05;
+        background-color: $white-5;
 
         &::before {
            background-color: $black;
@@ -3894,7 +3894,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         box-shadow: $dark-shadow;
     }
     .apexcharts-theme-light .apexcharts-menu-item:hover {
-        background: $white-05;
+        background: $white-5;
     }
 
     .irs-grid-pol {
@@ -3902,7 +3902,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
     }
 
     .heading-inverse {
-        background-color: $white-05;
+        background-color: $white-5;
     }
 
     .tab_wrapper {
@@ -3924,17 +3924,17 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
 
     #marketChart {
         .apexcharts-gridline {
-            stroke: $white-05;
+            stroke: $white-5;
         }
     }
 
     //badge styles start
     .badge-light {
-        background-color: $white-05;
+        background-color: $white-5;
     }
     .tabs-style6{
         >.panel-head > .nav-tabs{
-          background: $white-05;
+          background: $white-5;
 
           >.nav-item > .nav-link{
             color: $dark-color2;
@@ -3955,7 +3955,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         background-color: $white !important;
     }
     .badge.badge-default {
-        background-color: $white-05;
+        background-color: $white-5;
         color: $dark-color2;
     }
     //badge styels end
@@ -4083,7 +4083,7 @@ body.dark-mode .switcher-wrapper *::-webkit-scrollbar-track {
         }
     }
     .table-light {
-        background-color: $white-05;
+        background-color: $white-5;
         td {
             background-color: $white-4;
             border-color: $dark-border;

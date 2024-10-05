@@ -162,12 +162,12 @@ dd, .product-gallery-data .product-gallery-size dt, dd {
 }
 
 .carousel-inner .carousel-item .thumb.active {
-    border: 1px solid $border;
+    border: 1px solid $default-border;
 }
 
 .carousel-inner .carousel-item .thumb {
     padding: 5px;
-    border: 1px solid $border;
+    border: 1px solid $default-border;
     border-radius: 5px;
 }
 /*--- product ---*/

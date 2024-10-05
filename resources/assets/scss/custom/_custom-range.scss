@@ -279,11 +279,11 @@
 	cursor: pointer;
 	height: 1.25rem;
 	width: 2.25rem;
-	background: $background;
+	background: $default-background;
 	border-radius: 50px;
 	position: relative;
 	vertical-align: bottom;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	transition: .3s border-color, .3s background-color;
 
 	&:before {
@@ -494,7 +494,7 @@
 	vertical-align: middle;
 	// background: #f9f9f9 url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='#999' d='M0 0L10 0L5 5L0 0'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
 	background-size: 8px 10px;
-	border: 1px solid $border;
+	border: 1px solid $default-border;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
