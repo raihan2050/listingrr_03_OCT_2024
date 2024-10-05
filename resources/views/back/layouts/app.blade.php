@@ -88,7 +88,7 @@
 
             <!-- END RIGHT-SIDEBAR -->
 
-            <div class="scrollToTop" style="display: flex;"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>
+            <div class="scrollToTop" style="display: none;"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>
 
             <!-- MAIN-FOOTER -->
             @include('back.layouts.components.main-footer')
