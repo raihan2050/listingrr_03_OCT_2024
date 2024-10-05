@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "@simonwep/pickr": "^1.9.1",
+        "@tabler/icons": "^3.19.0",
         "apexcharts": "^3.54.0",
         "node-waves": "^0.7.6",
         "remixicon": "^4.3.0",
