@@ -92,7 +92,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -463,7 +463,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -857,7 +857,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -1174,7 +1174,7 @@
 																		class="sub-angle fe fe-chevron-right"></i></a>
 																<ul class="sub-slide-menu">
 																	<li><a href="{{url('form-elements')}}" class="sub-slide-item"> Form Elements</a></li>
-																	<li><a href="{{url('form-front.layouts.)}}" class="sub-slide-item"> Form front.layouts./a></li>
+																	<li><a href="{{url('form-layouts')}}" class="sub-slide-item"> Form Layouts</a></li>
 																	<li><a href="{{url('form-advanced')}}" class="sub-slide-item"> Form Advanced</a></li>
 																	<li><a href="{{url('form-editor')}}" class="sub-slide-item"> Form Editor</a></li>
 																	<li><a href="{{url('form-wizard')}}" class="sub-slide-item"> Form Wizard</a></li>
@@ -1241,7 +1241,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -1623,7 +1623,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -1981,7 +1981,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -2352,7 +2352,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -2728,7 +2728,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -3085,7 +3085,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -3442,7 +3442,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>
@@ -3804,7 +3804,7 @@
 																<div class="col-6 p-0">
 																	<div class="border text-center border-top-0">
 																		<i class="ti-layers fs-30 text-danger"></i>
-																		<p class="mb-0">front.layouts./p>
+																		<p class="mb-0">Layouts</p>
 																	</div>
 																</div>
 															</div>

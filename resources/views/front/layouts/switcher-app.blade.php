@@ -49,17 +49,17 @@
             <div class="page-main">
 
                 <!-- MAIN-HEADER -->
-                @include('front.layouts.components.main-header')
+                @include('layouts.components.main-header')
 
                 <!-- END MAIN-HEADER -->
 
                 <!-- NEWS-TICKER -->
-                @include('front.layouts.components.news-ticker')
+                @include('layouts.components.news-ticker')
 
                 <!-- END NEWS-TICKER -->
 
                 <!-- MAIN-SIDEBAR -->
-                @include('front.layouts.components.main-sidebar')
+                @include('layouts.components.main-sidebar')
 
                 <!-- END MAIN-SIDEBAR -->
 
@@ -76,12 +76,12 @@
             </div>
             
             <!-- RIGHT-SIDEBAR -->
-            @include('front.layouts.components.right-sidebar')
+            @include('layouts.components.right-sidebar')
 
             <!-- END RIGHT-SIDEBAR -->
 
             <!-- MAIN-FOOTER -->
-            @include('front.layouts.components.main-footer')
+            @include('layouts.components.main-footer')
 
             <!-- END MAIN-FOOTER -->
 
@@ -90,7 +90,7 @@
 
         <!-- SCRIPTS -->
         
-        @include('front.layouts.components.scripts')
+        @include('layouts.components.scripts')
 
         <!-- STICKY JS -->
 		<script src="{{asset('build/assets/sticky.js')}}"></script>

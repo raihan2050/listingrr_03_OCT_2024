@@ -32,14 +32,21 @@
         <!-- APP CSS -->
         @vite(['resources/css/app.css'])
 
+        <style>
+            body {
+                overflow-x: hidden !important;
+            }
+        </style>
+
         @yield('styles')
 
 	</head>
 
-	<body class="bg-account">
+	<body class="bg-white">
 
-            <div class="page h-100">
-                @yield('content')
-            </div>
+            @yield('content')
+
+
+        @yield('scripts')
 	</body>
 </html>

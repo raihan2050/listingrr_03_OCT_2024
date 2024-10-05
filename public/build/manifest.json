@@ -23,6 +23,10 @@
     "file": "assets/remixicon-BCkO1-UF.woff2",
     "src": "node_modules/remixicon/fonts/remixicon.woff2"
   },
+  "resources/assets/images/media/backgrounds/4.png": {
+    "file": "assets/4-CA044l-u.png",
+    "src": "resources/assets/images/media/backgrounds/4.png"
+  },
   "resources/assets/js/accordiation.js": {
     "file": "assets/accordiation-BshGsRQn.js",
     "name": "accordiation",
@@ -263,7 +267,7 @@
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-M9J8jWsl.css",
+    "file": "assets/app-Cl46mi7S.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

@@ -36,10 +36,12 @@
 
 	</head>
 
-	<body class="bg-account">
+	<body class="">
 
-            <div class="page h-100">
-                @yield('content')
-            </div>
+		<div class="container">
+            @yield('content')
+        </div>
+
+        @yield('scripts')
 	</body>
 </html>

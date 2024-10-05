@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en"
+        dir="ltr"
+        data-nav-layout="vertical"
+        data-theme-mode="light"
+        data-header-styles="light"
+        data-menu-styles="light"
+        {{-- loader="disable" --}}
+        data-vertical-style="">
 	<head>
 
 		<!-- META DATA -->
@@ -10,7 +17,7 @@
         <meta name="keywords" content="admin dashboard, admin dashboard laravel, admin panel template, blade template, blade template laravel, bootstrap template, dashboard laravel, laravel admin, laravel admin dashboard, laravel admin panel, laravel admin template, laravel bootstrap admin template, laravel bootstrap template, laravel template, vite laravel template, vite admin template, vite laravel admin, vite laravel admin dashboard, vite laravel bootstrap admin template">
 
         <!-- TITLE -->
-		<title> Sparic - Laravel Multipurpose Responsive Bootstrap5 Dashboard Template</title>
+		<title> @yield('title', 'Home') - {{ config('app.name') }}</title>
 
         <!-- FAVICON -->
         <link rel="icon" href="{{asset('build/assets/images/brand/favicon.ico')}}" type="image/x-icon" >
@@ -36,32 +43,30 @@
 
 	</head>
 
-	<body class="app sidebar-mini ltr">
+	<body class="">
+
+        @include('front.layouts.components.offcanvas')
 
 		<!--- GLOBAL LOADER -->
-		<div id="global-loader" >
-			<img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="loader">
-		</div>
+        <div id="loader" class="d-none">
+            <img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="">
+        </div>
 		<!--- END GLOBAL LOADER -->
 
         <!-- PAGE -->
 		<div class="page">
-            <div class="page-main">
 
                 <!-- MAIN-HEADER -->
-                @include('back.front.layouts.components.main-header')
-
+                @include('front.layouts.components.main-header')
                 <!-- END MAIN-HEADER -->
 
-                <!-- NEWS-TICKER -->
-                {{-- @include('back.front.layouts.components.news-ticker') --}}
-
-                <!-- END NEWS-TICKER -->
-
                 <!-- MAIN-SIDEBAR -->
-                @include('back.front.layouts.components.main-sidebar')
-
+                @include('front.layouts.components.main-sidebar')
                 <!-- END MAIN-SIDEBAR -->
+
+                <!-- NEWS-TICKER -->
+                {{-- @include('front.layouts.components.news-ticker') --}}
+                <!-- END NEWS-TICKER -->
 
                 <!-- MAIN-CONTENT -->
                 <div class="main-content app-content">
@@ -74,26 +79,28 @@
                     @yield('modal-page-content')
                 </div>
                 <!-- END MAIN-CONTENT -->
-            </div>
+
 
             @yield('modal-page-content1')
 
             <!-- RIGHT-SIDEBAR -->
-            @include('back.front.layouts.components.right-sidebar')
+            @include('front.layouts.components.right-sidebar')
 
             <!-- END RIGHT-SIDEBAR -->
 
+            <div class="scrollToTop" style="display: none;"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>
+
             <!-- MAIN-FOOTER -->
-            @include('back.front.layouts.components.main-footer')
+            @include('front.layouts.components.main-footer')
 
             <!-- END MAIN-FOOTER -->
-            @include('back.front.layouts.components.alert_message')
+            @include('front.layouts.components.alert_message')
 		</div>
         <!-- END PAGE-->
 
         <!-- SCRIPTS -->
 
-        @include('back.front.layouts.components.scripts')
+        @include('front.layouts.components.scripts')
 
         <!-- STICKY JS -->
 		<script src="{{asset('build/assets/sticky.js')}}"></script>
