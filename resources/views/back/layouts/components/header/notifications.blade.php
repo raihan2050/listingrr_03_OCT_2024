@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
+                {{-- <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div> --}}
             </div>
             <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
                 <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
