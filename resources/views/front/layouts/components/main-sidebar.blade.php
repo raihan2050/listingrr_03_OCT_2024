@@ -20,7 +20,7 @@
                 <div class="lsimplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;">
                    <div class="lsimplebar-content" style="padding: 0px 0px 80px;">
                       <!-- Start::nav -->
-                      <nav class="main-menu-container nav nav-pills flex-column sub-open open active">
+                      <nav class="main-menu main-menu-container nav nav-pills flex-column sub-open open active">
                          <div class="slide-left active d-none" id="slide-left">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
                                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
