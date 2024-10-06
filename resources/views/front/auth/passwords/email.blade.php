@@ -33,8 +33,8 @@
                                 <img src="{{asset('build/assets/images/brand-logos/desktop-dark.png')}}" alt="" class="authentication-brand desktop-dark">
                             </a>
                         </div>
-                        <p class="h5 fw-semibold mb-2">Reset Password</p>
-                        <p class="mb-3 text-muted op-7 fw-normal">Changing / Creating a new password!</p>
+                        <p class="h5 fw-semibold mb-2">@lang('login.reset_password')</p>
+                        <p class="mb-3 text-muted op-7 fw-normal">@lang('login.reset_password_title')!</p>
                         <div>
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">
@@ -47,13 +47,13 @@
                             @csrf
                             <div class="row gy-3">
                                 <div class="col-xl-12 mt-0">
-                                    <label for="resetEmail" class="form-label text-default">{{ __('Email Address') }}</label>
+                                    <label for="resetEmail" class="form-label text-default">@lang('login.email_address')</label>
                                     <input id="resetEmail"
                                             type="email"
                                             class="form-control form-control-lg @error('email') is-invalid @enderror"
                                             name="email"
                                             value="{{ old('email') }}"
-                                            placeholder="{{ __('Email Address') }}"
+                                            placeholder="@lang('login.email_address')"
                                             required
                                             autocomplete="email"
                                             autofocus>
@@ -66,15 +66,17 @@
                                 </div>
                                 <div class="col-xl-12 d-grid mt-4">
                                     <button type="submit" class="btn btn-lg btn-primary">
-                                        {{ __('Send Password Reset Link') }}
+                                        @lang('login.reset_pass_link_send')
                                     </button>
                                 </div>
                             </>
                         </form>
                         <div class="text-center">
                             <p class="fs-12 text-muted mt-4">
-                                Already have an account?
-                                <a href="{{ route('login') }}" class="text-primary">Sign In</a>
+                                @lang('register.already_have_account')?
+                                <a href="{{ route('login') }}" class="text-primary">
+                                    @lang('login.sign_in')
+                                </a>
                             </p>
                         </div>
                     </div>

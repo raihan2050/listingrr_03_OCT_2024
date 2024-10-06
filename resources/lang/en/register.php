@@ -2,7 +2,7 @@
 
 return [
     'sign_up' => 'Sign Up',
-    'sign_title' => 'Welcome & Join us by creating a free account',
+    'sign_up_title' => 'Welcome & Join us by creating a free account',
     'name' => 'Name',
     'email_address' => 'Email Address',
     'password' => 'Password',
