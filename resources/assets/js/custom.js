@@ -2,6 +2,7 @@ import Pickr from '@simonwep/pickr';
 import Waves from 'node-waves';
 import SimpleBar from 'simplebar';
 import {checkOptions} from "./switcher-styles"
+import {mkAjaxRequest} from "./ajax"
 (function () {
   "use strict";
 
@@ -243,70 +244,80 @@ function removeSearchResult(event){
   /* for theme background */
 
   /* header theme toggle */
-  function toggleTheme() {
-    let html = document.querySelector("html");
-    if (html.getAttribute("data-theme-mode") === "dark") {
-      html.setAttribute("data-theme-mode", "light");
-      html.setAttribute("data-header-styles", "light");
-      html.setAttribute("data-menu-styles", "light");
-      if (!localStorage.getItem("primaryRGB")) {
-        html.setAttribute("style", "");
-      }
-      html.removeAttribute("data-bg-theme");
-      document.querySelector("#switcher-light-theme").checked = true;
-      document.querySelector("#switcher-menu-light").checked = true;
-      document
-        .querySelector("html")
-        .style.removeProperty("--body-bg-rgb", localStorage.bodyBgRGB);
-      checkOptions();
-      html.style.removeProperty("--body-bg-rgb2");
-      html.style.removeProperty("--light-rgb");
-      html.style.removeProperty("--form-control-bg");
-      html.style.removeProperty("--input-border");
-      document.querySelector("#switcher-header-light").checked = true;
-      document.querySelector("#switcher-menu-light").checked = true;
-      document.querySelector("#switcher-light-theme").checked = true;
-      document.querySelector("#switcher-background4").checked = false;
-      document.querySelector("#switcher-background3").checked = false;
-      document.querySelector("#switcher-background2").checked = false;
-      document.querySelector("#switcher-background1").checked = false;
-      document.querySelector("#switcher-background").checked = false;
-      localStorage.removeItem("Sparicdarktheme");
-      localStorage.removeItem("SparicMenu");
-      localStorage.removeItem("SparicHeader");
-      localStorage.removeItem("bodylightRGB");
-      localStorage.removeItem("bodyBgRGB");
-      if (localStorage.getItem("Spariclayout") != "horizontal") {
-        html.setAttribute("data-menu-styles", "dark");
-      }
-      html.setAttribute("data-header-styles", "light");
-      html.setAttribute("data-menu-styles", "light");
-    } else {
-      html.setAttribute("data-theme-mode", "dark");
-      html.setAttribute("data-header-styles", "dark");
-      if (!localStorage.getItem("primaryRGB")) {
-        html.setAttribute("style", "");
-      }
-      html.setAttribute("data-menu-styles", "dark");
-      document.querySelector("#switcher-dark-theme").checked = true;
-      document.querySelector("#switcher-menu-dark").checked = true;
-      document.querySelector("#switcher-header-dark").checked = true;
-      checkOptions();
-      document.querySelector("#switcher-menu-dark").checked = true;
-      document.querySelector("#switcher-header-dark").checked = true;
-      document.querySelector("#switcher-dark-theme").checked = true;
-      document.querySelector("#switcher-background4").checked = false;
-      document.querySelector("#switcher-background3").checked = false;
-      document.querySelector("#switcher-background2").checked = false;
-      document.querySelector("#switcher-background1").checked = false;
-      document.querySelector("#switcher-background").checked = false;
-      localStorage.setItem("Sparicdarktheme", "true");
-      localStorage.setItem("SparicMenu", "dark");
-      localStorage.setItem("SparicHeader", "dark");
-      localStorage.removeItem("bodylightRGB");
-      localStorage.removeItem("bodyBgRGB");
+    function toggleTheme() {
+        let html = document.querySelector("html");
+        var light_dark = "";
+        if (html.getAttribute("data-theme-mode") === "dark") {
+            light_dark = "light";
+            html.setAttribute("data-theme-mode", "light");
+            html.setAttribute("data-header-styles", "light");
+            html.setAttribute("data-menu-styles", "light");
+            if (!localStorage.getItem("primaryRGB")) {
+                html.setAttribute("style", "");
+            }
+            html.removeAttribute("data-bg-theme");
+            document.querySelector("#switcher-light-theme").checked = true;
+            document.querySelector("#switcher-menu-light").checked = true;
+            document
+                .querySelector("html")
+                .style.removeProperty("--body-bg-rgb", localStorage.bodyBgRGB);
+            checkOptions();
+            html.style.removeProperty("--body-bg-rgb2");
+            html.style.removeProperty("--light-rgb");
+            html.style.removeProperty("--form-control-bg");
+            html.style.removeProperty("--input-border");
+            document.querySelector("#switcher-header-light").checked = true;
+            document.querySelector("#switcher-menu-light").checked = true;
+            document.querySelector("#switcher-light-theme").checked = true;
+            document.querySelector("#switcher-background4").checked = false;
+            document.querySelector("#switcher-background3").checked = false;
+            document.querySelector("#switcher-background2").checked = false;
+            document.querySelector("#switcher-background1").checked = false;
+            document.querySelector("#switcher-background").checked = false;
+            localStorage.removeItem("Sparicdarktheme");
+            localStorage.removeItem("SparicMenu");
+            localStorage.removeItem("SparicHeader");
+            localStorage.removeItem("bodylightRGB");
+            localStorage.removeItem("bodyBgRGB");
+            if (localStorage.getItem("Spariclayout") != "horizontal") {
+                html.setAttribute("data-menu-styles", "dark");
+            }
+            html.setAttribute("data-header-styles", "light");
+            html.setAttribute("data-menu-styles", "light");
+        } else {
+            light_dark = "dark";
+            html.setAttribute("data-theme-mode", "dark");
+            html.setAttribute("data-header-styles", "dark");
+            if (!localStorage.getItem("primaryRGB")) {
+                html.setAttribute("style", "");
+            }
+            html.setAttribute("data-menu-styles", "dark");
+            document.querySelector("#switcher-dark-theme").checked = true;
+            document.querySelector("#switcher-menu-dark").checked = true;
+            document.querySelector("#switcher-header-dark").checked = true;
+            checkOptions();
+            document.querySelector("#switcher-menu-dark").checked = true;
+            document.querySelector("#switcher-header-dark").checked = true;
+            document.querySelector("#switcher-dark-theme").checked = true;
+            document.querySelector("#switcher-background4").checked = false;
+            document.querySelector("#switcher-background3").checked = false;
+            document.querySelector("#switcher-background2").checked = false;
+            document.querySelector("#switcher-background1").checked = false;
+            document.querySelector("#switcher-background").checked = false;
+            localStorage.setItem("Sparicdarktheme", "true");
+            localStorage.setItem("SparicMenu", "dark");
+            localStorage.setItem("SparicHeader", "dark");
+            localStorage.removeItem("bodylightRGB");
+            localStorage.removeItem("bodyBgRGB");
+        }
+
+        var formDataObj = new FormData();
+        formDataObj.append('action', 'switch_dark_light');
+        formDataObj.append('mode', light_dark);
+        mkAjaxRequest('POST', window.commonAsset.admin_ajax, formDataObj, function(error, response) {
+
+        });
     }
-  }
   let layoutSetting = document.querySelector(".layout-setting");
   layoutSetting.addEventListener("click", toggleTheme);
   /* header theme toggle */

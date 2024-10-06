@@ -1,10 +1,14 @@
+@php
+    $currentUserDetails = getSuperUser();
+    $lightDark = ($currentUserDetails->dark_mode == 1)? "dark" : "light";
+@endphp
 <!DOCTYPE html>
 <html lang="en"
         dir="ltr"
         data-nav-layout="vertical"
-        data-theme-mode="light"
-        data-header-styles="light"
-        data-menu-styles="light"
+        data-theme-mode="{{ $lightDark }}"
+        data-header-styles="{{ $lightDark }}"
+        data-menu-styles="{{ $lightDark }}"
         {{-- loader="disable" --}}
         data-vertical-style="">
 	<head>
@@ -15,6 +19,8 @@
         <meta name="Description" content="Sparic - Sparic - Laravel Multipurpose Responsive Bootstrap5 Dashboard Template">
         <meta name="Author" content="Spruko Technologies Private Limited">
         <meta name="keywords" content="admin dashboard, admin dashboard laravel, admin panel template, blade template, blade template laravel, bootstrap template, dashboard laravel, laravel admin, laravel admin dashboard, laravel admin panel, laravel admin template, laravel bootstrap admin template, laravel bootstrap template, laravel template, vite laravel template, vite admin template, vite laravel admin, vite laravel admin dashboard, vite laravel bootstrap admin template">
+
+        <meta name="csrf_token" content="{{ csrf_token() }}" />
 
         <!-- TITLE -->
 		<title> @yield('title', 'Home') - {{ config('app.name') }}</title>
@@ -48,7 +54,7 @@
         @include('back.layouts.components.offcanvas')
 
 		<!--- GLOBAL LOADER -->
-        <div id="loader" class="d-none">
+        <div id="loader">
             <img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="">
         </div>
 		<!--- END GLOBAL LOADER -->

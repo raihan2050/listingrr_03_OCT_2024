@@ -28,4 +28,13 @@
 
         <!-- RIGHT SIDEBAR JS -->
         <script src="{{asset('build/assets/plugins/sidebar/sidebar.js')}}"></script>
-@yield('scripts')
+
+        <script>
+            // window.commonAsset.admin_ajax
+            window.commonAsset = {
+                admin_ajax: "{{ route('super.ajax') }}",
+                front_ajax: "value2"
+            };
+        </script>
+
+        @yield('scripts')

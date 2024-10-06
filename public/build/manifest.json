@@ -1,6 +1,6 @@
 {
-  "_switcher-styles-BcF-6Dmt.js": {
-    "file": "assets/switcher-styles-BcF-6Dmt.js",
+  "_switcher-styles-BjYxnv0C.js": {
+    "file": "assets/switcher-styles-BjYxnv0C.js",
     "name": "switcher-styles"
   },
   "node_modules/remixicon/fonts/remixicon.eot": {
@@ -37,6 +37,12 @@
     "file": "assets/advancedform-BdkjK4h8.js",
     "name": "advancedform",
     "src": "resources/assets/js/advancedform.js",
+    "isEntry": true
+  },
+  "resources/assets/js/ajax.js": {
+    "file": "assets/ajax-l0sNRNKZ.js",
+    "name": "ajax",
+    "src": "resources/assets/js/ajax.js",
     "isEntry": true
   },
   "resources/assets/js/alerts.js": {
@@ -238,12 +244,12 @@
     "isEntry": true
   },
   "resources/assets/js/themeColors.js": {
-    "file": "assets/themeColors-BAVljWW8.js",
+    "file": "assets/themeColors-CuNsP1J-.js",
     "name": "themeColors",
     "src": "resources/assets/js/themeColors.js",
     "isEntry": true,
     "imports": [
-      "_switcher-styles-BcF-6Dmt.js"
+      "_switcher-styles-BjYxnv0C.js"
     ]
   },
   "resources/assets/switcher/js/switcher.js": {
@@ -258,12 +264,12 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-CE4xF_-C.js",
+    "file": "assets/app-C1BmQX_6.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "imports": [
-      "_switcher-styles-BcF-6Dmt.js"
+      "_switcher-styles-BjYxnv0C.js"
     ]
   },
   "resources/sass/app.scss": {

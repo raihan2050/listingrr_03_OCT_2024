@@ -49,6 +49,7 @@ export default defineConfig({
                 'resources/assets/js/table-data',
                 'resources/assets/js/themeColors',
                 'resources/assets/switcher/js/switcher',
+                'resources/assets/js/ajax',
 
             ],
             refresh: true,

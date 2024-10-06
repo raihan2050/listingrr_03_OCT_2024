@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Back\AdminMaintenanceController;
+use App\Http\Controllers\Back\AjaxController as AdminAjaxController;
 use App\Http\Controllers\Back\Auth\AdminAuthController;
 use App\Http\Controllers\Back\ConfigController;
 use App\Http\Controllers\Back\DashboardController;
@@ -21,6 +22,8 @@ Route::group(['prefix' => config('app.super_admin_url'), 'as' => 'super.'], func
 Route::group(['prefix' => config('app.super_admin_url'), 'as' => 'super.', 'middleware' => ['super']], function() {
     Route::get('/migrate', [ConfigController::class, 'migrate'])->name('migrate');
     Route::get('/clear', [ConfigController::class, 'clear'])->name('clear');
+
+    Route::post('/ajax', [AdminAjaxController::class, 'index'])->name('ajax');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
