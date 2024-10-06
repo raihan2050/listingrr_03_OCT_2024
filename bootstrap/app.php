@@ -21,8 +21,10 @@ return Application::configure(basePath: dirname(__DIR__))
             \App\Http\Middleware\CheckForMaintenanceMode::class,
         ]);
         $middleware->group('super', [
-            SetLocale::class,
             RedirectIfAdminNotLoggedIn::class,
+        ]);
+        $middleware->group('lconfig', [
+            SetLocale::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

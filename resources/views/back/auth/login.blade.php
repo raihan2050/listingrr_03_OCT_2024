@@ -15,19 +15,19 @@
             </div>
             <div class="card custom-card">
                 <div class="card-body p-5">
-                    <p class="h5 fw-semibold mb-2 text-center">Sign In</p>
-                    <p class="mb-4 text-muted op-7 fw-normal text-center">Welcome back 🤗!</p>
+                    <p class="h5 fw-semibold mb-2 text-center">@lang('login.sign_in')</p>
+                    <p class="mb-4 text-muted op-7 fw-normal text-center">@lang('login.welcome_back') 🤗!</p>
                     <form method="POST" action="{{ route('super.login') }}">
                         @csrf
                         <div class="row gy-3">
                             <div class="col-xl-12">
-                                <label for="signinEmail" class="form-label text-default">{{ __('Email Address') }}</label>
+                                <label for="signinEmail" class="form-label text-default">@lang('login.email_address')</label>
                                 <input id="signinEmail"
                                         type="email"
                                         class="form-control form-control-lg @error('email') is-invalid @enderror"
                                         name="email"
                                         value="{{ old('email') }}"
-                                        placeholder="{{ __('Email Address') }}"
+                                        placeholder="@lang('login.email_address')"
                                         required
                                         autocomplete="email"
                                         autofocus>
@@ -39,15 +39,15 @@
                             </div>
                             <div class="col-xl-12 mb-2">
                                 <label for="signinPassword" class="form-label text-default d-block">
-                                    {{ __('Password') }}
-                                    <a href="javascript:void(0);" class="float-end text-danger">Forget password ?</a>
+                                    @lang('login.password')
+                                    <a href="javascript:void(0);" class="float-end text-danger">@lang('login.forgot_password') ?</a>
                                 </label>
                                 <div class="input-group">
                                     <input id="signinPassword"
                                             type="password"
                                             class="form-control form-control-lg @error('password') is-invalid @enderror"
                                             name="password"
-                                            placeholder="{{ __('Password') }}"
+                                            placeholder="@lang('login.password')"
                                             required
                                             autocomplete="current-password">
 
@@ -63,13 +63,13 @@
                                 <div class="mt-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                        <label class="form-check-label text-muted fw-normal" for="remember">{{ __('Remember Me') }}</label>
+                                        <label class="form-check-label text-muted fw-normal" for="remember">@lang('login.remember_me')</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-12 d-grid mt-2">
                                 <button type="submit" class="btn btn-lg btn-primary">
-                                    {{ __('Sign In') }}
+                                    @lang('login.sign_in')
                                 </button>
                             </div>
                         </div>

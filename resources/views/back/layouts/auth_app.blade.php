@@ -37,11 +37,35 @@
 	</head>
 
 	<body class="">
+        <div id="sidebar"></div>
+        <div class="
+                main-menu
+                main-sidebar
+                slide-left
+                slide-right
+                main-content
+                app-sidebar
+                sidebar-right
+                sidemenu-toggle
+                d-none"></div>
+
+        <header class="app-header bg-transparent">
+            <div class="main-header-container container-fluid">
+                <div class="header-content-left">
+
+                </div>
+                <div class="header-content-right">
+                    @include('back.layouts.components.header.language')
+                </div>
+            </div>
+        </header>
+
 
 		<div class="container">
             @yield('content')
         </div>
 
+        @include('back.layouts.components.scripts')
         @yield('scripts')
 	</body>
 </html>
