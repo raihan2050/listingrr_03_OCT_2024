@@ -55,7 +55,7 @@
                 sidemenu-toggle
                 d-none"></div>
 
-        <header class="app-header bg-transparent">
+        <header class="app-header bg-transparent border-0">
             <div class="main-header-container container-fluid">
                 <div class="header-content-left">
 

@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Illuminate\Validation\ValidationException;
+use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     use AuthenticatesUsers;
@@ -36,6 +37,21 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('front.auth.login');
+    }
+
+    /**
+     * Get the failed login response instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        throw ValidationException::withMessages([
+            $this->username() => [trans('login.failed')],
+        ]);
     }
 
     // protected $redirectTo = config('app.admin_name').'/dashboard';

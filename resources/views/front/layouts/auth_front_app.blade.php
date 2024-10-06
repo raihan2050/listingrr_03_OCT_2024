@@ -43,17 +43,39 @@
 	</head>
 
 	<body class="bg-white">
-
 		<!--- GLOBAL LOADER -->
         <div id="loader">
             <img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="">
         </div>
 		<!--- END GLOBAL LOADER -->
 
+        <div id="sidebar"></div>
+        <div class="
+                main-menu
+                main-sidebar
+                slide-left
+                slide-right
+                main-content
+                app-sidebar
+                sidebar-right
+                sidemenu-toggle
+                d-none"></div>
+
+        <header class="app-header bg-transparent border-0">
+            <div class="main-header-container container-fluid">
+                <div class="header-content-left">
+
+                </div>
+                <div class="header-content-right">
+                    @include('back.layouts.components.header.language')
+                </div>
+            </div>
+        </header>
+
         <div style="display: none;" id="afterLoadShown">
             @yield('content')
         </div>
-
+        @include('back.layouts.components.scripts')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script>
             $(function() {
