@@ -16,7 +16,7 @@
                                 <div class="mb-5">
                                     <img src="{{asset('build/assets/images/authentication/sign-up.png')}}" class="authentication-image" alt="">
                                 </div>
-                                <h6 class="fw-semibold text-fixed-white">Sign Up</h6>
+                                <h6 class="fw-semibold text-fixed-white">@lang('register.sign_up')</h6>
                                 <p class="fw-normal fs-14 op-7"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa eligendi expedita aliquam quaerat nulla voluptas facilis. Porro rem voluptates possimus, ad, autem quae culpa architecto, quam labore blanditiis at ratione.</p>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                                 <img src="{{asset('build/assets/images/brand-logos/desktop-dark.png')}}" alt="" class="authentication-brand desktop-dark">
                             </a>
                         </div>
-                        <p class="h5 fw-semibold mb-2">Sign Up</p>
+                        <p class="h5 fw-semibold mb-2">@lang('register.sign_up')</p>
                         <p class="mb-3 text-muted op-7 fw-normal">Welcome &amp; Join us by creating a free account !</p>
                         <div class="btn-list d-none">
                             <button class="btn btn-light">
@@ -49,13 +49,13 @@
                             @csrf
                             <div class="row gy-3">
                                 <div class="col-xl-12 mt-0">
-                                    <label for="signupFirstname" class="form-label text-default">{{ __('Name') }}</label>
+                                    <label for="signupFirstname" class="form-label text-default">@lang('register.name')</label>
                                     <input id="signupFirstname"
                                             type="text"
                                             class="form-control form-control-lg @error('name') is-invalid @enderror"
                                             name="name"
                                             value="{{ old('name') }}"
-                                            placeholder="{{ __('Name') }}"
+                                            placeholder="@lang('register.name')"
                                             required
                                             autocomplete="name"
                                             autofocus>
@@ -66,13 +66,13 @@
                                     @enderror
                                 </div>
                                 <div class="col-xl-12">
-                                    <label for="signupEmail" class="form-label text-default">{{ __('Email Address') }}</label>
+                                    <label for="signupEmail" class="form-label text-default">@lang('register.email_address')</label>
                                     <input id="signupEmail"
                                         type="email"
                                         class="form-control form-control-lg @error('email') is-invalid @enderror"
                                         name="email"
                                         value="{{ old('email') }}"
-                                        placeholder="{{ __('Email Address') }}"
+                                        placeholder="@lang('register.email_address')"
                                         required
                                         autocomplete="email">
 
@@ -83,13 +83,13 @@
                                     @enderror
                                 </div>
                                 <div class="col-xl-12">
-                                    <label for="signupPassword" class="form-label text-default">Password</label>
+                                    <label for="signupPassword" class="form-label text-default">@lang('register.password')</label>
                                     <div class="input-group">
                                         <input id="signupPassword"
                                                 type="password"
                                                 class="form-control form-control-lg @error('password') is-invalid @enderror"
                                                 name="password"
-                                                placeholder="{{ __('Password') }}"
+                                                placeholder="@lang('register.password')"
                                                 required
                                                 autocomplete="new-password">
                                         <button class="btn btn-light" onclick="showHidePassword('signupPassword')" type="button" id="button-addon2">
@@ -104,13 +104,13 @@
                                     @enderror
                                 </div>
                                 <div class="col-xl-12 mb-3">
-                                    <label for="passwordConfirm" class="form-label text-default">Confirm Password</label>
+                                    <label for="passwordConfirm" class="form-label text-default">@lang('register.confirm_password')</label>
                                     <div class="input-group">
                                         <input id="passwordConfirm"
                                                 type="password"
                                                 class="form-control form-control-lg"
                                                 name="password_confirmation"
-                                                placeholder="{{ __('Confirm Password') }}"
+                                                placeholder="@lang('register.confirm_password')"
                                                 required
                                                 autocomplete="new-password">
                                         <button class="btn btn-light" onclick="showHidePassword('passwordConfirm')" type="button" id="button-addon21">
@@ -120,12 +120,15 @@
                                     <div class="form-check d-flex mt-3">
                                         <input type="checkbox" name="agreeWithYou" id="agreeWithYou" class="form-check-input {{ $errors->has('agreeWithYou') ? 'is-invalid' : '' }}" >
                                         <label class="form-check-label text-muted fw-normal" for="agreeWithYou">
-                                            By creating a account you agree to our
-                                            <a href="{{url('terms')}}" class="text-success">
-                                                <u>Terms &amp; Conditions</u>
-                                            </a>
-                                            and
-                                            <a class="text-success"><u>Privacy Policy</u></a>
+                                            @php
+                                                $termsUrl = '#';
+                                                $privacyUrl = '#';
+                                                $terms_privacy_message = trans('register.terms_conditions_privacy_policy_msg', [
+                                                    'termsUrl' => $termsUrl,
+                                                    'privacyUrl' => $privacyUrl,
+                                                ]);
+                                            @endphp
+                                            {!! $terms_privacy_message !!}
                                         </label>
                                     </div>
                                     <div class="col-xl-12 d-grid mt-1">
@@ -137,7 +140,7 @@
                                     </div>
                                     <div class="col-xl-12 d-grid mt-2">
                                         <button type="submit" class="btn btn-lg btn-primary">
-                                            Create Account
+                                            @lang('register.create_account')
                                         </button>
                                     </div>
                                 </div>
@@ -145,8 +148,10 @@
                         </form>
                         <div class="text-center">
                             <p class="fs-12 text-muted mt-4">
-                                Already have an account?
-                                <a href="{{ route('login') }}" class="text-primary">Sign In</a>
+                                @lang('register.already_have_account')?
+                                <a href="{{ route('login') }}" class="text-primary">
+                                    @lang('login.sign_in')
+                                </a>
                             </p>
                         </div>
                     </div>
