@@ -30,9 +30,9 @@
         <script src="{{asset('build/assets/plugins/sidebar/sidebar.js')}}"></script>
 
         <script>
-            // window.commonAsset.admin_ajax
+            // window.commonAsset.ajax
             window.commonAsset = {
-                admin_ajax: "{{ route('super.ajax') }}",
+                ajax: "{{ route('super.ajax') }}",
                 front_ajax: "value2"
             };
         </script>

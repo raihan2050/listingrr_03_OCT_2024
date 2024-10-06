@@ -1,6 +1,6 @@
 {
-  "_switcher-styles-BjYxnv0C.js": {
-    "file": "assets/switcher-styles-BjYxnv0C.js",
+  "_switcher-styles-Cgfu2Zb1.js": {
+    "file": "assets/switcher-styles-Cgfu2Zb1.js",
     "name": "switcher-styles"
   },
   "node_modules/remixicon/fonts/remixicon.eot": {
@@ -244,12 +244,12 @@
     "isEntry": true
   },
   "resources/assets/js/themeColors.js": {
-    "file": "assets/themeColors-CuNsP1J-.js",
+    "file": "assets/themeColors-DxZdD4F2.js",
     "name": "themeColors",
     "src": "resources/assets/js/themeColors.js",
     "isEntry": true,
     "imports": [
-      "_switcher-styles-BjYxnv0C.js"
+      "_switcher-styles-Cgfu2Zb1.js"
     ]
   },
   "resources/assets/switcher/js/switcher.js": {
@@ -264,12 +264,12 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-C1BmQX_6.js",
+    "file": "assets/app-DNFwGwwf.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "imports": [
-      "_switcher-styles-BjYxnv0C.js"
+      "_switcher-styles-Cgfu2Zb1.js"
     ]
   },
   "resources/sass/app.scss": {

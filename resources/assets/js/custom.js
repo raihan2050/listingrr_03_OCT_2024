@@ -314,7 +314,7 @@ function removeSearchResult(event){
         var formDataObj = new FormData();
         formDataObj.append('action', 'switch_dark_light');
         formDataObj.append('mode', light_dark);
-        mkAjaxRequest('POST', window.commonAsset.admin_ajax, formDataObj, function(error, response) {
+        mkAjaxRequest('POST', window.commonAsset.ajax, formDataObj, function(error, response) {
 
         });
     }
