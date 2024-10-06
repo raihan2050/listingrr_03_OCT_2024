@@ -36,6 +36,17 @@
                         <p class="h5 fw-semibold mb-2">@lang('login.reset_password')</p>
                         <p class="mb-3 text-muted op-7 fw-normal">@lang('login.reset_password_title')!</p>
                         <div>
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
+                            @if (session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">
                                     {{ session('status') }}

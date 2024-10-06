@@ -57,6 +57,15 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+    // protected function validator(array $data)
+    // {
+    //     return Validator::make($data, [
+    //         'name' => ['required', 'string', 'max:255'],
+    //         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+    //         'password' => ['required', 'string', 'min:8', 'confirmed'],
+    //         'agreeWithYou' => ['required', 'accepted'],
+    //     ]);
+    // }
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -64,6 +73,24 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'agreeWithYou' => ['required', 'accepted'],
+        ], [
+            'name.required' => __('register.name_required'),
+            'name.string' => __('register.name_string'),
+            'name.max' => __('register.name_max'),
+
+            'email.required' => __('register.email_required'),
+            'email.string' => __('register.email_string'),
+            'email.email' => __('register.email_email'),
+            'email.max' => __('register.email_max'),
+            'email.unique' => __('register.email_unique'),
+
+            'password.required' => __('register.password_required'),
+            'password.string' => __('register.password_string'),
+            'password.min' => __('register.password_min'),
+            'password.confirmed' => __('register.password_confirmed'),
+
+            'agreeWithYou.required' => __('register.agreeWithYou_required'),
+            'agreeWithYou.accepted' => __('register.agreeWithYou_accepted'),
         ]);
     }
 

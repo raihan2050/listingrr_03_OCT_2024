@@ -44,6 +44,24 @@
                             <button class="btn btn-icon btn-light"><i class="ri-facebook-fill"></i></button>
                             <button class="btn btn-icon btn-light"><i class="ri-twitter-x-fill"></i></button>
                         </div>
+                        <div>
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
+                            @if (session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+                        </div>
                         <div class="text-center my-5 authentication-barrier opacity-0"> <span>&nbsp;</span> </div>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -117,6 +135,8 @@
                                             <i class="ri-eye-off-line align-middle"></i>
                                         </button>
                                     </div>
+                                </div>
+                                <div class="col-xl-12 mb-3">
                                     <div class="form-check d-flex mt-3">
                                         <input type="checkbox" name="agreeWithYou" id="agreeWithYou" class="form-check-input {{ $errors->has('agreeWithYou') ? 'is-invalid' : '' }}" >
                                         <label class="form-check-label text-muted fw-normal" for="agreeWithYou">

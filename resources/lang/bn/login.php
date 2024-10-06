@@ -16,4 +16,12 @@ return [
     'reset_password_title' => 'পাসওয়ার্ড পরিবর্তন / তৈরি করুন',
     'reset_pass_link_send' => 'পাসওয়ার্ড রিসেট লিঙ্ক পাঠান',
     'reset_failed' => 'ইমেইল এড্রেস খুঁজে পাওয়া যাচ্ছে না।',
+
+    'reset_token_required' => 'অথেনটিকেশন টোকেন প্রয়োজন',
+    'reset_email_required' => 'আপনার ইমেইল এড্রেস প্রদান করুন',
+    'reset_email_email' => 'সঠিক ইমেইল এড্রেস প্রদান করুন',
+    'reset_password_required' => 'পাসওয়ার্ড প্রদান করুন',
+    'reset_password_confirmed' => 'পাসওয়ার্ড মিলে নাই। আবার চেষ্টা করুন।',
+    'reset_password_min' => 'পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে।',
+    'reset_password_password' => 'জটিল পাসওয়ার্ড ব্যবহার করুন।',
 ];
