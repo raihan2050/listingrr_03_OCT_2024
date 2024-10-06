@@ -21,12 +21,11 @@ class AdminAuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::guard('admin')->attempt($credentials)) {
-            // Authentication passed, redirect to admin dashboard
             return redirect()->intended(route('super.dashboard'));
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => __('login.credentials_not_match'),
         ]);
     }
 

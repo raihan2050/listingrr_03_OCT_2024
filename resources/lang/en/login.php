@@ -7,4 +7,5 @@ return [
     'password' => 'Password',
     'forgot_password' => 'Forgot Password',
     'remember_me' => 'Remember Me',
+    'credentials_not_match' => 'The provided credentials do not match our records.',
 ];
