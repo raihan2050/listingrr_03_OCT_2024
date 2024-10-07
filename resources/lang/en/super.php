@@ -30,6 +30,8 @@ return [
     'dot_symbol' => 'Dot (.)',
     'save_basic_information' => 'Save Basic Information',
 
+    'save_logo_media' => 'Save Logo & Media',
+
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',
     'maintenance_off' => 'Maintenance Off',

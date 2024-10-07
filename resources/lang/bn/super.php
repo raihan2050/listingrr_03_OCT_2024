@@ -30,6 +30,8 @@ return [
     'dot_symbol' => 'ডট (.)',
     'save_basic_information' => 'প্রাথমিক তথ্য সংরক্ষণ করুন',
 
+    'save_logo_media' => 'লোগো ও মিডিয়া সংরক্ষণ করুন',
+
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
     'maintenance_off' => 'রক্ষণাবেক্ষণ বন্ধ',
