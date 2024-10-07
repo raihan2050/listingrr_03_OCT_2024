@@ -3,6 +3,8 @@ import Waves from 'node-waves';
 import SimpleBar from 'simplebar';
 import {checkOptions} from "./switcher-styles"
 import {mkAjaxRequest} from "./ajax"
+import Tagify from '@yaireo/tagify'
+
 (function () {
   "use strict";
 
@@ -526,3 +528,18 @@ headerbtn1.forEach((button) => {
   });
 });
 /* for notifications dropdown */
+$(document).ready(function() {
+    const metaKeywords = $('#metaKeywords');
+    if (metaKeywords.length) {
+        const tagify = new Tagify(metaKeywords[0], {
+            whitelist: [],
+            enforceWhitelist: false,
+            placeholder: 'Add a tag',
+            delimiters: ",| ",
+            editTags: {
+                edit: false, // Users cannot edit tags
+                delete: true  // Users can delete tags
+            }
+        });
+    }
+});

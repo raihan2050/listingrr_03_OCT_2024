@@ -47,6 +47,11 @@ return [
     'select_loader' => 'SELECT LOADER',
     'save_logo_media' => 'Save Logo & Media',
 
+    'site_meta_keywords' => 'Site Meta Keywords',
+    'site_meta_keywords_help' => 'Site Meta Keywords (Separated by Commas)',
+    'site_meta_description' => 'Site Meta Description',
+    'save_site_meta_description' => 'Save Meta Data',
+
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',
     'maintenance_off' => 'Maintenance Off',

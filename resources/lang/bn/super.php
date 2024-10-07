@@ -47,6 +47,11 @@ return [
     'select_loader' => 'লোডার নির্বাচন',
     'save_logo_media' => 'লোগো ও মিডিয়া সংরক্ষণ করুন',
 
+    'site_meta_keywords' => 'মেটা কীওয়ার্ড',
+    'site_meta_keywords_help' => 'মেটা কীওয়ার্ড (কমা দিয়ে পৃথক করা)',
+    'site_meta_description' => 'মেটা বর্ণনা',
+    'save_site_meta_description' => 'মেটা ডাটা সংরক্ষণ করুন',
+
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
     'maintenance_off' => 'রক্ষণাবেক্ষণ বন্ধ',
