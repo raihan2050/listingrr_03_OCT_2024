@@ -14,7 +14,7 @@
             <input type="text"
                     class="form-control"
                     id="appSlogan"
-                    placeholder=">@lang('super.app_slogan')">
+                    placeholder="@lang('super.app_slogan')">
         </div>
         <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12"></div>
 
