@@ -18,6 +18,17 @@ return [
     'api_integration' => 'এপিআই ইন্টিগ্রেশন',
     'cookies_alert' => 'কুকিজ এলার্ট',
 
+    'app_name' => 'অ্যাপের নাম',
+    'app_slogan' => 'অ্যাপের স্লোগান',
+    'primary_colour_code' => 'প্রাইমারি রং',
+    'decimal_separator' => 'দশমিক বিভাজক',
+    'currency_direction' => 'মুদ্রার দিক',
+    'thousand_separator' => 'হাজার বিভাজক',
+    'left_100_d' => 'বাম (৳১০০.০০)',
+    'right_100_d' => 'ডান (১০০.০০৳)',
+    'comma_symbol' => 'কমা (,)',
+    'dot_symbol' => 'ডট (.)',
+
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
     'maintenance_off' => 'রক্ষণাবেক্ষণ বন্ধ',

@@ -18,6 +18,17 @@ return [
     'api_integration' => 'API Integration',
     'cookies_alert' => 'Cookies Alert',
 
+    'app_name' => 'App Name',
+    'app_slogan' => 'App Slogan',
+    'primary_colour_code' => 'Primary Colour Code',
+    'decimal_separator' => 'Decimal Separator',
+    'currency_direction' => 'Currency Direction',
+    'thousand_separator' => 'Thousand Separator',
+    'left_100_d' => 'Left ($100.00)',
+    'right_100_d' => 'Right (100.00$)',
+    'comma_symbol' => 'Comma (,)',
+    'dot_symbol' => 'Dot (.)',
+
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',
     'maintenance_off' => 'Maintenance Off',
