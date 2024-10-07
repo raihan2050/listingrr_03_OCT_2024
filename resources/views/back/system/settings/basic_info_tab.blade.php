@@ -64,7 +64,7 @@
         <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12"></div>
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-5 text-align-right">
-            <button type="button" class="btn btn-success label-btn label-end mt-3">
+            <button type="button" class="btn btn-primary-gradient label-btn label-end mt-3">
                 @lang('super.save_basic_information') <i class="ri-save-line label-btn-icon ms-2"></i>
             </button>
         </div>
