@@ -1,5 +1,5 @@
 <form>
-    <div class="row gy-5">
+    <div class="row gy-4">
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
             <label for="appName">@lang('super.app_name')</label>
             <input type="text"
