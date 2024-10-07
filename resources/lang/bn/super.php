@@ -82,6 +82,18 @@ return [
     'smtp_contact_mail' => 'যোগাযোগের ইমেইল এড্রেস',
     'save_mail_settings' => 'ইমেইল সেটিংস সংরক্ষণ করুন',
 
+    'twilio_status' => 'Twilio SMS পরিষেবা',
+    'twilio_sid' => 'Twilio Sid',
+    'twilio_sid_help' => 'Twilio Sid লিখুন',
+    'twilio_token' => 'Twilio টোকেন',
+    'twilio_token_help' => 'Twilio টোকেন লিখুন',
+    'twilio_form_number' => 'Twilio প্রেরকের নম্বর',
+    'twilio_form_number_help' => 'Twilio প্রেরকের নম্বর লিখুন',
+    'twilio_country_code' => 'দেশের কোড নম্বর',
+    'twilio_country_code_help' => 'দেশের কোড নম্বর লিখুন',
+    'twilio_help' => 'দ্রষ্টব্য: (+) চিহ্নের আগে অবশ্যই দেশের কোড ব্যবহার করতে হবে',
+    'sms_setting_save' => 'SMS সেটিংস সংরক্ষণ করুন',
+
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
     'maintenance_off' => 'রক্ষণাবেক্ষণ বন্ধ',
