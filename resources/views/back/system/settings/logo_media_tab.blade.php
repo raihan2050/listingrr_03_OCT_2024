@@ -1,7 +1,7 @@
 <form>
     <div class="row gy-4">
 
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             {{-- <ul class="nav nav-pills nav-fill mb-3" role="tablist"> --}}
             <ul class="nav nav-tabs flex-row vertical-tabs-3" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -35,7 +35,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-5 text-align-right">
             <button type="button" class="btn btn-success label-btn label-end mt-3">
