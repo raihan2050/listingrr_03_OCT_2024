@@ -1,0 +1,42 @@
+// Define text alignment options
+$text-alignments: (
+  left: left,
+  center: center,
+  right: right,
+  justify: justify,
+  start: start,
+  end: end,
+);
+
+// Generate base text alignment classes
+@each $alignment, $value in $text-alignments {
+  .text-align-#{$alignment} {
+    text-align: $value;
+  }
+}
+
+// Define breakpoints for responsive text alignment
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+);
+
+// Generate responsive text alignment classes
+@each $breakpoint, $value in $breakpoints {
+  @each $alignment, $alignment-value in $text-alignments {
+    .text-align-#{$breakpoint}-#{$alignment} {
+      @media (min-width: #{$value}) {
+        text-align: $alignment-value;
+      }
+    }
+  }
+}
+
+
+
+
+// text-align-left
+// text-align-center
+// text-align-right
+// text-align-justify

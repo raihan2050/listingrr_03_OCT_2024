@@ -28,6 +28,7 @@ return [
     'right_100_d' => 'ডান (১০০.০০৳)',
     'comma_symbol' => 'কমা (,)',
     'dot_symbol' => 'ডট (.)',
+    'save_basic_information' => 'প্রাথমিক তথ্য সংরক্ষণ করুন',
 
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',

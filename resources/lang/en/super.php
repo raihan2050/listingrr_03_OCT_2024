@@ -28,6 +28,7 @@ return [
     'right_100_d' => 'Right (100.00$)',
     'comma_symbol' => 'Comma (,)',
     'dot_symbol' => 'Dot (.)',
+    'save_basic_information' => 'Save Basic Information',
 
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',
