@@ -38,39 +38,39 @@
             <div class="row">
                 <div class="col-xl-2 col-lg-3">
                     <nav class="nav nav-tabs flex-column nav-style-5" role="tablist">
-                        <a class="nav-link active" data-bs-toggle="tab" role="tab" aria-current="page" href="#personal-info" aria-selected="true">
+                        <a class="nav-link active" data-bs-toggle="tab" role="tab" aria-current="page" href="#basicInfoTab" aria-selected="true">
                             <i class="ri-palette-line me-2 fs-18 align-middle"></i>
                             @lang('super.basic_information')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#account-settings" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#logoMediaTab" aria-selected="false" tabindex="-1">
                             <i class="ri-image-2-line me-2 fs-18 align-middle"></i>
                             @lang('super.logo_other_media')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#email-settings" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#seoTab" aria-selected="false" tabindex="-1">
                             <i class="ri-seo-line me-2 fs-18 align-middle"></i>
                             @lang('super.search_engine_optimization')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#labels" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#socialLoginTab" aria-selected="false" tabindex="-1">
                             <i class="ri-login-circle-line me-2 fs-18 align-middle"></i>
                             @lang('super.social_login')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#labels" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#emailSettingsTab" aria-selected="false" tabindex="-1">
                             <i class="ri-mail-settings-line me-2 fs-18 align-middle"></i>
                             @lang('super.email_settings')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#notification-settings" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#smsSettingsTab" aria-selected="false" tabindex="-1">
                             <i class="ri-smartphone-line me-2 fs-18 align-middle"></i>
                             @lang('super.sms_settings')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#security" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#paymentGatewayTab" aria-selected="false" tabindex="-1">
                             <i class="ri-bank-card-2-line me-2 fs-18 align-middle"></i>
                             @lang('super.payment_gateway')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#security" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#apiIntegrationTab" aria-selected="false" tabindex="-1">
                             <i class="ri-links-line me-2 fs-18 align-middle"></i>
                             @lang('super.api_integration')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#security" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#coodiesAlertTab" aria-selected="false" tabindex="-1">
                             <i class="ri-alarm-warning-line me-2 fs-18 align-middle"></i>
                             @lang('super.cookies_alert')
                         </a>
@@ -78,23 +78,32 @@
                 </div>
                 <div class="col-xl-10 col-lg-9">
                     <div class="tab-content mail-setting-tab mt-4 mt-lg-0">
-                        <div class="tab-pane border br-5 text-muted active show" id="personal-info" role="tabpanel">
+                        <div class="tab-pane border br-5 text-muted active show" id="basicInfoTab" role="tabpanel">
                             1
                         </div>
-                        <div class="tab-pane p-4 text-muted" id="account-settings" role="tabpanel">
+                        <div class="tab-pane border br-5 text-muted" id="logoMediaTab" role="tabpanel">
                             2
                         </div>
-                        <div class="tab-pane border br-5 p-0 text-muted" id="email-settings" role="tabpanel">
+                        <div class="tab-pane border br-5 text-muted" id="seoTab" role="tabpanel">
                             3
                         </div>
-                        <div class="tab-pane p-4 border br-5 text-muted" id="labels" role="tabpanel">
+                        <div class="tab-pane border br-5 text-muted" id="socialLoginTab" role="tabpanel">
                             4
                         </div>
-                        <div class="tab-pane text-muted border br-5" id="notification-settings" role="tabpanel">
+                        <div class="tab-pane border br-5 text-muted" id="emailSettingsTab" role="tabpanel">
                             5
                         </div>
-                        <div class="tab-pane text-muted border br-5 p-0" id="security" role="tabpanel">
+                        <div class="tab-pane border br-5 text-muted" id="smsSettingsTab" role="tabpanel">
                             6
+                        </div>
+                        <div class="tab-pane border br-5 text-muted" id="paymentGatewayTab" role="tabpanel">
+                            7
+                        </div>
+                        <div class="tab-pane border br-5 text-muted" id="apiIntegrationTab" role="tabpanel">
+                            8
+                        </div>
+                        <div class="tab-pane border br-5 text-muted" id="coodiesAlertTab" role="tabpanel">
+                            9
                         </div>
                     </div>
                 </div>
