@@ -70,7 +70,7 @@
                             <i class="ri-links-line me-2 fs-18 align-middle"></i>
                             @lang('super.api_integration')
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#coodiesAlertTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#cookiesAlertTab" aria-selected="false" tabindex="-1">
                             <i class="ri-alarm-warning-line me-2 fs-18 align-middle"></i>
                             @lang('super.cookies_alert')
                         </a>
@@ -79,31 +79,31 @@
                 <div class="col-xl-10 col-lg-9">
                     <div class="tab-content mail-setting-tab mt-4 mt-lg-0">
                         <div class="tab-pane border br-5 text-muted active show" id="basicInfoTab" role="tabpanel">
-                            1
+                            @include('back.system.settings.basic_info_tab')
                         </div>
                         <div class="tab-pane border br-5 text-muted" id="logoMediaTab" role="tabpanel">
-                            2
+                            @include('back.system.settings.logo_media_tab')
                         </div>
                         <div class="tab-pane border br-5 text-muted" id="seoTab" role="tabpanel">
-                            3
+                            @include('back.system.settings.seo_tab')
                         </div>
                         <div class="tab-pane border br-5 text-muted" id="socialLoginTab" role="tabpanel">
-                            4
+                            @include('back.system.settings.social_login_tab')
                         </div>
                         <div class="tab-pane border br-5 text-muted" id="emailSettingsTab" role="tabpanel">
-                            5
+                            @include('back.system.settings.email_settings_tab')
                         </div>
                         <div class="tab-pane border br-5 text-muted" id="smsSettingsTab" role="tabpanel">
-                            6
+                            @include('back.system.settings.sms_settings_tab')
                         </div>
                         <div class="tab-pane border br-5 text-muted" id="paymentGatewayTab" role="tabpanel">
-                            7
+                            @include('back.system.settings.payment_gateway_tab')
                         </div>
                         <div class="tab-pane border br-5 text-muted" id="apiIntegrationTab" role="tabpanel">
-                            8
+                            @include('back.system.settings.api_integration_tab')
                         </div>
-                        <div class="tab-pane border br-5 text-muted" id="coodiesAlertTab" role="tabpanel">
-                            9
+                        <div class="tab-pane border br-5 text-muted" id="cookiesAlertTab" role="tabpanel">
+                            @include('back.system.settings.cookies_alert_tab')
                         </div>
                     </div>
                 </div>
