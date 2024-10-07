@@ -71,6 +71,17 @@ return [
     'sl_google_redirect_url_help' => 'https://deshievents.com/auth/google/callback',
     'save_social_login' => 'সংরক্ষণ করুন',
 
+    'smtp_status' => 'SMTP সার্ভিস',
+    'smtp_host' => 'SMTP হোস্ট',
+    'smtp_port' => 'SMTP পোর্ট',
+    'smtp_encryption' => 'SMTP এনক্রিপশন',
+    'smtp_username' => 'SMTP ব্যবহারকারীর নাম',
+    'smtp_password' => 'SMTP পাসওয়ার্ড',
+    'smtp_from' => 'প্রেরকের ইমেইল ঠিকানা',
+    'smtp_from_name' => 'প্রেরকের নাম',
+    'smtp_contact_mail' => 'যোগাযোগের ইমেইল এড্রেস',
+    'save_mail_settings' => 'ইমেইল সেটিংস সংরক্ষণ করুন',
+
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
     'maintenance_off' => 'রক্ষণাবেক্ষণ বন্ধ',
