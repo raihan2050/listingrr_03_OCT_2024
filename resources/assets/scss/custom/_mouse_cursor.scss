@@ -1,0 +1,143 @@
+@mixin cursor($type) {
+  cursor: $type;
+}
+
+.cursor-alias {
+  @include cursor(alias);
+}
+
+.cursor-all-scroll {
+  @include cursor(all-scroll);
+}
+
+.cursor-auto {
+  @include cursor(auto);
+}
+
+.cursor-cell {
+  @include cursor(cell);
+}
+
+.cursor-col-resize {
+  @include cursor(col-resize);
+}
+
+.cursor-context-menu {
+  @include cursor(context-menu);
+}
+
+.cursor-copy {
+  @include cursor(copy);
+}
+
+.cursor-crosshair {
+  @include cursor(crosshair);
+}
+
+.cursor-default {
+  @include cursor(default);
+}
+
+.cursor-e-resize {
+  @include cursor(e-resize);
+}
+
+.cursor-ew-resize {
+  @include cursor(ew-resize);
+}
+
+.cursor-grab {
+  @include cursor(grab);
+}
+
+.cursor-grabbing {
+  @include cursor(grabbing);
+}
+
+.cursor-help {
+  @include cursor(help);
+}
+
+.cursor-move {
+  @include cursor(move);
+}
+
+.cursor-n-resize {
+  @include cursor(n-resize);
+}
+
+.cursor-ne-resize {
+  @include cursor(ne-resize);
+}
+
+.cursor-nesw-resize {
+  @include cursor(nesw-resize);
+}
+
+.cursor-ns-resize {
+  @include cursor(ns-resize);
+}
+
+.cursor-nw-resize {
+  @include cursor(nw-resize);
+}
+
+.cursor-nwse-resize {
+  @include cursor(nwse-resize);
+}
+
+.cursor-no-drop {
+  @include cursor(no-drop);
+}
+
+.cursor-none {
+  @include cursor(none);
+}
+
+.cursor-not-allowed {
+  @include cursor(not-allowed);
+}
+
+.cursor-pointer {
+  @include cursor(pointer);
+}
+
+.cursor-progress {
+  @include cursor(progress);
+}
+
+.cursor-row-resize {
+  @include cursor(row-resize);
+}
+
+.cursor-s-resize {
+  @include cursor(s-resize);
+}
+
+.cursor-se-resize {
+  @include cursor(se-resize);
+}
+
+.cursor-sw-resize {
+  @include cursor(sw-resize);
+}
+
+.cursor-text {
+  @include cursor(text);
+}
+
+.cursor-w-resize {
+  @include cursor(w-resize);
+}
+
+.cursor-wait {
+  @include cursor(wait);
+}
+
+.cursor-zoom-in {
+  @include cursor(zoom-in);
+}
+
+.cursor-zoom-out {
+  @include cursor(zoom-out);
+}
