@@ -23,9 +23,49 @@
     "file": "assets/remixicon-BCkO1-UF.woff2",
     "src": "node_modules/remixicon/fonts/remixicon.woff2"
   },
+  "resources/assets/images/media/backgrounds/1.png": {
+    "file": "assets/1-Bu0aE6In.png",
+    "src": "resources/assets/images/media/backgrounds/1.png"
+  },
+  "resources/assets/images/media/backgrounds/2.png": {
+    "file": "assets/2-vVA9PyuO.png",
+    "src": "resources/assets/images/media/backgrounds/2.png"
+  },
+  "resources/assets/images/media/backgrounds/3.png": {
+    "file": "assets/3-BcIMAc9-.png",
+    "src": "resources/assets/images/media/backgrounds/3.png"
+  },
   "resources/assets/images/media/backgrounds/4.png": {
     "file": "assets/4-CA044l-u.png",
     "src": "resources/assets/images/media/backgrounds/4.png"
+  },
+  "resources/assets/images/media/team-covers/4.jpg": {
+    "file": "assets/4-cuQSkXE-.jpg",
+    "src": "resources/assets/images/media/team-covers/4.jpg"
+  },
+  "resources/assets/images/menu-bg-images/bg-img1.jpg": {
+    "file": "assets/bg-img1-BWl_1nZ7.jpg",
+    "src": "resources/assets/images/menu-bg-images/bg-img1.jpg"
+  },
+  "resources/assets/images/menu-bg-images/bg-img2.jpg": {
+    "file": "assets/bg-img2-n4n61izM.jpg",
+    "src": "resources/assets/images/menu-bg-images/bg-img2.jpg"
+  },
+  "resources/assets/images/menu-bg-images/bg-img3.jpg": {
+    "file": "assets/bg-img3-CNxcagJr.jpg",
+    "src": "resources/assets/images/menu-bg-images/bg-img3.jpg"
+  },
+  "resources/assets/images/menu-bg-images/bg-img4.jpg": {
+    "file": "assets/bg-img4-CFXPUJ9E.jpg",
+    "src": "resources/assets/images/menu-bg-images/bg-img4.jpg"
+  },
+  "resources/assets/images/menu-bg-images/bg-img5.jpg": {
+    "file": "assets/bg-img5-532FJrAF.jpg",
+    "src": "resources/assets/images/menu-bg-images/bg-img5.jpg"
+  },
+  "resources/assets/images/menu-bg-images/transparent.png": {
+    "file": "assets/transparent-BFs1rQTc.png",
+    "src": "resources/assets/images/menu-bg-images/transparent.png"
   },
   "resources/assets/js/accordiation.js": {
     "file": "assets/accordiation-BshGsRQn.js",
@@ -273,7 +313,7 @@
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-B6Ojs-4e.css",
+    "file": "assets/app-Ch9Ydcxc.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }
