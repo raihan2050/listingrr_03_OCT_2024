@@ -51,71 +51,45 @@
 
 	<body class="">
 
-        @include('back.layouts.components.offcanvas')
-
 		<!--- GLOBAL LOADER -->
         <div id="loader">
             <img src="{{asset('build/assets/images/svgs/loader.svg')}}" alt="">
         </div>
 		<!--- END GLOBAL LOADER -->
 
+        @include('back.layouts.components.main-header')
+
+        @include('back.layouts.components.main-sidebar')
+
+        {{-- @include('back.layouts.components.news-ticker') --}}
+
         <!-- PAGE -->
-		<div class="page">
-
-                <!-- MAIN-HEADER -->
-                @include('back.layouts.components.main-header')
-                <!-- END MAIN-HEADER -->
-
-                <!-- MAIN-SIDEBAR -->
-                @include('back.layouts.components.main-sidebar')
-                <!-- END MAIN-SIDEBAR -->
-
-                <!-- NEWS-TICKER -->
-                {{-- @include('back.layouts.components.news-ticker') --}}
-                <!-- END NEWS-TICKER -->
-
-                <!-- MAIN-CONTENT -->
-                <div class="main-content app-content">
-                    <div class="side-app">
-                        <!-- CONTAINER -->
-                        <div class="main-container container-fluid">
-                                @yield('content')
-                        </div>
-                    </div>
-                    @yield('modal-page-content')
+		<div class="main-content app-content">
+                <div class="container-fluid">
+                    @yield('content')
                 </div>
-                <!-- END MAIN-CONTENT -->
-
-
-            @yield('modal-page-content1')
-
-            <!-- RIGHT-SIDEBAR -->
-            @include('back.layouts.components.right-sidebar')
-
-            <!-- END RIGHT-SIDEBAR -->
-
-            <div class="scrollToTop" style="display: none;"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>
-
-            <!-- MAIN-FOOTER -->
-            @include('back.layouts.components.main-footer')
-
-            <!-- END MAIN-FOOTER -->
-            @include('back.layouts.components.alert_message')
 		</div>
-        <!-- END PAGE-->
+        @yield('modal-page-content')
+        @yield('modal-page-content1')
 
-        <!-- SCRIPTS -->
+        @include('back.layouts.components.right-sidebar')
+
+        @include('back.layouts.components.main-footer')
+
+        @include('back.layouts.components.offcanvas')
+
+        @include('back.layouts.components.alert_message')
+
+        <div class="scrollToTop" style="display: none;"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>
+        <div id="responsive-overlay"></div>
 
         @include('back.layouts.components.scripts')
 
-        <!-- STICKY JS -->
 		<script src="{{asset('build/assets/sticky.js')}}"></script>
 
-        <!-- THEMECOLOR JS -->
         @vite('resources/assets/js/themeColors.js')
 
 
-        <!-- APP JS -->
 		@vite('resources/js/app.js')
 
         @if(session('alert_message'))
@@ -126,7 +100,6 @@
                 });
             </script>
         @endif
-        <!-- END SCRIPTS -->
 
 	</body>
 </html>
