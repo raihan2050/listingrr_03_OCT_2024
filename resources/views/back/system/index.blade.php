@@ -39,7 +39,7 @@
                 <div class="col-xl-2 col-lg-3">
                     <nav class="nav nav-tabs flex-column nav-style-5" role="tablist">
                         <a class="nav-link active" data-bs-toggle="tab" role="tab" aria-current="page" href="#basicInfoTab" aria-selected="true">
-                            <i class="ri-palette-line me-2 fs-18 align-middle"></i>
+                            <i class="ri-tools-line me-2 fs-18 align-middle"></i>
                             @lang('super.basic_information')
                         </a>
                         <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#logoMediaTab" aria-selected="false" tabindex="-1">
