@@ -1,5 +1,5 @@
-<div class="row gy-5">
-    <div class="col-md-6">
+<div class="row gy-3">
+    <div class="col-md-4">
         <div class="mb-3">
             <label for="loaderUploader" class="form-label">@lang('super.loader_image')</label>
             <input class="form-control" type="file" id="loaderUploader" style="display: none;">
@@ -20,5 +20,15 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6"></div>
+
+    <div class="col-md-4">
+        <div class="mb-3">
+            <label for="siteLoaderStatus" class="form-label">@lang('super.loader_status')</label>
+            <div class="toggle mb-3 on" id="siteLoaderStatus">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4"></div>
 </div>
