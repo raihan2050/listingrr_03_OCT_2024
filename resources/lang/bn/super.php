@@ -109,6 +109,11 @@ return [
     'disqus_link' => 'ডিসকুইস লিংক',
     'save_apis_information' => 'এপিআই এর তথ্য সংরক্ষণ করুন',
 
+    'cookie_alert' => 'কুকিজ এলার্ট',
+    'cookie_text' => 'কুকিজ টেক্সট',
+    'cookies_text' => 'কুকিজ টেক্সট',
+    'save_cookie_alert' => 'কুকিজ এলার্ট সংরক্ষণ করুন',
+
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
     'maintenance_off' => 'রক্ষণাবেক্ষণ বন্ধ',

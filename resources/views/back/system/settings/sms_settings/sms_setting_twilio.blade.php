@@ -1,4 +1,4 @@
-<form>
+<div>
     <div class="row gy-4">
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
             <label for="twilioTtatus">@lang('super.twilio_status')</label>
@@ -46,5 +46,5 @@
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
     </div>
-</form>
+</div>
 

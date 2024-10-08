@@ -110,6 +110,11 @@ return [
     'disqus_link' => 'Disqus Link',
     'save_apis_information' => 'Save API\'s Information',
 
+    'cookie_alert' => 'Cookie Alert',
+    'cookie_text' => 'Cookie Text',
+    'cookies_text' => 'Cookies Text',
+    'save_cookie_alert' => 'Save Cookie Alert',
+
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',
     'maintenance_off' => 'Maintenance Off',
