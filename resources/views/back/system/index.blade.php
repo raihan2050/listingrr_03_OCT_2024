@@ -74,12 +74,6 @@
                                 @lang('super.sms_settings')
                             </div>
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#paymentGatewayTab" aria-selected="false" tabindex="-1">
-                            <i class="ri-bank-card-2-line me-2 fs-18 align-middle"></i>
-                            <div class="text-align-left">
-                                @lang('super.payment_gateway')
-                            </div>
-                        </a>
                         <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#apiIntegrationTab" aria-selected="false" tabindex="-1">
                             <i class="ri-links-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
@@ -113,9 +107,6 @@
                         </div>
                         <div class="tab-pane border br-5 text-muted1" id="smsSettingsTab" role="tabpanel">
                             @include('back.system.settings.sms_settings_tab')
-                        </div>
-                        <div class="tab-pane border br-5 text-muted1" id="paymentGatewayTab" role="tabpanel">
-                            @include('back.system.settings.payment_gateway_tab')
                         </div>
                         <div class="tab-pane border br-5 text-muted1" id="apiIntegrationTab" role="tabpanel">
                             @include('back.system.settings.api_integration_tab')
