@@ -117,6 +117,7 @@ return [
     'payment_config' => 'Payment Config',
     'set_coupons' => 'Set Coupons',
     'state_tax' => 'State Tax',
+    'general_tax' => 'General Tax',
     'tax' => 'Tax',
     'currency' => 'Currency',
     'payment_gateway' => 'Payment Gateway',

@@ -116,6 +116,7 @@ return [
     'payment_config' => 'পেমেন্ট কনফিগারেশন',
     'set_coupons' => 'কুপন',
     'state_tax' => 'রাজ্যের ট্যাক্স',
+    'general_tax' => 'সাধারণ যাক্স',
     'tax' => 'ট্যাক্স',
     'currency' => 'কারেন্সি',
     'payment_gateway' => 'পেমেন্ট গেটওয়ে',

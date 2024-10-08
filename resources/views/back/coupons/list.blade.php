@@ -1,5 +1,7 @@
 @extends('back.layouts.app')
 
+@section('title', __('super.coupon_manger'))
+
 @section('styles')
     <link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />

@@ -6,6 +6,7 @@ use App\Http\Controllers\Back\Auth\AdminAuthController;
 use App\Http\Controllers\Back\ConfigController;
 use App\Http\Controllers\Back\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Back\CouponController as AdminCouponController;
+use App\Http\Controllers\Back\TaxController as AdminTaxController;
 use App\Http\Controllers\Back\SystemSetting;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,8 @@ Route::group(['prefix' => config('app.super_admin_url'), 'as' => 'super.', 'midd
 
     Route::prefix('payment-config')->name('payment_config.')->group(function () {
         Route::get('coupons/list', [AdminCouponController::class, 'list'])->name('coupon.list');
+        Route::get('tax/state', [AdminTaxController::class, 'taxState'])->name('txt.state');
+        Route::get('tax/regular', [AdminTaxController::class, 'taxGeneral'])->name('txt.regular');
     });
 
     Route::get('/setting/system', [SystemSetting::class, 'index'])->name('system.settings');

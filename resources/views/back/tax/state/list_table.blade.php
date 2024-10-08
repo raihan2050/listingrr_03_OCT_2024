@@ -13,7 +13,7 @@
     @for ($i = 1; $i < 20; $i++)
         <tr>
             <td>
-                <div>Coupon {{ $i }}</div>
+                <div>TaxState {{ $i }}</div>
                 <div>
                     <span class="btn btn-sm btn-secondary-gradient btn-wave waves-effect waves-light">EID2024</span>
                 </div>
@@ -45,11 +45,11 @@
                 </div>
             </td>
             <td>
-                <a class="modaldCouponFormBtn btn btn-primary btn-wave waves-effect waves-light"
+                <a class="modalTaxStateFormBtn btn btn-primary btn-wave waves-effect waves-light"
                     data-bs-effect="effect-scale"
                     data-bs-toggle="modal"
-                    data-coupon_id="{{ $i }}"
-                    href="#modaldCouponForm">
+                    data-tax_state_id="{{ $i }}"
+                    href="#modalTaxStateForm">
                     <i class="ri-pencil-line"></i>
                 </a>
                 <button type="button" class="btn btn-danger btn-wave waves-effect waves-light">

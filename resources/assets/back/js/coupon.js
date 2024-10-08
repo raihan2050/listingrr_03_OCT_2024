@@ -2,7 +2,7 @@ import {mkAjaxRequest} from "../../js/ajax"
 import DataTable from 'datatables.net-dt';
 import 'bootstrap-daterangepicker';
 
-let table = new DataTable('#couponListTable', {
+let couponListTable = new DataTable('#couponListTable', {
     responsive: true
 });
 
@@ -24,12 +24,6 @@ $(document).ready(function() {
             $(this).removeClass(removeClass);
         }
     });
-
-    $('#couponValidateTill').daterangepicker({
-        opens: 'left'
-    }, function(start, end) {
-        console.log("Selected date range: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-    });
 });
 
 function loadCouponCreateEditForm(couponId){
@@ -38,7 +32,7 @@ function loadCouponCreateEditForm(couponId){
     formDataObj.append('action', 'load_coupon_create_edit_form');
     formDataObj.append('coupon_id', couponId);
 
-    $("#modalCouponBody").html('<div class="text-center"><img src="../../build/assets/images/svgs/loader.svg" alt=""></div>');
+    $("#modalCouponBody").html('<div class="text-center"><img src="../../../build/assets/images/svgs/loader.svg" alt=""></div>');
 
     mkAjaxRequest('POST', window.commonAsset.ajax, formDataObj, function(error, response) {
         loadCouponEditCreateForm(error, response);

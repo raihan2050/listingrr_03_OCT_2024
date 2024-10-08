@@ -4,8 +4,7 @@
             aria-sort="ascending">
             Title
         </th>
-        <th class="sorting">Objects</th>
-        <th class="sorting">Discount Validity</th>
+        <th class="sorting">Tax</th>
         <th class="sorting">Status</th>
         <th class="sorting">Action</th>
     </tr>
@@ -13,21 +12,10 @@
     @for ($i = 1; $i < 20; $i++)
         <tr>
             <td>
-                <div>Coupon {{ $i }}</div>
-                <div>
-                    <span class="btn btn-sm btn-secondary-gradient btn-wave waves-effect waves-light">EID2024</span>
-                </div>
+                TaxGeneral {{ $i }}
             </td>
             <td>
-                <div>Plan 1{{ $i }}</div>
-                <div>Plan 2{{ $i }}</div>
-            </td>
-            <td>
-                <div>From : 03/20/2024</div>
-                <div>To : 04/19/2024</div>
-                <div>Discount : {{ $i }}%</div>
-                <div>Max Use : {{ $i }} times</div>
-                <div class="badge bg-secondary">Expired</div>
+                {{ $i }}%
             </td>
             <td>
                 <div class="btn-group">
@@ -45,11 +33,11 @@
                 </div>
             </td>
             <td>
-                <a class="modaldCouponFormBtn btn btn-primary btn-wave waves-effect waves-light"
+                <a class="modalTaxGeneralFormBtn btn btn-primary btn-wave waves-effect waves-light"
                     data-bs-effect="effect-scale"
                     data-bs-toggle="modal"
-                    data-coupon_id="{{ $i }}"
-                    href="#modaldCouponForm">
+                    data-tax_general_id="{{ $i }}"
+                    href="#modalTaxGeneralForm">
                     <i class="ri-pencil-line"></i>
                 </a>
                 <button type="button" class="btn btn-danger btn-wave waves-effect waves-light">

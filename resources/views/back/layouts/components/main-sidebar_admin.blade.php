@@ -19,15 +19,46 @@
             <i class="fe fe-chevron-right side-menu__angle"></i>
         </a>
         <ul class="slide-menu child1" data-popper-placement="bottom">
-            <li class="slide active">
-                <a href="{{ route('super.payment_config.coupon.list') }}" class="side-menu__item">@lang('super.set_coupons')</a>
+            <li class="
+                slide
+                @if (request()->routeIs('super.payment_config.coupon.list'))
+                    active
+                @endif
+                ">
+                <a href="{{ route('super.payment_config.coupon.list') }}" class="
+                    side-menu__item
+                    @if (request()->routeIs('super.payment_config.coupon.list'))
+                        active
+                    @endif
+                    ">@lang('super.set_coupons')</a>
             </li>
-            <li class="slide">
-                <a href="index.html" class="side-menu__item">@lang('super.state_tax')</a>
+            <li class="
+                slide
+                @if (request()->routeIs('super.payment_config.txt.regular'))
+                    active
+                @endif
+                ">
+                <a href="{{ route('super.payment_config.txt.regular') }}" class="
+                    side-menu__item
+                    @if (request()->routeIs('super.payment_config.txt.regular'))
+                        active
+                    @endif
+                    ">@lang('super.general_tax')</a>
             </li>
-            <li class="slide">
-                <a href="index-2.html" class="side-menu__item">@lang('super.tax')</a>
+            <li class="
+                slide
+                @if (request()->routeIs('super.payment_config.txt.state'))
+                    active
+                @endif
+                ">
+                <a href="{{ route('super.payment_config.txt.state') }}" class="
+                    side-menu__item
+                    @if (request()->routeIs('super.payment_config.txt.state'))
+                        active
+                    @endif
+                    ">@lang('super.state_tax')</a>
             </li>
+
             <li class="slide">
                 <a href="index-3.html" class="side-menu__item">@lang('super.currency')</a>
             </li>

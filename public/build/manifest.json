@@ -7,6 +7,13 @@
     "file": "assets/ajax-BLA7SV_z.js",
     "name": "ajax"
   },
+  "_dataTables-B9FWpZWP.js": {
+    "file": "assets/dataTables-B9FWpZWP.js",
+    "name": "dataTables",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
   "_switcher-styles-Bvz96Ijc.js": {
     "file": "assets/switcher-styles-Bvz96Ijc.js",
     "name": "switcher-styles",
@@ -35,12 +42,35 @@
     "src": "node_modules/remixicon/fonts/remixicon.woff2"
   },
   "resources/assets/back/js/coupon.js": {
-    "file": "assets/coupon-Bf-CSgiU.js",
+    "file": "assets/coupon-DZZyOXkm.js",
     "name": "coupon",
     "src": "resources/assets/back/js/coupon.js",
     "isEntry": true,
     "imports": [
       "_ajax-BLA7SV_z.js",
+      "_dataTables-B9FWpZWP.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/assets/back/js/tax_general.js": {
+    "file": "assets/tax_general-DXFCBToh.js",
+    "name": "tax_general",
+    "src": "resources/assets/back/js/tax_general.js",
+    "isEntry": true,
+    "imports": [
+      "_ajax-BLA7SV_z.js",
+      "_dataTables-B9FWpZWP.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/assets/back/js/tax_state.js": {
+    "file": "assets/tax_state-C5pE_rFk.js",
+    "name": "tax_state",
+    "src": "resources/assets/back/js/tax_state.js",
+    "isEntry": true,
+    "imports": [
+      "_ajax-BLA7SV_z.js",
+      "_dataTables-B9FWpZWP.js",
       "__commonjsHelpers-BosuxZz1.js"
     ]
   },

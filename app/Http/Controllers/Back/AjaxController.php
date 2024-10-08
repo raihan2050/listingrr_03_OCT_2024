@@ -28,6 +28,40 @@ class AjaxController extends Controller
     {
         $im = Auth::guard('admin')->user();
         switch ($request->action) {
+            case 'load_tax_state_create_edit_form':
+                $taxStateId = $request->tax_state_id;
+                $formTitle = "Create State Tax";
+                $formBtn = "Create Now";
+                if($taxStateId > 0){
+                    $formTitle = "Update State Tax";
+                    $formBtn = "Update Now";
+                }
+                $formBody = view('back.tax.state.modal_txt_state_form_element')->render();
+                $result = [
+                    'type' => 'success',
+                    'form_title' => $formTitle,
+                    'form_btn' => $formBtn,
+                    'form_body' => $formBody,
+                ];
+                return response()->json($result);
+                break;
+            case 'load_tax_general_create_edit_form':
+                $taxGeneralId = $request->tax_general_id;
+                $formTitle = "Create General Tax";
+                $formBtn = "Create Now";
+                if($taxGeneralId > 0){
+                    $formTitle = "Update General Tax";
+                    $formBtn = "Update Now";
+                }
+                $formBody = view('back.tax.general.modal_txt_general_form_element')->render();
+                $result = [
+                    'type' => 'success',
+                    'form_title' => $formTitle,
+                    'form_btn' => $formBtn,
+                    'form_body' => $formBody,
+                ];
+                return response()->json($result);
+                break;
             case 'load_coupon_create_edit_form':
                 $couponId = $request->coupon_id;
                 $formTitle = "Create Coupon";
