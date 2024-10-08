@@ -11,9 +11,9 @@
             <span class="side-menu__label">@lang('super.payment_config')</span>
             <i class="fe fe-chevron-right side-menu__angle"></i>
         </a>
-        <ul class="slide-menu child1" data-popper-placement="bottom" style="position: relative; left: 0px; top: 0px; margin: 0px; transform: translate(125px, 1472px); display: none; box-sizing: border-box;">
-            <li class="slide side-menu__label1">
-                <a href="javascript:void(0)">@lang('super.set_coupons')</a>
+        <ul class="slide-menu child1" data-popper-placement="bottom">
+            <li class="slide">
+                <a href="{{ route('super.coupon.list') }}" class="side-menu__item">@lang('super.set_coupons')</a>
             </li>
             <li class="slide">
                 <a href="index.html" class="side-menu__item">@lang('super.state_tax')</a>

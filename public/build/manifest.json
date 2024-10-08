@@ -1,7 +1,14 @@
 {
-  "_switcher-styles-Cgfu2Zb1.js": {
-    "file": "assets/switcher-styles-Cgfu2Zb1.js",
-    "name": "switcher-styles"
+  "__commonjsHelpers-Cpj98o6Y.js": {
+    "file": "assets/_commonjsHelpers-Cpj98o6Y.js",
+    "name": "_commonjsHelpers"
+  },
+  "_switcher-styles-p0TfOZfa.js": {
+    "file": "assets/switcher-styles-p0TfOZfa.js",
+    "name": "switcher-styles",
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
   },
   "node_modules/remixicon/fonts/remixicon.eot": {
     "file": "assets/remixicon-CTLsMfss.eot",
@@ -22,6 +29,21 @@
   "node_modules/remixicon/fonts/remixicon.woff2": {
     "file": "assets/remixicon-BCkO1-UF.woff2",
     "src": "node_modules/remixicon/fonts/remixicon.woff2"
+  },
+  "resources/assets/back/js/coupon.js": {
+    "file": "assets/coupon-DV5U-060.js",
+    "name": "coupon",
+    "src": "resources/assets/back/js/coupon.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
+  },
+  "resources/assets/back/scss/coupon.scss": {
+    "file": "assets/coupon-l0sNRNKZ.js",
+    "name": "coupon",
+    "src": "resources/assets/back/scss/coupon.scss",
+    "isEntry": true
   },
   "resources/assets/images/media/backgrounds/1.png": {
     "file": "assets/1-Bu0aE6In.png",
@@ -284,12 +306,13 @@
     "isEntry": true
   },
   "resources/assets/js/themeColors.js": {
-    "file": "assets/themeColors-DxZdD4F2.js",
+    "file": "assets/themeColors-DHv1xIP_.js",
     "name": "themeColors",
     "src": "resources/assets/js/themeColors.js",
     "isEntry": true,
     "imports": [
-      "_switcher-styles-Cgfu2Zb1.js"
+      "_switcher-styles-p0TfOZfa.js",
+      "__commonjsHelpers-Cpj98o6Y.js"
     ]
   },
   "resources/assets/switcher/js/switcher.js": {
@@ -304,12 +327,13 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-CW9ekYiQ.js",
+    "file": "assets/app-BDtn8nbQ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "imports": [
-      "_switcher-styles-Cgfu2Zb1.js"
+      "__commonjsHelpers-Cpj98o6Y.js",
+      "_switcher-styles-p0TfOZfa.js"
     ]
   },
   "resources/sass/app.scss": {

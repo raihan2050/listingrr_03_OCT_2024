@@ -51,6 +51,9 @@ export default defineConfig({
                 'resources/assets/switcher/js/switcher',
                 'resources/assets/js/ajax',
 
+                'resources/assets/back/js/coupon.js',
+                'resources/assets/back/scss/coupon.scss',
+
             ],
             refresh: true,
         }),
