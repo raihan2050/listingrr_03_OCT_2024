@@ -28,6 +28,23 @@ class AjaxController extends Controller
     {
         $im = Auth::guard('admin')->user();
         switch ($request->action) {
+            case 'load_coupon_create_edit_form':
+                $couponId = $request->coupon_id;
+                $formTitle = "Create Coupon";
+                $formBtn = "Create Now";
+                if($couponId > 0){
+                    $formTitle = "Update Coupon";
+                    $formBtn = "Update Now";
+                }
+                $formBody = view('back.coupons.modal_coupon_form_element')->render();
+                $result = [
+                    'type' => 'success',
+                    'form_title' => $formTitle,
+                    'form_btn' => $formBtn,
+                    'form_body' => $formBody,
+                ];
+                return response()->json($result);
+                break;
             case 'switch_dark_light':
                     $uid = $im->id;
                     $mode = ($request->mode == "light")? 0 : 1;

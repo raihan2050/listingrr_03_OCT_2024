@@ -1,13 +1,17 @@
 {
-  "__commonjsHelpers-Cpj98o6Y.js": {
-    "file": "assets/_commonjsHelpers-Cpj98o6Y.js",
+  "__commonjsHelpers-BosuxZz1.js": {
+    "file": "assets/_commonjsHelpers-BosuxZz1.js",
     "name": "_commonjsHelpers"
   },
-  "_switcher-styles-p0TfOZfa.js": {
-    "file": "assets/switcher-styles-p0TfOZfa.js",
+  "_ajax-BLA7SV_z.js": {
+    "file": "assets/ajax-BLA7SV_z.js",
+    "name": "ajax"
+  },
+  "_switcher-styles-Bvz96Ijc.js": {
+    "file": "assets/switcher-styles-Bvz96Ijc.js",
     "name": "switcher-styles",
     "imports": [
-      "__commonjsHelpers-Cpj98o6Y.js"
+      "__commonjsHelpers-BosuxZz1.js"
     ]
   },
   "node_modules/remixicon/fonts/remixicon.eot": {
@@ -31,12 +35,13 @@
     "src": "node_modules/remixicon/fonts/remixicon.woff2"
   },
   "resources/assets/back/js/coupon.js": {
-    "file": "assets/coupon-DV5U-060.js",
+    "file": "assets/coupon-Bf-CSgiU.js",
     "name": "coupon",
     "src": "resources/assets/back/js/coupon.js",
     "isEntry": true,
     "imports": [
-      "__commonjsHelpers-Cpj98o6Y.js"
+      "_ajax-BLA7SV_z.js",
+      "__commonjsHelpers-BosuxZz1.js"
     ]
   },
   "resources/assets/back/scss/coupon.scss": {
@@ -306,13 +311,13 @@
     "isEntry": true
   },
   "resources/assets/js/themeColors.js": {
-    "file": "assets/themeColors-DHv1xIP_.js",
+    "file": "assets/themeColors-D2dFwpUr.js",
     "name": "themeColors",
     "src": "resources/assets/js/themeColors.js",
     "isEntry": true,
     "imports": [
-      "_switcher-styles-p0TfOZfa.js",
-      "__commonjsHelpers-Cpj98o6Y.js"
+      "_switcher-styles-Bvz96Ijc.js",
+      "__commonjsHelpers-BosuxZz1.js"
     ]
   },
   "resources/assets/switcher/js/switcher.js": {
@@ -327,13 +332,14 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-BDtn8nbQ.js",
+    "file": "assets/app-Djyvd_on.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "imports": [
-      "__commonjsHelpers-Cpj98o6Y.js",
-      "_switcher-styles-p0TfOZfa.js"
+      "__commonjsHelpers-BosuxZz1.js",
+      "_switcher-styles-Bvz96Ijc.js",
+      "_ajax-BLA7SV_z.js"
     ]
   },
   "resources/sass/app.scss": {

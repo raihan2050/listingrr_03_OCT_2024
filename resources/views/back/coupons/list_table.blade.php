@@ -15,7 +15,7 @@
             <td>
                 <div>Coupon {{ $i }}</div>
                 <div>
-                    <span class="badge bg-purple-gradient h6 text-white">EID2024</span>
+                    <span class="btn btn-sm btn-secondary-gradient btn-wave waves-effect waves-light">EID2024</span>
                 </div>
             </td>
             <td>
@@ -26,6 +26,7 @@
                 <div>From : 03/20/2024</div>
                 <div>To : 04/19/2024</div>
                 <div>Discount : {{ $i }}%</div>
+                <div>Max Use : {{ $i }} times</div>
                 <div class="badge bg-secondary">Expired</div>
             </td>
             <td>
@@ -44,7 +45,11 @@
                 </div>
             </td>
             <td>
-                <a class="btn btn-primary btn-wave waves-effect waves-light" href="javascript:void(0);" role="button">
+                <a class="modaldCouponFormBtn btn btn-primary btn-wave waves-effect waves-light"
+                    data-bs-effect="effect-scale"
+                    data-bs-toggle="modal"
+                    data-coupon_id="{{ $i }}"
+                    href="#modaldCouponForm">
                     <i class="ri-pencil-line"></i>
                 </a>
                 <button type="button" class="btn btn-danger btn-wave waves-effect waves-light">

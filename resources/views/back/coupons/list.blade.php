@@ -2,6 +2,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     @vite('resources/assets/back/scss/coupon.scss')
 @endsection
 
@@ -19,7 +20,11 @@
     </div>
     <div class="page-title fw-semibold fs-18 mb-0">
         <div>
-            <a href="javascript:void(0);" class="btn bg-primary text-white btn-sm" data-bs-toggle="tooltip" title="" data-bs-placement="bottom" data-bs-original-title="Add New">
+            <a class="modaldCouponFormBtn btn bg-primary text-white btn-sm"
+                data-bs-effect="effect-scale"
+                data-bs-toggle="modal"
+                data-coupon_id="0"
+                href="#modaldCouponForm">
                 <span> <i class="fa fa-plus"></i> </span> New Coupon
             </a>
         </div>
@@ -40,6 +45,8 @@
         </div>
     </div>
 </div>
+
+@include('back.coupons.modal_coupon_form')
 @endsection
 
 @section('scripts')

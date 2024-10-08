@@ -9,3 +9,7 @@ jQuery(function() {
 });
 
 flatpickr("#date", {});
+
+// Animated modals
+
+// Animated modals
