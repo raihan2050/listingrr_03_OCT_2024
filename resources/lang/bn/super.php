@@ -14,7 +14,6 @@ return [
     'social_login' => 'সোশ্যাল লগইন সেটিংস',
     'email_settings' => 'ইমেইল ক্লায়েন্ট সেটিংস',
     'sms_settings' => 'ইন্টিগ্রেট এসএমএস এপিআই',
-    'payment_gateway' => 'ইন্টিগ্রেট পেমেন্ট গেটওয়ে',
     'api_integration' => 'অন্যান্য এপিআই ইন্টিগ্রেশন',
     'cookies_alert' => 'কুকিজ এলার্ট সেটিংস',
 
@@ -113,6 +112,13 @@ return [
     'cookie_text' => 'কুকিজ টেক্সট',
     'cookies_text' => 'কুকিজ টেক্সট',
     'save_cookie_alert' => 'কুকিজ এলার্ট সংরক্ষণ করুন',
+
+    'payment_config' => 'পেমেন্ট কনফিগারেশন',
+    'set_coupons' => 'কুপন',
+    'state_tax' => 'রাজ্যের ট্যাক্স',
+    'tax' => 'ট্যাক্স',
+    'currency' => 'কারেন্সি',
+    'payment_gateway' => 'পেমেন্ট গেটওয়ে',
 
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',

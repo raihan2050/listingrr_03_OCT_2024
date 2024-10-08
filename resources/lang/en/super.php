@@ -14,7 +14,6 @@ return [
     'social_login' => 'Website Social Login',
     'email_settings' => 'Mail Client Settings',
     'sms_settings' => 'Integrate SMS API\'s',
-    'payment_gateway' => 'Integrate Payment Gateway',
     'api_integration' => 'OtherAPI\'s Integration',
     'cookies_alert' => 'Cookies Alert Settings',
 
@@ -114,6 +113,13 @@ return [
     'cookie_text' => 'Cookie Text',
     'cookies_text' => 'Cookies Text',
     'save_cookie_alert' => 'Save Cookie Alert',
+
+    'payment_config' => 'Payment Config',
+    'set_coupons' => 'Set Coupons',
+    'state_tax' => 'State Tax',
+    'tax' => 'Tax',
+    'currency' => 'Currency',
+    'payment_gateway' => 'Payment Gateway',
 
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',
