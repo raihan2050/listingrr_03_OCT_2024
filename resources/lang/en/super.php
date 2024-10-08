@@ -119,6 +119,7 @@ return [
     'state_tax' => 'State Tax',
     'general_tax' => 'General Tax',
     'tax' => 'Tax',
+    'currency_list' => 'Currency List',
     'currency' => 'Currency',
     'payment_gateway' => 'Payment Gateway',
 

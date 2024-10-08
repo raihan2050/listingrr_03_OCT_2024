@@ -28,6 +28,23 @@ class AjaxController extends Controller
     {
         $im = Auth::guard('admin')->user();
         switch ($request->action) {
+            case 'load_currency_create_edit_form':
+                $currencyId = $request->currency_id;
+                $formTitle = "Create Currency";
+                $formBtn = "Create Now";
+                if($currencyId > 0){
+                    $formTitle = "Update Currency";
+                    $formBtn = "Update Now";
+                }
+                $formBody = view('back.currency.modal_currency_form_element')->render();
+                $result = [
+                    'type' => 'success',
+                    'form_title' => $formTitle,
+                    'form_btn' => $formBtn,
+                    'form_body' => $formBody,
+                ];
+                return response()->json($result);
+                break;
             case 'load_tax_state_create_edit_form':
                 $taxStateId = $request->tax_state_id;
                 $formTitle = "Create State Tax";

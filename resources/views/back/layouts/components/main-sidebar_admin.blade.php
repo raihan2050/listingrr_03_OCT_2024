@@ -58,9 +58,18 @@
                     @endif
                     ">@lang('super.state_tax')</a>
             </li>
-
-            <li class="slide">
-                <a href="index-3.html" class="side-menu__item">@lang('super.currency')</a>
+            <li class="
+                slide
+                @if (request()->routeIs('super.payment_config.currency.list'))
+                    active
+                @endif
+                ">
+                <a href="{{ route('super.payment_config.currency.list') }}" class="
+                    side-menu__item
+                    @if (request()->routeIs('super.payment_config.currency.list'))
+                        active
+                    @endif
+                    ">@lang('super.currency_list')</a>
             </li>
             <li class="slide">
                 <a href="index-4.html" class="side-menu__item">@lang('super.payment_gateway')</a>

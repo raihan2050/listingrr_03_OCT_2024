@@ -52,6 +52,17 @@
       "__commonjsHelpers-BosuxZz1.js"
     ]
   },
+  "resources/assets/back/js/currency_manager.js": {
+    "file": "assets/currency_manager-DfsuYodc.js",
+    "name": "currency_manager",
+    "src": "resources/assets/back/js/currency_manager.js",
+    "isEntry": true,
+    "imports": [
+      "_ajax-BLA7SV_z.js",
+      "_dataTables-B9FWpZWP.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
   "resources/assets/back/js/tax_general.js": {
     "file": "assets/tax_general-DXFCBToh.js",
     "name": "tax_general",

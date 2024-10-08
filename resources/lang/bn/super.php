@@ -118,6 +118,7 @@ return [
     'state_tax' => 'রাজ্যের ট্যাক্স',
     'general_tax' => 'সাধারণ যাক্স',
     'tax' => 'ট্যাক্স',
+    'currency_list' => 'কারেন্সি লিস্ট',
     'currency' => 'কারেন্সি',
     'payment_gateway' => 'পেমেন্ট গেটওয়ে',
 
