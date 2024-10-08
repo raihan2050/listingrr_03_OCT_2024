@@ -118,6 +118,7 @@ return [
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',
     'maintenance_off' => 'Maintenance Off',
+    'cache_clear' => 'Cache Clear',
     'off' => 'Off',
     'on' => 'On',
 ];

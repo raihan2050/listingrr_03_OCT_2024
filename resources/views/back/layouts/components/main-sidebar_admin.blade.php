@@ -27,4 +27,10 @@
             </a>
         </li>
     @endif
+    <li class="slide">
+        <a class="side-menu__item has-link" href="{{ route('super.clear') }}">
+            <i class="side-menu__icon mdi mdi-broom"></i>
+            <span class="side-menu__label">@lang('super.cache_clear')</span>
+        </a>
+    </li>
 </ul>

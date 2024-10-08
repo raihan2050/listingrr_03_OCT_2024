@@ -78,7 +78,6 @@
 
         @include('back.layouts.components.offcanvas')
 
-        @include('back.layouts.components.alert_message')
 
         <div class="scrollToTop" style="display: none;"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>
         <div id="responsive-overlay"></div>
@@ -93,6 +92,7 @@
 		@vite('resources/js/app.js')
 
         @if(session('alert_message'))
+            @include('back.layouts.components.alert_message')
             <script>
                 $(function(){
                     const alertMessage = new bootstrap.Toast(document.getElementById('alertMessage'))

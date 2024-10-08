@@ -1,5 +1,4 @@
-@if(session('alert_message'))
-<div class="position-fixed bottom-50 end-0 p-3">
+<div class="position-fixed top-60 zindex-100 end-0 p-3">
     <div id="alertMessage"
             class="toast fade hide"
             role="alert"
@@ -27,4 +26,3 @@
         </div>
     </div>
 </div>
-@endif

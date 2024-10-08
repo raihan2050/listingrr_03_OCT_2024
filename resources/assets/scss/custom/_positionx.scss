@@ -1,0 +1,12 @@
+@mixin position-value($property, $value) {
+  .#{$property}-#{$value} {
+    #{$property}: #{$value}px;
+  }
+}
+
+@for $i from 0 through 1000 {
+  @include position-value(top, $i);
+  @include position-value(right, $i);
+  @include position-value(bottom, $i);
+  @include position-value(left, $i);
+}

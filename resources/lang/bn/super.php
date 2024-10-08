@@ -117,6 +117,7 @@ return [
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
     'maintenance_off' => 'রক্ষণাবেক্ষণ বন্ধ',
+    'cache_clear' => 'ক্যাশ ক্লিয়ার ',
     'off' => 'বন্ধ',
     'on' => 'চালু',
 ];

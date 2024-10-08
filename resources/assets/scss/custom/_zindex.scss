@@ -1,0 +1,9 @@
+@mixin z-index($value) {
+    .zindex-#{$value} {
+        z-index: $value;
+    }
+}
+
+@for $i from 10 through 1000 {
+  @include z-index($i);
+}
