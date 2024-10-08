@@ -5,15 +5,22 @@
             <span class="side-menu__label">@lang('super.dashboard')</span>
         </a>
     </li>
-    <li class="slide has-sub">
+    <li class="
+            slide
+            has-sub
+            @if (request()->routeIs('super.payment_config.coupon.list') || request()->routeIs('super.payment_config.*'))
+                active
+                open
+            @endif
+        ">
         <a href="javascript:void(0);" class="side-menu__item">
             <i class="ri-secure-payment-line side-menu__icon"></i>
             <span class="side-menu__label">@lang('super.payment_config')</span>
             <i class="fe fe-chevron-right side-menu__angle"></i>
         </a>
         <ul class="slide-menu child1" data-popper-placement="bottom">
-            <li class="slide">
-                <a href="{{ route('super.coupon.list') }}" class="side-menu__item">@lang('super.set_coupons')</a>
+            <li class="slide active">
+                <a href="{{ route('super.payment_config.coupon.list') }}" class="side-menu__item">@lang('super.set_coupons')</a>
             </li>
             <li class="slide">
                 <a href="index.html" class="side-menu__item">@lang('super.state_tax')</a>

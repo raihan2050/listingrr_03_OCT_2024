@@ -28,7 +28,9 @@ Route::group(['prefix' => config('app.super_admin_url'), 'as' => 'super.', 'midd
 
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
-    Route::get('/coupons/list', [AdminCouponController::class, 'list'])->name('coupon.list');
+    Route::prefix('payment-config')->name('payment_config.')->group(function () {
+        Route::get('coupons/list', [AdminCouponController::class, 'list'])->name('coupon.list');
+    });
 
     Route::get('/setting/system', [SystemSetting::class, 'index'])->name('system.settings');
 });
