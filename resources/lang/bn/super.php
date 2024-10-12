@@ -203,6 +203,10 @@ return [
     'payc_gateway_logo_help' => 'ছবির আকার ২৯৩ x ১২২ হওয়া উচিত',
     'payc_gateway_description' => 'গেটওয়ের বর্ণনা',
     'payc_gateway_save' => 'সংরক্ষণ করুন',
+    'payc_gateway_key' => '%s কী',
+    'payc_gateway_secret' => '%s সিক্রেট',
+    'payc_gateway_sendbox' => 'সেন্ডবক্স',
+    'payc_gateway_sendbox_help' => '%s সেন্ডবক্স',
 
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',

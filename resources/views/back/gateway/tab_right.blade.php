@@ -7,6 +7,6 @@
         </div>
     @endforeach
     <div class="row">
-        @include('back.gateway.settings.button')
+        @include('back.gateway.settings._button')
     </div>
 </div>
