@@ -2,12 +2,12 @@
     <tr>
         <th class="sorting sorting_asc"
             aria-sort="ascending">
-            Name
+            @lang('super.payc_curr_name')
         </th>
-        <th class="sorting">Sign</th>
-        <th class="sorting">Value</th>
-        <th class="sorting">Default</th>
-        <th class="sorting">Action</th>
+        <th class="sorting">@lang('super.payc_curr_sign')</th>
+        <th class="sorting">@lang('super.payc_curr_value')</th>
+        <th class="sorting">@lang('super.payc_curr_default')</th>
+        <th class="sorting">@lang('super.payc_curr_action')</th>
     </tr>
 @elseif ($table_part == "body")
     @for ($i = 1; $i < 20; $i++)

@@ -30,12 +30,13 @@ class AjaxController extends Controller
         switch ($request->action) {
             case 'load_currency_create_edit_form':
                 $currencyId = $request->currency_id;
-                $formTitle = "Create Currency";
-                $formBtn = "Create Now";
+                $formTitle = __('super.payc_curr_create_currency_tax');
+                $formBtn = __('super.payc_curr_create_now');
                 if($currencyId > 0){
-                    $formTitle = "Update Currency";
-                    $formBtn = "Update Now";
+                    $formTitle = __('super.payc_curr_update_currency_tax');
+                    $formBtn = __('super.payc_curr_update_now');
                 }
+
                 $formBody = view('back.currency.modal_currency_form_element')->render();
                 $result = [
                     'type' => 'success',

@@ -26,7 +26,7 @@
                 data-currency_id="0"
                 href="#modalCurrencyForm"
                 >
-                <span> <i class="fa fa-plus"></i> </span> New Currency
+                <span> <i class="fa fa-plus"></i> </span> @lang('super.payc_curr_new_currency')
             </a>
         </div>
     </div>
