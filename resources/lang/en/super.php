@@ -194,7 +194,7 @@ return [
     'payc_curr_currency_value' => 'Currency Value',
 
     'payc_gateway_status' => 'Status',
-    'payc_gateway_status_help' => 'Display %s',
+    'payc_gateway_status_help' => 'Display %s Gateway',
     'payc_gateway_name' => 'Name',
     'payc_gateway_enter_name' => 'Enter Name',
     'payc_gateway_logo_light' => 'Logo (Light)',
