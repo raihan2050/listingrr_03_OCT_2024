@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
+
+if (!function_exists('getCurrentLang')) {
+    function getCurrentLang()
+    {
+        return Config::get('app.locale');
+    }
+}
 
 if (!function_exists('isSuperAdmin')) {
     function isSuperAdmin()

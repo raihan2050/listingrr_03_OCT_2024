@@ -15,7 +15,7 @@
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item active" aria-current="page">@lang('super.payment_config')</li>
                 <li class="breadcrumb-item">
-                    <a href="javascript:void(0);">@lang('super.set_coupons')</a>
+                    <a href="javascript:void(0);">@lang('super.payc_set_coupons')</a>
                 </li>
             </ol>
         </nav>
@@ -27,7 +27,7 @@
                 data-bs-toggle="modal"
                 data-coupon_id="0"
                 href="#modaldCouponForm">
-                <span> <i class="fa fa-plus"></i> </span> New Coupon
+                <span> <i class="fa fa-plus"></i> </span> @lang('super.payc_new_coupon')
             </a>
         </div>
     </div>
@@ -52,20 +52,5 @@
 @endsection
 
 @section('scripts')
-
-    <!-- SELECT2 JS -->
-    {{-- <script src="{{asset('build/assets/plugins/select2/select2.full.min.js')}}"></script> --}}
-
-    <!-- APEXCHART JS -->
-    {{-- <script src="{{asset('build/assets/plugins/apexcharts/apexcharts.min.js')}}"></script> --}}
-
-    <!-- DATA TABLES JS -->
-    {{-- <script src="{{asset('build/assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('build/assets/plugins/datatable/js/dataTables.bootstrap5.js')}}"></script>
-    <script src="{{asset('build/assets/plugins/datatable/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('build/assets/plugins/datatable/responsive.bootstrap5.min.js')}}"></script> --}}
-
-    <!-- INDEX JS -->
     @vite('resources/assets/back/js/coupon.js')
-
 @endsection

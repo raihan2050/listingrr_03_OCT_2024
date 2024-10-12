@@ -2,12 +2,12 @@
     <tr>
         <th class="sorting sorting_asc"
             aria-sort="ascending">
-            Title
+            @lang('super.payc_coupon_title')
         </th>
-        <th class="sorting">Objects</th>
-        <th class="sorting">Discount Validity</th>
-        <th class="sorting">Status</th>
-        <th class="sorting">Action</th>
+        <th class="sorting">@lang('super.payc_coupon_objects')</th>
+        <th class="sorting">@lang('super.payc_coupon_discount_validity')</th>
+        <th class="sorting">@lang('super.payc_coupon_status')</th>
+        <th class="sorting">@lang('super.payc_coupon_action')</th>
     </tr>
 @elseif ($table_part == "body")
     @for ($i = 1; $i < 20; $i++)
