@@ -13,7 +13,7 @@
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item active" aria-current="page">@lang('super.payment_config')</li>
                 <li class="breadcrumb-item">
-                    <a href="javascript:void(0);">@lang('super.currency_list')</a>
+                    <a href="javascript:void(0);">@lang('super.currency_manager')</a>
                 </li>
             </ol>
         </nav>

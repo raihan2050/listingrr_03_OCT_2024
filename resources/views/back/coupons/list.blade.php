@@ -15,7 +15,7 @@
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item active" aria-current="page">@lang('super.payment_config')</li>
                 <li class="breadcrumb-item">
-                    <a href="javascript:void(0);">@lang('super.payc_set_coupons')</a>
+                    <a href="javascript:void(0);">@lang('super.coupon_manager')</a>
                 </li>
             </ol>
         </nav>

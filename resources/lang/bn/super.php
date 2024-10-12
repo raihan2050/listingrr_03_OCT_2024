@@ -114,6 +114,12 @@ return [
     'save_cookie_alert' => 'কুকিজ এলার্ট সংরক্ষণ করুন',
 
     'payment_config' => 'পেমেন্ট কনফিগারেশন',
+    'coupon_manager' => 'কুপন ম্যানেজার',
+    'state_tax' => 'রাজ্যের ট্যাক্স',
+    'general_tax' => 'সাধারণ ট্যাক্স',
+    'currency_manager' => 'কারেন্সি ম্যানেজার',
+    'payment_gateway' => 'পেমেন্ট গেটওয়ে',
+
     'payc_set_coupons' => 'কুপন সেট করুন',
     'payc_new_coupon' => 'নতুন কুপন',
     'payc_coupon_title' => 'টাইটেল',
@@ -186,14 +192,6 @@ return [
     'payc_curr_currency_name' => 'কারেন্সি নাম',
     'payc_curr_currency_sign' => 'কারেন্সি সাইন',
     'payc_curr_currency_value' => 'কারেন্সি মূল্য',
-
-    'set_coupons' => 'কুপন',
-    'state_tax' => 'রাজ্যের ট্যাক্স',
-    'general_tax' => 'সাধারণ ট্যাক্স',
-    'tax' => 'ট্যাক্স',
-    'currency_list' => 'কারেন্সি লিস্ট',
-    'currency' => 'কারেন্সি',
-    'payment_gateway' => 'পেমেন্ট গেটওয়ে',
 
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',

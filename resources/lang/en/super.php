@@ -115,6 +115,12 @@ return [
     'save_cookie_alert' => 'Save Cookie Alert',
 
     'payment_config' => 'Payment Config',
+    'coupon_manager' => 'Coupon Manager',
+    'state_tax' => 'State Tax',
+    'general_tax' => 'General Tax',
+    'currency_manager' => 'Currency Manager',
+    'payment_gateway' => 'Payment Gateway',
+
     'payc_set_coupons' => 'Set Coupons',
     'payc_new_coupon' => 'New Coupon',
     'payc_coupon_title' => 'Title',
@@ -190,13 +196,6 @@ return [
     'payc_close' => 'Close',
     'payc_close' => 'Close',
     'payc_close' => 'Close',
-
-    'state_tax' => 'State Tax',
-    'general_tax' => 'General Tax',
-    'tax' => 'Tax',
-    'currency_list' => 'Currency List',
-    'currency' => 'Currency',
-    'payment_gateway' => 'Payment Gateway',
 
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',

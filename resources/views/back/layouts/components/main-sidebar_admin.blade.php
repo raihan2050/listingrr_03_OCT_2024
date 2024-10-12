@@ -30,7 +30,7 @@
                     @if (request()->routeIs('super.payment_config.coupon.list'))
                         active
                     @endif
-                    ">@lang('super.set_coupons')</a>
+                    ">@lang('super.coupon_manager')</a>
             </li>
             <li class="
                 slide
@@ -69,7 +69,7 @@
                     @if (request()->routeIs('super.payment_config.currency.list'))
                         active
                     @endif
-                    ">@lang('super.currency_list')</a>
+                    ">@lang('super.currency_manager')</a>
             </li>
             <li class="slide">
                 <a href="index-4.html" class="side-menu__item">@lang('super.payment_gateway')</a>
