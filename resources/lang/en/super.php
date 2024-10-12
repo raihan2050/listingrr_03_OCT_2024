@@ -202,7 +202,7 @@ return [
     'payc_gateway_select_logo' => 'Select Logo',
     'payc_gateway_logo_help' => 'Image Size Should Be 293 x 122',
     'payc_gateway_description' => 'Gateway Description',
-    'payc_gateway_' => 'Close',
+    'payc_gateway_save' => 'Save Now',
     'payc_gateway_' => 'Close',
     'payc_gateway_' => 'Close',
     'payc_gateway_' => 'Close',

@@ -6,4 +6,7 @@
             @include('back.gateway.settings.'.$gateway['href'])
         </div>
     @endforeach
+    <div class="row">
+        @include('back.gateway.settings.button')
+    </div>
 </div>
