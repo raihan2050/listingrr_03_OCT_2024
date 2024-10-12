@@ -14,6 +14,10 @@
       "__commonjsHelpers-BosuxZz1.js"
     ]
   },
+  "_isObject-DB8w6JNV.js": {
+    "file": "assets/isObject-DB8w6JNV.js",
+    "name": "isObject"
+  },
   "_switcher-styles-Bvz96Ijc.js": {
     "file": "assets/switcher-styles-Bvz96Ijc.js",
     "name": "switcher-styles",
@@ -64,10 +68,14 @@
     ]
   },
   "resources/assets/back/js/gateway_manager.js": {
-    "file": "assets/gateway_manager-l0sNRNKZ.js",
+    "file": "assets/gateway_manager-Bigdlhc4.js",
     "name": "gateway_manager",
     "src": "resources/assets/back/js/gateway_manager.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_isObject-DB8w6JNV.js"
+    ]
   },
   "resources/assets/back/js/tax_general.js": {
     "file": "assets/tax_general-DXFCBToh.js",
@@ -379,18 +387,19 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-Djyvd_on.js",
+    "file": "assets/app-DMy9UcTP.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "imports": [
       "__commonjsHelpers-BosuxZz1.js",
+      "_isObject-DB8w6JNV.js",
       "_switcher-styles-Bvz96Ijc.js",
       "_ajax-BLA7SV_z.js"
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-ZTkw6r8b.css",
+    "file": "assets/app-sbuiYgfj.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

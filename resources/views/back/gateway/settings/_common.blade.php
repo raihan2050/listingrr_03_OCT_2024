@@ -61,6 +61,10 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
     <div class="mt-3">
         <label for="gatewayDescription{{ $gateway['identity'] }}" class="form-label">@lang('super.payc_gateway_description')</label>
-        <textarea class="form-control" id="gatewayDescription{{ $gateway['identity'] }}" rows="3"></textarea>
+        @if ($gateway['identity'] == 'TabBankTransfer')
+            <div id="gatewayDescription{{ $gateway['identity'] }}"></div>
+        @else
+            <textarea class="form-control" id="gatewayDescription{{ $gateway['identity'] }}" rows="3"></textarea>
+        @endif
     </div>
 </div>
