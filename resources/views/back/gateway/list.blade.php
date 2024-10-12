@@ -18,18 +18,6 @@
             </ol>
         </nav>
     </div>
-    <div class="page-title fw-semibold fs-18 mb-0">
-        <div>
-            <a class="modalCurrencyFormBtn btn bg-primary text-white btn-sm"
-                data-bs-effect="effect-scale"
-                data-bs-toggle="modal"
-                data-gateway_id="0"
-                href="#modalCurrencyForm"
-                >
-                <span> <i class="fa fa-plus"></i> </span> @lang('super.payc_curr_new_currency')
-            </a>
-        </div>
-    </div>
 </div>
 @php
     $gatewayList = [
