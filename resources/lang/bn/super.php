@@ -207,6 +207,8 @@ return [
     'payc_gateway_secret' => '%s সিক্রেট',
     'payc_gateway_sendbox' => 'সেন্ডবক্স',
     'payc_gateway_sendbox_help' => '%s সেন্ডবক্স',
+    'payc_gateway_client_id' => '%s ক্লায়েন্ট আইডি',
+    'payc_gateway_client_secret' => '%s ক্লায়েন্ট সিক্রেট',
 
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
