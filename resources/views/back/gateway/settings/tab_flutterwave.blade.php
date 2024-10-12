@@ -1,1 +1,3 @@
-tab_flutterwave
+<div class="row">
+    @include('back.gateway.settings.common')
+</div>

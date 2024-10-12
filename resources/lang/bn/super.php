@@ -193,6 +193,16 @@ return [
     'payc_curr_currency_sign' => 'কারেন্সি সাইন',
     'payc_curr_currency_value' => 'কারেন্সি মূল্য',
 
+    'payc_gateway_status' => 'স্ট্যাটাস',
+    'payc_gateway_status_help' => '%s গেটওয়ে স্ট্যাটাস',
+    'payc_gateway_name' => 'নাম',
+    'payc_gateway_enter_name' => 'নাম লিখুন',
+    'payc_gateway_logo_light' => 'লোগো (লাইট)',
+    'payc_gateway_logo_dark' => 'লোগো (ডার্ক)',
+    'payc_gateway_select_logo' => 'লোগো সিলেক্ট করুন',
+    'payc_gateway_logo_help' => 'ছবির আকার ২৯৩ x ১২২ হওয়া উচিত',
+    'payc_gateway_description' => 'গেটওয়ের বর্ণনা',
+
     'maintenance' => 'রক্ষণাবেক্ষণ',
     'maintenance_on' => 'রক্ষণাবেক্ষণ চালু',
     'maintenance_off' => 'রক্ষণাবেক্ষণ বন্ধ',

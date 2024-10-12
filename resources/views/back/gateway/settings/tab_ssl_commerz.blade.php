@@ -1,1 +1,3 @@
-tab_ssl_commerz
+<div class="row">
+    @include('back.gateway.settings.common')
+</div>

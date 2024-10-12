@@ -1,1 +1,3 @@
-tab_mercadopago
+<div class="row">
+    @include('back.gateway.settings.common')
+</div>
