@@ -131,7 +131,13 @@
       color: $white;
       border: 0;
     }
-    &:hover,
+    &:not(.active) {
+        &:hover {
+            border: 0;
+            background: rgba(var(--primary-rgb), 0.3);
+            color: $primary;
+          }
+    }
     &:focus {
       border: 0;
     }
@@ -364,14 +370,12 @@
       }
       &:hover {
         border: 0;
-        background: transparent;
-        color: $primary;
       }
       &.active {
         background-color: transparent;
         position: relative;
         border: 0;
-        color: $primary !important;
+        color: $primary;
         i {
           background-color: $primary-01;
           color: $primary;

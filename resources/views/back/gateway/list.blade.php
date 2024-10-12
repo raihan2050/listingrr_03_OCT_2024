@@ -31,18 +31,91 @@
         </div>
     </div>
 </div>
-
+@php
+    $gatewayList = [
+        [
+            'title' => 'COD',
+            'status' => 1,
+            'href' => 'tab_cod',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Stripe',
+            'status' => 0,
+            'href' => 'tab_stripe',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'PayPal',
+            'status' => 0,
+            'href' => 'tab_paypal',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Mollie',
+            'status' => 0,
+            'href' => 'tab_mollie',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Paytm',
+            'status' => 0,
+            'href' => 'tab_paytm',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Razorpay',
+            'status' => 0,
+            'href' => 'tab_razorpay',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'SSL Commerz',
+            'status' => 0,
+            'href' => 'tab_ssl_commerz',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Mercadopago',
+            'status' => 0,
+            'href' => 'tab_mercadopago',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Authorize.Net',
+            'status' => 0,
+            'href' => 'tab_authorizenet',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Paystack',
+            'status' => 0,
+            'href' => 'tab_paystack',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Flutterwave',
+            'status' => 0,
+            'href' => 'tab_flutterwave',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+        [
+            'title' => 'Bank Transfer',
+            'status' => 0,
+            'href' => 'tab_bank_transfer',
+            'icon' => 'ri-arrow-drop-right-line',
+        ],
+    ];
+@endphp
 <div class="card custom-card">
     <div class="card-body">
-        <div class="table-responsive">
-            <table id="currencyListTable" class="table table-bordered text-nowrap w-100 dataTable no-footer dtr-inline" aria-describedby="responsiveDataTable_info">
-                <thead>
-                     @include('back.currency.list_table', ['table_part' => 'head'])
-                </thead>
-                <tbody>
-                     @include('back.currency.list_table', ['table_part' => 'body'])
-                </tbody>
-             </table>
+        <div class="row">
+            <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2">
+                @include('back.gateway.tab_left')
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-10 col-xl-10">
+                @include('back.gateway.tab_right')
+            </div>
         </div>
     </div>
 </div>
