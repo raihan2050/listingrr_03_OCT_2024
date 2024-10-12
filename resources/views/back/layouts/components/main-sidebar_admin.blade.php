@@ -82,7 +82,7 @@
                     @if (request()->routeIs('super.payment_config.gateway.list'))
                         active
                     @endif
-                    ">@lang('super.payment_gateway')</a>
+                    ">@lang('super.gateway_manager')</a>
             </li>
         </ul>
     </li>
