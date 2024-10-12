@@ -13,7 +13,7 @@
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item active" aria-current="page">@lang('super.payment_config')</li>
                 <li class="breadcrumb-item">
-                    <a href="javascript:void(0);">@lang('super.general_tax')</a>
+                    <a href="javascript:void(0);">@lang('super.payc_gt_general_tax')</a>
                 </li>
             </ol>
         </nav>
@@ -26,7 +26,7 @@
                 data-tax_general_id="0"
                 href="#modalTaxGeneralForm"
                 >
-                <span> <i class="fa fa-plus"></i> </span> New Tax
+                <span> <i class="fa fa-plus"></i> </span> @lang('super.payc_gt_new_tax')
             </a>
         </div>
     </div>

@@ -2,11 +2,11 @@
     <tr>
         <th class="sorting sorting_asc"
             aria-sort="ascending">
-            Title
+            @lang('super.payc_gt_title')
         </th>
-        <th class="sorting">Tax</th>
-        <th class="sorting">Status</th>
-        <th class="sorting">Action</th>
+        <th class="sorting">@lang('super.payc_gt_tax')</th>
+        <th class="sorting">@lang('super.payc_gt_status')</th>
+        <th class="sorting">@lang('super.payc_gt_action')</th>
     </tr>
 @elseif ($table_part == "body")
     @for ($i = 1; $i < 20; $i++)

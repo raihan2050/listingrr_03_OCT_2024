@@ -64,11 +64,11 @@ class AjaxController extends Controller
                 break;
             case 'load_tax_general_create_edit_form':
                 $taxGeneralId = $request->tax_general_id;
-                $formTitle = "Create General Tax";
-                $formBtn = "Create Now";
+                $formTitle = __('super.payc_gt_create_general_tax');
+                $formBtn = __('super.payc_gt_create_now');
                 if($taxGeneralId > 0){
-                    $formTitle = "Update General Tax";
-                    $formBtn = "Update Now";
+                    $formTitle = __('super.payc_gt_update_general_tax');
+                    $formBtn = __('super.payc_gt_update_now');
                 }
                 $formBody = view('back.tax.general.modal_txt_general_form_element')->render();
                 $result = [
