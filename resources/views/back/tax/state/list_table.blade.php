@@ -2,32 +2,20 @@
     <tr>
         <th class="sorting sorting_asc"
             aria-sort="ascending">
-            Title
+            @lang('super.payc_statet_title')
         </th>
-        <th class="sorting">Objects</th>
-        <th class="sorting">Discount Validity</th>
-        <th class="sorting">Status</th>
-        <th class="sorting">Action</th>
+        <th class="sorting">@lang('super.payc_statet_tax')</th>
+        <th class="sorting">@lang('super.payc_statet_status')</th>
+        <th class="sorting">@lang('super.payc_statet_action')</th>
     </tr>
 @elseif ($table_part == "body")
     @for ($i = 1; $i < 20; $i++)
         <tr>
             <td>
-                <div>TaxState {{ $i }}</div>
-                <div>
-                    <span class="btn btn-sm btn-secondary-gradient btn-wave waves-effect waves-light">EID2024</span>
-                </div>
+                TaxGeneral {{ $i }}
             </td>
             <td>
-                <div>Plan 1{{ $i }}</div>
-                <div>Plan 2{{ $i }}</div>
-            </td>
-            <td>
-                <div>From : 03/20/2024</div>
-                <div>To : 04/19/2024</div>
-                <div>Discount : {{ $i }}%</div>
-                <div>Max Use : {{ $i }} times</div>
-                <div class="badge bg-secondary">Expired</div>
+                {{ $i }}%
             </td>
             <td>
                 <div class="btn-group">
@@ -48,7 +36,7 @@
                 <a class="modalTaxStateFormBtn btn btn-primary btn-wave waves-effect waves-light"
                     data-bs-effect="effect-scale"
                     data-bs-toggle="modal"
-                    data-tax_state_id="{{ $i }}"
+                    data-tax_general_id="{{ $i }}"
                     href="#modalTaxStateForm">
                     <i class="ri-pencil-line"></i>
                 </a>

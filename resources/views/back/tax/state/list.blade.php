@@ -13,7 +13,7 @@
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item active" aria-current="page">@lang('super.payment_config')</li>
                 <li class="breadcrumb-item">
-                    <a href="javascript:void(0);">@lang('super.state_tax')</a>
+                    <a href="javascript:void(0);">@lang('super.payc_statet_state_tax')</a>
                 </li>
             </ol>
         </nav>
@@ -26,7 +26,7 @@
                 data-tax_state_id="0"
                 href="#modalTaxStateForm"
                 >
-                <span> <i class="fa fa-plus"></i> </span> New State
+                <span> <i class="fa fa-plus"></i> </span> @lang('super.payc_statet_new_tax')
             </a>
         </div>
     </div>

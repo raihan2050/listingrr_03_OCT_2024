@@ -47,11 +47,11 @@ class AjaxController extends Controller
                 break;
             case 'load_tax_state_create_edit_form':
                 $taxStateId = $request->tax_state_id;
-                $formTitle = "Create State Tax";
-                $formBtn = "Create Now";
+                $formTitle = __('super.payc_statet_create_state_tax');
+                $formBtn = __('super.payc_statet_create_now');
                 if($taxStateId > 0){
-                    $formTitle = "Update State Tax";
-                    $formBtn = "Update Now";
+                    $formTitle = __('super.payc_statet_update_state_tax');
+                    $formBtn = __('super.payc_statet_update_now');
                 }
                 $formBody = view('back.tax.state.modal_txt_state_form_element')->render();
                 $result = [
