@@ -63,6 +63,12 @@
       "__commonjsHelpers-BosuxZz1.js"
     ]
   },
+  "resources/assets/back/js/gateway_manager.js": {
+    "file": "assets/gateway_manager-l0sNRNKZ.js",
+    "name": "gateway_manager",
+    "src": "resources/assets/back/js/gateway_manager.js",
+    "isEntry": true
+  },
   "resources/assets/back/js/tax_general.js": {
     "file": "assets/tax_general-DXFCBToh.js",
     "name": "tax_general",

@@ -119,7 +119,7 @@ return [
     'state_tax' => 'State Tax',
     'general_tax' => 'General Tax',
     'currency_manager' => 'Currency Manager',
-    'payment_gateway' => 'Payment Gateway',
+    'gateway_manager' => 'Gateway Manager',
 
     'payc_set_coupons' => 'Set Coupons',
     'payc_new_coupon' => 'New Coupon',

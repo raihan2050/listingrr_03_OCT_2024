@@ -58,6 +58,7 @@ export default defineConfig({
                 'resources/assets/back/js/tax_state',
 
                 'resources/assets/back/js/currency_manager',
+                'resources/assets/back/js/gateway_manager',
 
             ],
             refresh: true,

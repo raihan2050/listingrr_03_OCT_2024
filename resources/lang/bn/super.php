@@ -118,7 +118,7 @@ return [
     'state_tax' => 'রাজ্যের ট্যাক্স',
     'general_tax' => 'সাধারণ ট্যাক্স',
     'currency_manager' => 'কারেন্সি ম্যানেজার',
-    'payment_gateway' => 'পেমেন্ট গেটওয়ে',
+    'gateway_manager' => 'গেটওয়ে ম্যানেজার',
 
     'payc_set_coupons' => 'কুপন সেট করুন',
     'payc_new_coupon' => 'নতুন কুপন',

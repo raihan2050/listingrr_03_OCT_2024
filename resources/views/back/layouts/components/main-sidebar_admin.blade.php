@@ -71,8 +71,18 @@
                     @endif
                     ">@lang('super.currency_manager')</a>
             </li>
-            <li class="slide">
-                <a href="index-4.html" class="side-menu__item">@lang('super.payment_gateway')</a>
+            <li class="
+                slide
+                @if (request()->routeIs('super.payment_config.gateway.list'))
+                    active
+                @endif
+                ">
+                <a href="{{ route('super.payment_config.gateway.list') }}" class="
+                    side-menu__item
+                    @if (request()->routeIs('super.payment_config.gateway.list'))
+                        active
+                    @endif
+                    ">@lang('super.payment_gateway')</a>
             </li>
         </ul>
     </li>
