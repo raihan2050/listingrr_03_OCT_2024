@@ -28,6 +28,14 @@ class AjaxController extends Controller
     {
         $im = Auth::guard('admin')->user();
         switch ($request->action) {
+            case 'save_update_data':
+                $target_form = $request->target_form;
+                $result = [
+                    'type' => 'error',
+                    'msg' => __('super.something_wrong')
+                ];
+                return response()->json($result);
+                break;
             case 'load_currency_create_edit_form':
                 $currencyId = $request->currency_id;
                 $formTitle = __('super.payc_curr_create_currency_tax');

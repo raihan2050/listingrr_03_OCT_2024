@@ -4,6 +4,7 @@ return [
     'welcome' => 'Welcome',
     'goodbye' => 'Goodbye',
     'dashboard' => 'Dashboard',
+    'something_wrong' => 'Something wrong',
 
     // System Settings
     'manage_site' => 'Manage Site',

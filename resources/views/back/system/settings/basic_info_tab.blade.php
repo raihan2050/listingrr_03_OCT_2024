@@ -4,6 +4,7 @@
             <label for="appName">@lang('super.app_name')</label>
             <input type="text"
                     class="form-control"
+                    name="title"
                     id="appName"
                     placeholder="@lang('super.app_name')">
         </div>
@@ -13,6 +14,7 @@
             <label for="appSlogan">@lang('super.app_slogan'):</label>
             <input type="text"
                     class="form-control"
+                    name="slogan"
                     id="appSlogan"
                     placeholder="@lang('super.app_slogan')">
         </div>
@@ -23,6 +25,7 @@
             <input class="form-control form-input-color"
                     id="primaryColourCode"
                     type="color"
+                    name="primary_color"
                     value="#136bd0">
         </div>
         <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12">
@@ -38,6 +41,7 @@
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
             <label for="decimalSeparator">@lang('super.decimal_separator'):</label>
             <select id="decimalSeparator"
+                    name="decimal_separator"
                     class="form-control">
                     <option value=",">@lang('super.comma_symbol')</option>
                     <option value=".">@lang('super.dot_symbol')</option>
@@ -48,6 +52,7 @@
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
             <label for="currencyDirection">@lang('super.currency_direction'):</label>
             <select id="currencyDirection"
+                    name="currency_direction"
                     class="form-control">
                     <option value="1">@lang('super.left_100_d')</option>
                     <option value="2">@lang('super.right_100_d')</option>
@@ -58,6 +63,7 @@
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
             <label for="decimalSeparator">@lang('super.thousand_separator')</label>
             <select id="decimalSeparator"
+                    name="thousand_separator"
                     class="form-control">
                     <option value=",">@lang('super.comma_symbol')</option>
                     <option value=".">@lang('super.dot_symbol')</option>

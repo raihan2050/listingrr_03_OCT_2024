@@ -4,6 +4,7 @@ return [
     'welcome' => 'স্বাগতম',
     'goodbye' => 'বিদায়',
     'dashboard' => 'ড্যাশবোর্ড',
+    'something_wrong' => 'কিছু ভুল আছে',
 
     // System Settings
     'manage_site' => 'সাইট রক্ষণাবেক্ষণ',

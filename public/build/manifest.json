@@ -222,10 +222,14 @@
     "isEntry": true
   },
   "resources/assets/js/common.js": {
-    "file": "assets/common-DTYof6r8.js",
+    "file": "assets/common-B1qwaCLm.js",
     "name": "common",
     "src": "resources/assets/js/common.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_ajax-BLA7SV_z.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
   },
   "resources/assets/js/echarts.js": {
     "file": "assets/echarts-BOSaIz8B.js",
@@ -411,7 +415,7 @@
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-CHgsenfS.css",
+    "file": "assets/app-B1Lxy8UO.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

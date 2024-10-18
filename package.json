@@ -29,6 +29,7 @@
         "quill": "^2.0.2",
         "remixicon": "^4.3.0",
         "simplebar": "^6.2.7",
-        "sweetalert2": "^11.14.3"
+        "sweetalert2": "^11.14.3",
+        "toastify-js": "^1.12.0"
     }
 }
