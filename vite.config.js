@@ -50,6 +50,7 @@ export default defineConfig({
                 'resources/assets/js/themeColors',
                 'resources/assets/switcher/js/switcher',
                 'resources/assets/js/ajax',
+                'resources/assets/js/common',
 
                 'resources/assets/back/js/coupon.js',
                 'resources/assets/back/scss/coupon.scss',

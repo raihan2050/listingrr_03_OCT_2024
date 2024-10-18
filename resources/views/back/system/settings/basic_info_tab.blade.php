@@ -1,4 +1,4 @@
-<form data-target_pulse="basicInfoPulse">
+<form data-target_pulse="basicInfoPulse" class="basicInfoForm">
     <div class="row gy-4">
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
             <label for="appName">@lang('super.app_name')</label>
@@ -26,8 +26,10 @@
                     value="#136bd0">
         </div>
         <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12">
+            <input type="hidden" name="is_decimal" class="decimalSeparator">
             <label for="decimalSeparator">@lang('super.decimal_separator')</label>
-            <div class="toggle mb-3 on"
+            <div class="toggle switchToggleOne mb-3 on"
+                    data-target_class="decimalSeparator"
                     id="decimalSeparator">
                 <span></span>
             </div>
@@ -64,7 +66,9 @@
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
 
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mt-5 text-align-right">
-            <button type="button" class="btn btn-primary-gradient label-btn label-end mt-3 basicInfoPulse">
+            <button type="button"
+                    class="btn btn-primary-gradient label-btn label-end mt-3 basicInfoPulse submitForm"
+                    data-targetForm="basicInfoForm">
                 @lang('super.save_basic_information') <i class="ri-save-line label-btn-icon ms-2"></i>
             </button>
         </div>

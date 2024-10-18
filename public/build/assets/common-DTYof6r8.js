@@ -1,0 +1,1 @@
+$(function(){$(document).on("click",".switchToggleOne",function(){var t=$(this).data("target_class"),s=$(this).hasClass("on")?1:0;$("."+t).val(s),$("form").each(function(n){const a=$(this),e=a.data("target_pulse"),o=$(`.${e}`);a.find(`.${t}`).length>0&&(formChangeStates[n]=!0,o.addClass("formChanged"))})})});

@@ -82,11 +82,16 @@
         <div class="scrollToTop" style="display: none;"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>
         <div id="responsive-overlay"></div>
 
+        <script>
+            window.formChangeStates = {};
+        </script>
+
         @include('back.layouts.components.scripts')
 
 		<script src="{{asset('build/assets/sticky.js')}}"></script>
 
         @vite('resources/assets/js/themeColors.js')
+        @vite('resources/assets/js/common.js')
 
 
 		@vite('resources/js/app.js')
