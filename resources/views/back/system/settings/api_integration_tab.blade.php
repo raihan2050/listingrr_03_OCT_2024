@@ -1,4 +1,4 @@
-<form action="">
+<form data-target_pulse="apiIntegrationPulse">
     <div class="row gy-1">
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
             <div class="custom-toggle-switch mb-4">
@@ -115,7 +115,7 @@
         </div>
 
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mt-5 text-align-right">
-            <button type="button" class="btn btn-primary-gradient label-btn label-end mt-3">
+            <button type="button" class="btn btn-primary-gradient label-btn label-end mt-3 apiIntegrationPulse">
                 @lang('super.save_apis_information') <i class="ri-save-line label-btn-icon ms-2"></i>
             </button>
         </div>

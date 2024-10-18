@@ -25,49 +25,49 @@
             <div class="row">
                 <div class="col-xl-2 col-lg-3">
                     <nav class="nav nav-tabs flex-column nav-style-5" role="tablist">
-                        <a class="nav-link active" data-bs-toggle="tab" role="tab" aria-current="page" href="#basicInfoTab" aria-selected="true">
+                        <a class="nav-link basicInfoPulse active" data-bs-toggle="tab" role="tab" aria-current="page" href="#basicInfoTab" aria-selected="true">
                             <i class="ri-tools-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.basic_information')
                             </div>
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#logoMediaTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link logoMediaPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#logoMediaTab" aria-selected="false" tabindex="-1">
                             <i class="ri-image-2-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.logo_other_media')
                             </div>
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#seoTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link seoPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#seoTab" aria-selected="false" tabindex="-1">
                             <i class="ri-seo-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.search_engine_optimization')
                             </div>
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#socialLoginTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link socialLoginPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#socialLoginTab" aria-selected="false" tabindex="-1">
                             <i class="ri-login-circle-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.social_login')
                             </div>
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#emailSettingsTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link emailSettingsPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#emailSettingsTab" aria-selected="false" tabindex="-1">
                             <i class="ri-mail-settings-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.email_settings')
                             </div>
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#smsSettingsTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link smsSettingsPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#smsSettingsTab" aria-selected="false" tabindex="-1">
                             <i class="ri-smartphone-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.sms_settings')
                             </div>
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#apiIntegrationTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link apiIntegrationPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#apiIntegrationTab" aria-selected="false" tabindex="-1">
                             <i class="ri-links-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.api_integration')
                             </div>
                         </a>
-                        <a class="nav-link mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#cookiesAlertTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link cookiesAlertPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#cookiesAlertTab" aria-selected="false" tabindex="-1">
                             <i class="ri-alarm-warning-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.cookies_alert')

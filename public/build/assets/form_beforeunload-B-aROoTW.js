@@ -1,1 +1,0 @@
-const o={};document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("form").forEach((n,e)=>{o[e]=!1,n.addEventListener("input",()=>{o[e]=!0,console.log(`Form ${e} is changed: ${o[e]}`)})}),window.addEventListener("beforeunload",n=>{Object.values(o).some(t=>t)&&n.preventDefault()})});
