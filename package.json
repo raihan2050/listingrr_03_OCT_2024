@@ -28,6 +28,7 @@
         "node-waves": "^0.7.6",
         "quill": "^2.0.2",
         "remixicon": "^4.3.0",
-        "simplebar": "^6.2.7"
+        "simplebar": "^6.2.7",
+        "sweetalert2": "^11.14.3"
     }
 }

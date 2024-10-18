@@ -67,6 +67,12 @@
       "__commonjsHelpers-BosuxZz1.js"
     ]
   },
+  "resources/assets/back/js/form_beforeunload.js": {
+    "file": "assets/form_beforeunload-B-aROoTW.js",
+    "name": "form_beforeunload",
+    "src": "resources/assets/back/js/form_beforeunload.js",
+    "isEntry": true
+  },
   "resources/assets/back/js/gateway_manager.js": {
     "file": "assets/gateway_manager-Bigdlhc4.js",
     "name": "gateway_manager",

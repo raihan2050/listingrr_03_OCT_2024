@@ -60,6 +60,8 @@ export default defineConfig({
                 'resources/assets/back/js/currency_manager',
                 'resources/assets/back/js/gateway_manager',
 
+                'resources/assets/back/js/form_beforeunload',
+
             ],
             refresh: true,
         }),
