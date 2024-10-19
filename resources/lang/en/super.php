@@ -21,6 +21,7 @@ return [
     'social_login' => 'Website Social Login',
     'social_login_only' => 'Website Social Login',
     'email_settings' => 'Mail Client Settings',
+    'email_settings_only' => 'Mail Client',
     'sms_settings' => 'Integrate SMS API\'s',
     'api_integration' => 'OtherAPI\'s Integration',
     'cookies_alert' => 'Cookies Alert Settings',

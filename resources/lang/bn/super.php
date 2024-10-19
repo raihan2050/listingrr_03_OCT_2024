@@ -21,6 +21,7 @@ return [
     'social_login' => 'সোশ্যাল লগইন সেটিংস',
     'social_login_only' => 'সোশ্যাল লগইন',
     'email_settings' => 'ইমেইল ক্লায়েন্ট সেটিংস',
+    'email_settings_only' => 'ইমেইল ক্লায়েন্ট',
     'sms_settings' => 'ইন্টিগ্রেট এসএমএস এপিআই',
     'api_integration' => 'অন্যান্য এপিআই ইন্টিগ্রেশন',
     'cookies_alert' => 'কুকিজ এলার্ট সেটিংস',
