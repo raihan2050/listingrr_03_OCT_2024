@@ -164,7 +164,7 @@ class AjaxController extends Controller
                 $uploadedFiles[$file] = $path;
             }
         }
-
+        $uploadedFiles['is_loader'] = $request->is_loader;
         $filteredData = $uploadedFiles;
         $uniqueId = 1;
         $msg = __('super.logo_other_media');
