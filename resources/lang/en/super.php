@@ -19,6 +19,7 @@ return [
     'logo_other_media' => 'Logo & Other Media',
     'search_engine_optimization' => 'Search Engine Optimization',
     'social_login' => 'Website Social Login',
+    'social_login_only' => 'Website Social Login',
     'email_settings' => 'Mail Client Settings',
     'sms_settings' => 'Integrate SMS API\'s',
     'api_integration' => 'OtherAPI\'s Integration',

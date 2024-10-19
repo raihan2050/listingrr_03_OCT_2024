@@ -184,6 +184,12 @@ class AjaxController extends Controller
 
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
+    private function socialLoginFormInput($request){
+        $filteredData = $request->except(['action', 'target_form']);
+        $uniqueId = 1;
+        $msg = __('super.social_login_only');
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
     private function updateInsertSettings($msg, $uniqueId, $filteredData){
         try {
             $setting = Setting::updateOrCreate(

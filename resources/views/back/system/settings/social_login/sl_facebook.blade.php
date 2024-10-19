@@ -1,8 +1,21 @@
 <div class="row gy-3">
+    @php
+        $facebook_check = 0;
+        $facebook_check_class = '';
+        if(isset($setting->facebook_check)){
+            $facebook_check = ($setting->facebook_check == 1)? 1 : 0;
+            $facebook_check_class = ($setting->facebook_check == 1)? 'on' : '';
+        }
+    @endphp
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
         <div class="mb-3">
+            <input type="hidden" name="facebook_check" class="facebookLoignStatus"
+                value="{{ $facebook_check }}"
+                >
             <label for="facebookLoignStatus" class="form-label">@lang('super.facebook_login')</label>
-            <div class="toggle mb-3 on" id="facebookLoignStatus">
+            <div class="toggle switchToggleOne mb-3 {{ $facebook_check_class }}"
+                data-target_class="facebookLoignStatus"
+                id="facebookLoignStatus">
                 <span></span>
             </div>
         </div>
@@ -14,6 +27,12 @@
         <input type="text"
                 class="form-control"
                 id="fbAppId"
+                autocomplete="off"
+                name="facebook_client_id"
+                data-is_required="1"
+                @isset($setting->facebook_client_id)
+                    value="{{ $setting->facebook_client_id }}"
+                @endisset
                 placeholder="@lang('super.sl_fb_app_id_help')">
     </div>
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
@@ -23,6 +42,12 @@
         <input type="text"
                 class="form-control"
                 id="fbAppSecret"
+                name="facebook_client_secret"
+                autocomplete="off"
+                data-is_required="1"
+                @isset($setting->facebook_client_secret)
+                    value="{{ $setting->facebook_client_secret }}"
+                @endisset
                 placeholder="@lang('super.sl_fb_app_secret_help')">
     </div>
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>

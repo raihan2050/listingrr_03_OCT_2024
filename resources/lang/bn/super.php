@@ -19,6 +19,7 @@ return [
     'logo_other_media' => 'সাইট সম্পর্কিত ছবি আপলোড',
     'search_engine_optimization' => 'সার্চ ইঞ্জিন অপটিমাইজেশন',
     'social_login' => 'সোশ্যাল লগইন সেটিংস',
+    'social_login_only' => 'সোশ্যাল লগইন',
     'email_settings' => 'ইমেইল ক্লায়েন্ট সেটিংস',
     'sms_settings' => 'ইন্টিগ্রেট এসএমএস এপিআই',
     'api_integration' => 'অন্যান্য এপিআই ইন্টিগ্রেশন',
