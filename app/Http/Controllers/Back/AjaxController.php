@@ -153,7 +153,7 @@ class AjaxController extends Controller
         $setting = Setting::first();
         foreach ($files as $file) {
             if ($request->hasFile($file)) {
-                $currentFilePath = $setting->$file;
+                $currentFilePath = isset($setting->$file)? $setting->$file : false;
                 if ($currentFilePath && Storage::disk('public')->exists($currentFilePath)) {
                     Storage::disk('public')->delete($currentFilePath);
                 }

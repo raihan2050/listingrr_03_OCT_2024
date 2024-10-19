@@ -6,19 +6,19 @@
             <ul class="nav nav-tabs flex-row vertical-tabs-3" role="tablist">
                 <li class="nav-item" role="presentation">
                     <a class="nav-link text-break active" data-bs-toggle="tab" role="tab" aria-current="page" href="#logoUploadTab" aria-selected="true">
-                        <i class="ri-flower-line me-2 align-middle d-inline-block"></i>
+                        <i class="ri-flower-line me-2 align-middle d-inline-block" style="padding: 0px 8px 0px 8px;"></i>
                         @lang('super.site_logo')
                     </a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link text-break" data-bs-toggle="tab" role="tab" aria-current="page" href="#faviconUploadTab" aria-selected="false" tabindex="-1">
-                        <i class="ri-shapes-line me-2 align-middle d-inline-block"></i>
+                        <i class="ri-shapes-line me-2 align-middle d-inline-block" style="padding: 0px 8px 0px 8px;"></i>
                         @lang('super.site_favicon')
                     </a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link text-break" data-bs-toggle="tab" role="tab" aria-current="page" href="#loaderUploadTab" aria-selected="false" tabindex="-1">
-                        <i class="ri-loader-2-line me-2 align-middle d-inline-block"></i>
+                        <i class="ri-loader-2-line me-2 align-middle d-inline-block" style="padding: 0px 8px 0px 8px;"></i>
                         @lang('super.site_loader')
                     </a>
                 </li>
