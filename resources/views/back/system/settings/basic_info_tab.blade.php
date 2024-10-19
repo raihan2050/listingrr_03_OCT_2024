@@ -8,6 +8,9 @@
                     id="appName"
                     data-is_required="1"
                     autocomplete="off"
+                    @isset($setting->title)
+                        value="{{ $setting->title }}"
+                    @endisset
                     placeholder="@lang('super.app_name')">
             <span class="error-message" style="color: red; display: none;"></span>
         </div>
@@ -21,6 +24,9 @@
                     id="appSlogan"
                     data-is_required="1"
                     autocomplete="off"
+                    @isset($setting->slogan)
+                        value="{{ $setting->slogan }}"
+                    @endisset
                     placeholder="@lang('super.app_slogan')">
             <span class="error-message" style="color: red; display: none;"></span>
         </div>
@@ -33,13 +39,28 @@
                     type="color"
                     name="primary_color"
                     data-is_required="1"
-                    value="#136bd0">
+                    @isset($setting->slogan)
+                        value="{{ $setting->slogan }}"
+                    @else
+                        value="#136bd0"
+                    @endisset
+                    >
             <span class="error-message" style="color: red; display: none;"></span>
         </div>
+        @php
+            $is_decimal = 0;
+            $is_decimal_class = '';
+            if(isset($setting->is_decimal)){
+                $is_decimal = ($setting->is_decimal == 1)? 1 : 0;
+                $is_decimal_class = ($setting->is_decimal == 1)? 'on' : '';
+            }
+        @endphp
         <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12">
-            <input type="hidden" name="is_decimal" class="decimalSeparator" value="0">
+            <input type="hidden" name="is_decimal" class="decimalSeparator"
+                value="{{ $is_decimal }}"
+                >
             <label for="decimalSeparator">@lang('super.decimal_separator')</label>
-            <div class="toggle switchToggleOne mb-3 on"
+            <div class="toggle switchToggleOne mb-3 {{ $is_decimal_class }}"
                     data-target_class="decimalSeparator"
                     id="decimalSeparator">
                 <span></span>
@@ -52,8 +73,8 @@
                     name="decimal_separator"
                     data-is_required="1"
                     class="form-control">
-                    <option value=",">@lang('super.comma_symbol')</option>
-                    <option value=".">@lang('super.dot_symbol')</option>
+                    <option value="," @isset($setting->decimal_separator) @if($setting->decimal_separator == ",") selected @endif @endisset>@lang('super.comma_symbol')</option>
+                    <option value="." @isset($setting->decimal_separator) @if($setting->decimal_separator == ".") selected @endif @endisset>@lang('super.dot_symbol')</option>
             </select>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
@@ -64,8 +85,8 @@
                     name="currency_direction"
                     data-is_required="1"
                     class="form-control">
-                    <option value="1">@lang('super.left_100_d')</option>
-                    <option value="2">@lang('super.right_100_d')</option>
+                    <option value="1" @isset($setting->currency_direction) @if($setting->currency_direction == "1") selected @endif @endisset>@lang('super.left_100_d')</option>
+                    <option value="2" @isset($setting->currency_direction) @if($setting->currency_direction == "2") selected @endif @endisset>@lang('super.right_100_d')</option>
             </select>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
@@ -76,8 +97,8 @@
                     name="thousand_separator"
                     data-is_required="1"
                     class="form-control">
-                    <option value=",">@lang('super.comma_symbol')</option>
-                    <option value=".">@lang('super.dot_symbol')</option>
+                    <option value="," @isset($setting->thousand_separator) @if($setting->thousand_separator == ",") selected @endif @endisset>@lang('super.comma_symbol')</option>
+                    <option value="." @isset($setting->thousand_separator) @if($setting->thousand_separator == ".") selected @endif @endisset>@lang('super.dot_symbol')</option>
             </select>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>

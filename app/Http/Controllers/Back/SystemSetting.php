@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class SystemSetting extends Controller
@@ -24,6 +25,7 @@ class SystemSetting extends Controller
      */
     public function index()
     {
-        return view('back.system.index');
+        $setting = Setting::first();
+        return view('back.system.index', compact('setting'));
     }
 }
