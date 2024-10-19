@@ -25,6 +25,10 @@ $(function(){
         var $form = $('.' + targetform);
         var isValid = true;
 
+        const $currentForm = $(this).closest('form');
+        const formIndex = $('form').index($currentForm);
+        const $button = $("."+$form.data('target_pulse'));
+
         $form.find('[data-is_required="1"]').each(function() {
             if (!$(this).val()) {
                 isValid = false;
@@ -71,8 +75,17 @@ $(function(){
                     showToast(response.msg, response.type);
                     return false;
                 }
+                removeFormChanged(formIndex, $button);
                 showToast(response.msg, response.type);
             }
         });
     });
 });
+function setFormChanged(index, $button) {
+    window.formChangeStates[index] = true;
+    $button.addClass('formChanged');
+}
+function removeFormChanged(index, $button) {
+    window.formChangeStates[index] = false;
+    $button.removeClass('formChanged');
+}

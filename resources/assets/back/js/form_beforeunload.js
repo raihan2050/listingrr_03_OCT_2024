@@ -1,4 +1,6 @@
 $(function() {
+    window.formChangeStates = window.formChangeStates || [];
+
     $('form').each(function(index) {
         window.formChangeStates[index] = false;
         const $form = $(this);
