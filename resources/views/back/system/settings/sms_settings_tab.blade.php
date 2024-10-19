@@ -1,4 +1,4 @@
-<form data-target_pulse="smsSettingsPulse">
+<form data-target_pulse="smsSettingsPulse" class="smsSettingsForm">
     <div class="row gy-4">
 
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -19,8 +19,16 @@
         </div>
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-5 text-align-right">
-            <button type="button" class="btn btn-primary-gradient label-btn label-end mt-3 smsSettingsPulse">
-                @lang('super.sms_setting_save') <i class="ri-save-line label-btn-icon ms-2"></i>
+            <button type="button"
+                    class="btn btn-primary-gradient label-btn label-end mt-3 smsSettingsPulse submitForm"
+                    data-targetForm="smsSettingsForm">
+                @lang('super.sms_setting_save')
+                <span class="btnSubmitIcon">
+                    <i class="ri-save-line label-btn-icon ms-2"></i>
+                </span>
+                <span class="label-btn-icon ms-2 btnSubmitLoader" style="display: none;">
+                    <span class="spinner-grow spinner-grow-sm align-middle" role="status" aria-hidden="true"></span>
+                </span>
             </button>
         </div>
         <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12 mt-5"></div>

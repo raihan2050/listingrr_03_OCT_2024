@@ -196,6 +196,12 @@ class AjaxController extends Controller
         $msg = __('super.email_settings_only');
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
+    private function smsSettingsFormInput($request){
+        $filteredData = $request->except(['action', 'target_form']);
+        $uniqueId = 1;
+        $msg = __('super.sms_settings');
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
     private function updateInsertSettings($msg, $uniqueId, $filteredData){
         try {
             $setting = Setting::updateOrCreate(

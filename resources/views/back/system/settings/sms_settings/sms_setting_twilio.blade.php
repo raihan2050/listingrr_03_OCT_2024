@@ -1,11 +1,14 @@
 <div>
     <div class="row gy-4">
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-            <label for="twilioTtatus">@lang('super.twilio_status')</label>
-            <div class="toggle mb-3 on"
-                    id="twilioTtatus">
-                <span></span>
-            </div>
+            @php
+                $inputSwitchForm = [
+                    'label' => __('super.twilio_status'),
+                    'name' => 'is_twilio',
+                    'class' => 'twilioStatus'
+                ];
+            @endphp
+            {!! inputSwitchHtml($setting, $inputSwitchForm) !!}
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
 
@@ -14,6 +17,12 @@
             <input type="text"
                     class="form-control"
                     id="twilioSid"
+                    autocomplete="off"
+                    name="twilio_sid"
+                    data-is_required="1"
+                    @isset($setting->twilio_sid)
+                        value="{{ $setting->twilio_sid }}"
+                    @endisset
                     placeholder="@lang('super.twilio_sid_help')">
         </div>
 
@@ -22,6 +31,12 @@
             <input type="text"
                     class="form-control"
                     id="twilioToken"
+                    autocomplete="off"
+                    name="twilio_token"
+                    data-is_required="1"
+                    @isset($setting->twilio_token)
+                        value="{{ $setting->twilio_token }}"
+                    @endisset
                     placeholder="@lang('super.twilio_token_help')">
         </div>
 
@@ -30,6 +45,12 @@
             <input type="text"
                     class="form-control"
                     id="twilioFormNumber"
+                    autocomplete="off"
+                    name="twilio_form_number"
+                    data-is_required="1"
+                    @isset($setting->twilio_form_number)
+                        value="{{ $setting->twilio_form_number }}"
+                    @endisset
                     placeholder="@lang('super.twilio_form_number_help')">
         </div>
 
@@ -38,6 +59,12 @@
             <input type="text"
                     class="form-control"
                     id="twilioCountryCode"
+                    autocomplete="off"
+                    name="twilio_country_code"
+                    data-is_required="1"
+                    @isset($setting->twilio_country_code)
+                        value="{{ $setting->twilio_country_code }}"
+                    @endisset
                     placeholder="@lang('super.twilio_country_code_help')">
         </div>
 
