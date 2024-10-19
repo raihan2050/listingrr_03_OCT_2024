@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\Admin;
 use App\Models\Setting;
 
+use function PHPSTORM_META\map;
+
 class AjaxController extends Controller
 {
     /**
@@ -131,14 +133,35 @@ class AjaxController extends Controller
     }
 
     private function basicInfoFormInput($request) {
+        $filteredData = $request->except(['action', 'target_form']);
+        $uniqueId = 1;
+        $msg = __('super.basic_information');
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
+    private function logoMediaFormInput($request) {
         $result = [
             'type' => 'error',
             'msg' => __('super.something_wrong')
         ];
+        if ($request->hasFile('logo_main_light')) {
+
+        }
+        return $result;
+    }
+    private function seoFormInput($request) {
+        $keywordsArray = json_decode($request->meta_keywords, true);
+        $meta_keywords = array_map(function($item) {
+            return $item['value'];
+        }, $keywordsArray);
+        $request->meta_keywords = implode(',', $meta_keywords);
 
         $filteredData = $request->except(['action', 'target_form']);
         $uniqueId = 1;
+        $msg = __('super.search_engine_optimization');
 
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
+    private function updateInsertSettings($msg, $uniqueId, $filteredData){
         try {
             $setting = Setting::updateOrCreate(
                 ['id' => $uniqueId],
@@ -148,12 +171,12 @@ class AjaxController extends Controller
             if ($setting->wasRecentlyCreated) {
                 $result = [
                     'type' => 'success',
-                    'msg' => __('super.basic_information')." ".__('super.setting_created'),
+                    'msg' => $msg." ".__('super.setting_created'),
                 ];
             } else {
                 $result = [
                     'type' => 'success',
-                    'msg' => __('super.basic_information')." ".__('super.setting_update'),
+                    'msg' => $msg." ".__('super.setting_update'),
                 ];
             }
 

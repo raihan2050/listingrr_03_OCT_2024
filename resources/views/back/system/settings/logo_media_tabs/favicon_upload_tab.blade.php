@@ -2,7 +2,11 @@
     <div class="col-md-6">
         <div class="mb-3">
             <label for="faviconUploader" class="form-label">@lang('super.favicon_icon')</label>
-            <input class="form-control" type="file" id="faviconUploader" style="display: none;">
+            <input class="form-control"
+                    type="file"
+                    id="faviconUploader"
+                    name="favicon"
+                    style="display: none;">
             <div class="border cursor-pointer d-flex justify-items-center" style="width: 50px; height: 50px; padding: 4px;">
                 <div class="d-flex justify-items-center" style="width: 40px; height: 40px;">
                     <span style="
