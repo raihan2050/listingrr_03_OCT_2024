@@ -1,39 +1,30 @@
 <div class="row gy-3">
     <div class="col-md-4">
         <div class="mb-3">
-            <label for="loaderUploader" class="form-label">@lang('super.loader_image')</label>
-            <input class="form-control imgUploaderInput"
-                    type="file"
-                    id="loaderUploader"
-                    name="loader"
-                    data-target_preview="loaderPreview"
-                    style="display: none;">
-            <div class="border cursor-pointer d-flex justify-items-center clickToUpload"
-                    data-target_file_input="loaderUploader"
-                    style="width: 80px; height: 80px; padding: 4px;">
-                <div class="d-flex justify-items-center"
-                        id="loaderPreview"
-                        style="width: 70px; height: 70px;">
-                    @php
-                        $logo_media_img = "";
-                        if(isset($setting->loader)){
-                            $logo_media_img = asset('storage/'.$setting->loader);
-                        }
-                    @endphp
-                    @if($logo_media_img == "")
-                        <span style="
-                                font-size: 9px;
-                                line-height: 15px;
-                                margin: 7px auto;
-                                padding: 0;
-                                text-align: center;
-                                display: block;
-                                font-weight: bold;
-                            ">@lang('super.select_loader')</span>
-                    @endif
-                    <img src="{{ $logo_media_img }}" style="width: 70px; height: 70px; @if($logo_media_img == "") display:none; @endif">
-                </div>
-            </div>
+            @php
+                $inputFileDetails = [
+                    'file_id' => 'loaderUploader',
+                    'field_label' => __('super.loader_image'),
+                    'name' => 'loader',
+                    'width_parent' => 80,
+                    'width' => 70,
+                    'height_parent' => 80,
+                    'height' => 70,
+                    'parent_bg' => 'bg-light',
+                    'img_size_help' => '',
+                    'preview_bg_txt' => __('super.select_loader'),
+                    'no_img_css' => "
+                            font-size: 9px;
+                            line-height: 15px;
+                            margin: 7px auto;
+                            padding: 0;
+                            text-align: center;
+                            display: block;
+                            font-weight: bold;
+                        ",
+                ];
+            @endphp
+            {!! getImgInputPreviewHtml($setting, $inputFileDetails) !!}
         </div>
     </div>
     @php

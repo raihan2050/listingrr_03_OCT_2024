@@ -12,6 +12,7 @@
                     'height' => 40,
                     'parent_bg' => 'bg-light',
                     'img_size_help' => __('super.main_logo_w_h'),
+                    'preview_bg_txt' => __('super.select_logo'),
                     'no_img_css' => "
                             font-size: 16px;
                             line-height: 0px;
@@ -39,6 +40,7 @@
                     'height' => 40,
                     'parent_bg' => 'bg-dark',
                     'img_size_help' => __('super.main_logo_w_h'),
+                    'preview_bg_txt' => __('super.select_logo'),
                     'no_img_css' => "
                             font-size: 16px;
                             line-height: 0px;
@@ -68,6 +70,7 @@
                     'height' => 40,
                     'parent_bg' => 'bg-light',
                     'img_size_help' => __('super.small_logo_w_h'),
+                    'preview_bg_txt' => __('super.select_logo'),
                     'no_img_css' => "
                             font-size: 10px;
                             line-height: 15px;
@@ -95,6 +98,7 @@
                     'height' => 40,
                     'parent_bg' => 'bg-dark',
                     'img_size_help' => __('super.small_logo_w_h'),
+                    'preview_bg_txt' => __('super.select_logo'),
                     'no_img_css' => "
                             font-size: 10px;
                             line-height: 15px;

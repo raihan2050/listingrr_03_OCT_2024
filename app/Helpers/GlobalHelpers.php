@@ -23,7 +23,7 @@ if (!function_exists('getImgInputPreviewHtml')) {
                         <img src="' . asset('storage/' . $row->{$inputFileDetails['name']}) . '"
                             style="width: ' . (int)$inputFileDetails['width'] . 'px; height: ' . (int)$inputFileDetails['height'] . 'px;">
                     ' : '
-                        <span style="' . htmlspecialchars($inputFileDetails['no_img_css']) . '">' . __('super.select_logo') . '</span>
+                        <span style="' . htmlspecialchars($inputFileDetails['no_img_css']) . '">' . $inputFileDetails['preview_bg_txt'] . '</span>
                         <img src=""
                             style="width: ' . (int)$inputFileDetails['width'] . 'px; height: ' . (int)$inputFileDetails['height'] . 'px; display: none;">
                     ') . '
