@@ -5,6 +5,8 @@ return [
     'goodbye' => 'বিদায়',
     'dashboard' => 'ড্যাশবোর্ড',
     'something_wrong' => 'কিছু ভুল আছে',
+    'this_field_is_required' => 'এটা বাধ্যতামূলক',
+    'please_fill_in_all_required_fields' => 'প্রয়োজনীয় ফিল্ড গুলো ফাঁকা রাখা যাবে না',
 
     // System Settings
     'manage_site' => 'সাইট রক্ষণাবেক্ষণ',

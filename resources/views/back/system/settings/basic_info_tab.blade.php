@@ -6,7 +6,9 @@
                     class="form-control"
                     name="title"
                     id="appName"
+                    data-is_required="1"
                     placeholder="@lang('super.app_name')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
 

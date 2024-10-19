@@ -86,6 +86,8 @@
             window.formChangeStates = {};
         </script>
 
+        @include('back.layouts.components.translate')
+
         @include('back.layouts.components.scripts')
 
 		<script src="{{asset('build/assets/sticky.js')}}"></script>

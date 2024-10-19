@@ -1,6 +1,7 @@
 import {mkAjaxRequest} from "../js/ajax"
 import Toastify from 'toastify-js'
 $(function(){
+    $('input[data-is_required="1"], select[data-is_required="1"], textarea[data-is_required="1"]').attr('required', true);
     $(document).on("click", ".switchToggleOne", function(){
         var className = $(this).data("target_class");
         var val = ($(this).hasClass('on')) ? 1 : 0;
@@ -19,7 +20,30 @@ $(function(){
     });
     $(document).on("click", ".submitForm", function(){
         var targetform = $(this).data('targetform');
-        var formData = new FormData($('.'+targetform)[0]);
+        var $form = $('.' + targetform);
+        var isValid = true;
+
+        $form.find('[data-is_required="1"]').each(function() {
+            if (!$(this).val()) {
+                isValid = false;
+                $(this).addClass('error');
+                $(this).siblings('.error-message').text(translations.super.this_field_is_required).show();
+            } else {
+                $(this).removeClass('error');
+                $(this).siblings('.error-message').hide();
+            }
+        });
+        if (!isValid) {
+            Toastify({
+                text: translations.super.please_fill_in_all_required_fields,
+                style: {
+                    background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                },
+                duration: 3000
+            }).showToast();
+            return false;
+        }
+        var formData = new FormData($form[0]);
         $('.' + targetform).find(':input').each(function() {
             var inputName = this.name;
             if (!formData.has(inputName)) {

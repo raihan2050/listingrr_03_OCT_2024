@@ -5,6 +5,8 @@ return [
     'goodbye' => 'Goodbye',
     'dashboard' => 'Dashboard',
     'something_wrong' => 'Something wrong',
+    'this_field_is_required' => 'This field is required',
+    'please_fill_in_all_required_fields' => 'Please fill in all required fields.',
 
     // System Settings
     'manage_site' => 'Manage Site',
