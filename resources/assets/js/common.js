@@ -82,6 +82,31 @@ $(function(){
             }
         });
     });
+    $(document).on("click", ".clickToUpload", function(){
+        var targetFileInput = $(this).data('target_file_input');
+        $("#"+targetFileInput).click();
+    });
+    $(document).on("change", ".imgUploaderInput", function() {
+        var input = $(this);
+        var targetPreviewId = input.data("target_preview");
+        var targetPreview = $("#" + targetPreviewId);
+
+        var file = input[0].files[0];
+
+        if (file) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                targetPreview.find("img").attr("src", e.target.result).show();
+                targetPreview.find("span").hide();
+            };
+
+            reader.readAsDataURL(file);
+        } else {
+            targetPreview.find("img").attr("src", "").hide();
+            targetPreview.find("span").show();
+        }
+    });
 });
 function setFormChanged(index, $button) {
     window.formChangeStates[index] = true;

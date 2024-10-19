@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\Admin;
 use App\Models\Setting;
 
@@ -139,14 +141,35 @@ class AjaxController extends Controller
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
     private function logoMediaFormInput($request) {
-        $result = [
-            'type' => 'error',
-            'msg' => __('super.something_wrong')
+        $files = [
+            'logo_main_light',
+            'logo_main_dark',
+            'logo_sm_light',
+            'logo_sm_dark',
+            'favicon',
+            'loader'
         ];
-        if ($request->hasFile('logo_main_light')) {
-
+        $uploadedFiles = [];
+        $setting = Setting::first();
+        foreach ($files as $file) {
+            if ($request->hasFile($file)) {
+                $currentFilePath = $setting->$file;
+                if ($currentFilePath && Storage::disk('public')->exists($currentFilePath)) {
+                    Storage::disk('public')->delete($currentFilePath);
+                }
+                $extension = $request->file($file)->getClientOriginalExtension();
+                $timestamp = time();
+                $customFileName = Str::uuid() . '_' . $timestamp . '.' . $extension;
+                $path = $request->file($file)->storeAs('uploads', $customFileName, 'public');
+                $uploadedFiles[$file] = $path;
+            }
         }
-        return $result;
+
+        $filteredData = $uploadedFiles;
+        $uniqueId = 1;
+        $msg = __('super.logo_other_media');
+
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
     private function seoFormInput($request) {
         $keywordsArray = json_decode($request->meta_keywords, true);
