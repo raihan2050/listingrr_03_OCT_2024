@@ -4865,3 +4865,9 @@ pre[class*=language-]{
 #country-map path{
   fill: $light;
 }
+button.loader span.btnSubmitIcon {
+    display: none;
+}
+button.loader span.btnSubmitLoader {
+    display: flex !important;
+}

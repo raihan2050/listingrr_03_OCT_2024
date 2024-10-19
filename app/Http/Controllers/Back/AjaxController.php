@@ -148,12 +148,12 @@ class AjaxController extends Controller
             if ($setting->wasRecentlyCreated) {
                 $result = [
                     'type' => 'success',
-                    'msg' => __('super.setting_created'),
+                    'msg' => __('super.basic_information')." ".__('super.setting_created'),
                 ];
             } else {
                 $result = [
                     'type' => 'success',
-                    'msg' => __('super.setting_update'),
+                    'msg' => __('super.basic_information')." ".__('super.setting_update'),
                 ];
             }
 

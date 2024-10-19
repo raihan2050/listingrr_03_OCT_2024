@@ -65,9 +65,11 @@ $(function(){
         });
         formData.append('action', 'save_update_data');
         formData.append('target_form', targetform);
+        $submitFormBtn.addClass('loader');
         $submitFormBtn.prop('disabled', true);
         mkAjaxRequest('POST', window.commonAsset.ajax, formData, function(error, response) {
             $submitFormBtn.prop('disabled', false);
+            $submitFormBtn.removeClass('loader');
             if (error) {
                 console.error(error);
             } else {

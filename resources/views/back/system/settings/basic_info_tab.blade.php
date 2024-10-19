@@ -107,7 +107,13 @@
             <button type="button"
                     class="btn btn-primary-gradient label-btn label-end mt-3 basicInfoPulse submitForm"
                     data-targetForm="basicInfoForm">
-                @lang('super.save_basic_information') <i class="ri-save-line label-btn-icon ms-2"></i>
+                @lang('super.save_basic_information')
+                <span class="btnSubmitIcon">
+                    <i class="ri-save-line label-btn-icon ms-2"></i>
+                </span>
+                <span class="label-btn-icon ms-2 btnSubmitLoader" style="display: none;">
+                    <span class="spinner-grow spinner-grow-sm align-middle" role="status" aria-hidden="true"></span>
+                </span>
             </button>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5"></div>
