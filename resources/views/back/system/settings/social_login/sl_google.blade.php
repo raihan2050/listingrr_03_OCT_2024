@@ -1,23 +1,14 @@
 <div class="row gy-3">
-    @php
-        $google_check = 0;
-        $google_check_class = '';
-        if(isset($setting->google_check)){
-            $google_check = ($setting->google_check == 1)? 1 : 0;
-            $google_check_class = ($setting->google_check == 1)? 'on' : '';
-        }
-    @endphp
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
         <div class="mb-3">
-            <input type="hidden" name="google_check" class="googleLoignStatus"
-                value="{{ $google_check }}"
-                >
-            <label for="googleLoignStatus" class="form-label">@lang('super.google_login')</label>
-            <div class="toggle switchToggleOne mb-3 {{ $google_check_class }}"
-                data-target_class="googleLoignStatus"
-                id="googleLoignStatus">
-                <span></span>
-            </div>
+            @php
+                $inputSwitchForm = [
+                    'label' => __('super.google_login'),
+                    'name' => 'google_check',
+                    'class' => 'googleLoignStatus'
+                ];
+            @endphp
+            {!! inputSwitchHtml($setting, $inputSwitchForm) !!}
         </div>
     </div>
     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12"></div>

@@ -37,15 +37,14 @@
     @endphp
     <div class="col-md-4">
         <div class="mb-3">
-            <input type="hidden" name="is_loader" class="siteLoaderStatus"
-                value="{{ $is_loader }}"
-                >
-            <label for="siteLoaderStatus">@lang('super.loader_status')</label>
-            <div class="toggle switchToggleOne mb-3 {{ $is_loader_class }}"
-                    data-target_class="siteLoaderStatus"
-                    id="siteLoaderStatus">
-                <span></span>
-            </div>
+            @php
+                $inputSwitchForm = [
+                    'label' => __('super.loader_status'),
+                    'name' => 'is_loader',
+                    'class' => 'siteLoaderStatus'
+                ];
+            @endphp
+            {!! inputSwitchHtml($setting, $inputSwitchForm) !!}
         </div>
     </div>
 

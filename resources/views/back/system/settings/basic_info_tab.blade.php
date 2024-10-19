@@ -56,15 +56,14 @@
             }
         @endphp
         <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12">
-            <input type="hidden" name="is_decimal" class="decimalSeparator"
-                value="{{ $is_decimal }}"
-                >
-            <label for="decimalSeparator">@lang('super.decimal_separator')</label>
-            <div class="toggle switchToggleOne mb-3 {{ $is_decimal_class }}"
-                    data-target_class="decimalSeparator"
-                    id="decimalSeparator">
-                <span></span>
-            </div>
+            @php
+                $inputSwitchForm = [
+                    'label' => __('super.decimal_separator'),
+                    'name' => 'is_decimal',
+                    'class' => 'decimalSeparator'
+                ];
+            @endphp
+            {!! inputSwitchHtml($setting, $inputSwitchForm) !!}
         </div>
 
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">

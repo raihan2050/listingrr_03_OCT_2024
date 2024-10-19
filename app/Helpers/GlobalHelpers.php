@@ -3,6 +3,35 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 
+if (!function_exists('inputSwitchHtml')) {
+    function inputSwitchHtml($row, $inputFileDetails) {
+        $name = $inputFileDetails['name'];
+        $class_name = $inputFileDetails['class'];
+        $label_title = $inputFileDetails['label'];
+        $current_value = 0;
+        $open_class = '';
+        if(isset($row->$name)){
+            $current_value = ($row->$name == 1)? 1 : 0;
+            $open_class = ($row->$name == 1)? 'on' : '';
+        }
+        return '
+            <input type="hidden"
+                    name="'.$name.'"
+                    class="'.$class_name.'"
+                    value="'.$current_value.'"
+                >
+            <label for="'.$class_name.'"
+                    class="form-label">'.$label_title.'
+            </label>
+            <div class="toggle switchToggleOne mb-3 '.$open_class.'"
+                data-target_class="'.$class_name.'"
+                id="'.$class_name.'">
+                <span></span>
+            </div>
+        ';
+    }
+}
+
 if (!function_exists('getImgInputPreviewHtml')) {
     function getImgInputPreviewHtml($row, $inputFileDetails) {
         return '

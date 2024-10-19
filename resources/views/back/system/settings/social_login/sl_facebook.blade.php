@@ -9,15 +9,14 @@
     @endphp
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
         <div class="mb-3">
-            <input type="hidden" name="facebook_check" class="facebookLoignStatus"
-                value="{{ $facebook_check }}"
-                >
-            <label for="facebookLoignStatus" class="form-label">@lang('super.facebook_login')</label>
-            <div class="toggle switchToggleOne mb-3 {{ $facebook_check_class }}"
-                data-target_class="facebookLoignStatus"
-                id="facebookLoignStatus">
-                <span></span>
-            </div>
+            @php
+                $inputSwitchForm = [
+                    'label' => __('super.facebook_login'),
+                    'name' => 'facebook_check',
+                    'class' => 'facebookLoignStatus'
+                ];
+            @endphp
+            {!! inputSwitchHtml($setting, $inputSwitchForm) !!}
         </div>
     </div>
     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12"></div>
