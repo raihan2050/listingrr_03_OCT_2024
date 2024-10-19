@@ -1,5 +1,6 @@
+import {showToast} from "../js/show_toast"
 import {mkAjaxRequest} from "../js/ajax"
-import Toastify from 'toastify-js'
+
 $(function(){
     $('input[data-is_required="1"], select[data-is_required="1"], textarea[data-is_required="1"]').attr('required', true);
     $(document).on("click", ".switchToggleOne", function(){
@@ -19,7 +20,8 @@ $(function(){
         });
     });
     $(document).on("click", ".submitForm", function(){
-        var targetform = $(this).data('targetform');
+        var $submitFormBtn = $(this);
+        var targetform = $submitFormBtn.data('targetform');
         var $form = $('.' + targetform);
         var isValid = true;
 
@@ -34,13 +36,7 @@ $(function(){
             }
         });
         if (!isValid) {
-            Toastify({
-                text: translations.super.please_fill_in_all_required_fields,
-                style: {
-                    background: "linear-gradient(to right, #ff5f6d, #ffc371)",
-                },
-                duration: 3000
-            }).showToast();
+            showToast(translations.super.please_fill_in_all_required_fields, 'warning');
             return false;
         }
         var formData = new FormData($form[0]);
@@ -65,23 +61,17 @@ $(function(){
         });
         formData.append('action', 'save_update_data');
         formData.append('target_form', targetform);
-        $(this).prop('disabled', true);
+        $submitFormBtn.prop('disabled', true);
         mkAjaxRequest('POST', window.commonAsset.ajax, formData, function(error, response) {
-            $(this).prop('disabled', false);
+            $submitFormBtn.prop('disabled', false);
             if (error) {
                 console.error(error);
             } else {
                 if(response.type == 'error'){
-                    Toastify({
-                        text: response.msg,
-                        style: {
-                            background: "linear-gradient(to right, #00b09b, #96c93d)",
-                        },
-                        duration: 3000
-                    }).showToast();
+                    showToast(response.msg, response.type);
                     return false;
                 }
-                console.log('Response:', response);
+                showToast(response.msg, response.type);
             }
         });
     });

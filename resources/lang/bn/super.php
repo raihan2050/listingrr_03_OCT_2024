@@ -5,8 +5,12 @@ return [
     'goodbye' => 'বিদায়',
     'dashboard' => 'ড্যাশবোর্ড',
     'something_wrong' => 'কিছু ভুল আছে',
+    'operation_failed' => 'অপারেশন ব্যর্থ হয়েছে',
+    'method_not_exists' => 'মেথড পাওয়া যায়নি',
     'this_field_is_required' => 'এটা বাধ্যতামূলক',
     'please_fill_in_all_required_fields' => 'প্রয়োজনীয় ফিল্ড গুলো ফাঁকা রাখা যাবে না',
+    'setting_created' => 'সেটিং তৈরি করা হয়েছে',
+    'setting_update' => 'সেটিং আপডেট করা হয়েছে',
 
     // System Settings
     'manage_site' => 'সাইট রক্ষণাবেক্ষণ',

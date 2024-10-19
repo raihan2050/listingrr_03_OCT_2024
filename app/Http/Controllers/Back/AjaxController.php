@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\Setting;
 
 class AjaxController extends Controller
 {
@@ -29,11 +30,16 @@ class AjaxController extends Controller
         $im = Auth::guard('admin')->user();
         switch ($request->action) {
             case 'save_update_data':
-                $target_form = $request->target_form;
-                $result = [
-                    'type' => 'error',
-                    'msg' => __('super.something_wrong')
-                ];
+                $targetForm = $request->target_form;
+                $targetMethod = $targetForm . 'Input';
+                if (method_exists($this, $targetMethod)) {
+                    $result = $this->$targetMethod($request);
+                } else {
+                    $result = [
+                        'type' => 'error',
+                        'msg' => __('super.method_not_exists')
+                    ];
+                }
                 return response()->json($result);
                 break;
             case 'load_currency_create_edit_form':
@@ -121,6 +127,43 @@ class AjaxController extends Controller
             default:
                 # code...
                 break;
+        }
+    }
+
+    private function basicInfoFormInput($request) {
+        $result = [
+            'type' => 'error',
+            'msg' => __('super.something_wrong')
+        ];
+
+        $filteredData = $request->except(['action', 'target_form']);
+        $uniqueId = 1;
+
+        try {
+            $setting = Setting::updateOrCreate(
+                ['id' => $uniqueId],
+                $filteredData
+            );
+
+            if ($setting->wasRecentlyCreated) {
+                $result = [
+                    'type' => 'success',
+                    'msg' => __('super.setting_created'),
+                ];
+            } else {
+                $result = [
+                    'type' => 'success',
+                    'msg' => __('super.setting_update'),
+                ];
+            }
+
+            return $result;
+        } catch (\Exception $e) {
+            return [
+                'type' => 'error',
+                'msg' => __('super.operation_failed'),
+                'error' => $e->getMessage(),
+            ];
         }
     }
 }

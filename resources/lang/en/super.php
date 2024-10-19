@@ -5,8 +5,12 @@ return [
     'goodbye' => 'Goodbye',
     'dashboard' => 'Dashboard',
     'something_wrong' => 'Something wrong',
+    'operation_failed' => 'Operation failed',
+    'method_not_exists' => 'Method not exists',
     'this_field_is_required' => 'This field is required',
     'please_fill_in_all_required_fields' => 'Please fill in all required fields.',
+    'setting_created' => 'Setting created',
+    'setting_update' => 'Setting update',
 
     // System Settings
     'manage_site' => 'Manage Site',

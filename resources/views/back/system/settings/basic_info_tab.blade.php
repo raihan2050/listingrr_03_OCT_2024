@@ -7,6 +7,7 @@
                     name="title"
                     id="appName"
                     data-is_required="1"
+                    autocomplete="off"
                     placeholder="@lang('super.app_name')">
             <span class="error-message" style="color: red; display: none;"></span>
         </div>
@@ -18,7 +19,10 @@
                     class="form-control"
                     name="slogan"
                     id="appSlogan"
+                    data-is_required="1"
+                    autocomplete="off"
                     placeholder="@lang('super.app_slogan')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
 
@@ -28,10 +32,12 @@
                     id="primaryColourCode"
                     type="color"
                     name="primary_color"
+                    data-is_required="1"
                     value="#136bd0">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
         <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12">
-            <input type="hidden" name="is_decimal" class="decimalSeparator">
+            <input type="hidden" name="is_decimal" class="decimalSeparator" value="0">
             <label for="decimalSeparator">@lang('super.decimal_separator')</label>
             <div class="toggle switchToggleOne mb-3 on"
                     data-target_class="decimalSeparator"
@@ -44,6 +50,7 @@
             <label for="decimalSeparator">@lang('super.decimal_separator'):</label>
             <select id="decimalSeparator"
                     name="decimal_separator"
+                    data-is_required="1"
                     class="form-control">
                     <option value=",">@lang('super.comma_symbol')</option>
                     <option value=".">@lang('super.dot_symbol')</option>
@@ -55,6 +62,7 @@
             <label for="currencyDirection">@lang('super.currency_direction'):</label>
             <select id="currencyDirection"
                     name="currency_direction"
+                    data-is_required="1"
                     class="form-control">
                     <option value="1">@lang('super.left_100_d')</option>
                     <option value="2">@lang('super.right_100_d')</option>
@@ -66,6 +74,7 @@
             <label for="decimalSeparator">@lang('super.thousand_separator')</label>
             <select id="decimalSeparator"
                     name="thousand_separator"
+                    data-is_required="1"
                     class="form-control">
                     <option value=",">@lang('super.comma_symbol')</option>
                     <option value=".">@lang('super.dot_symbol')</option>

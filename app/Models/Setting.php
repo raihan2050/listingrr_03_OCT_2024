@@ -74,6 +74,4 @@ class Setting extends Model
         'theme',
         'version',
     ];
-
-    protected $keyType = 'bigint';
 }

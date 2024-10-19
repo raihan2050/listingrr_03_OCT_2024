@@ -222,13 +222,13 @@
     "isEntry": true
   },
   "resources/assets/js/common.js": {
-    "file": "assets/common-D_ovVJJ2.js",
+    "file": "assets/common-Bof4hqAK.js",
     "name": "common",
     "src": "resources/assets/js/common.js",
     "isEntry": true,
     "imports": [
-      "_ajax-BLA7SV_z.js",
-      "__commonjsHelpers-BosuxZz1.js"
+      "__commonjsHelpers-BosuxZz1.js",
+      "_ajax-BLA7SV_z.js"
     ]
   },
   "resources/assets/js/echarts.js": {
