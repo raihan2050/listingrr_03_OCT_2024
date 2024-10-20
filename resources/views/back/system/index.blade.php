@@ -43,7 +43,7 @@
                                 @lang('super.search_engine_optimization')
                             </div>
                         </a>
-                        <a class="nav-link socialLoginPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#socialLoginTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link socialLoginPulse socialLoginFBPulse socialLoginGPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#socialLoginTab" aria-selected="false" tabindex="-1">
                             <i class="ri-login-circle-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.social_login')

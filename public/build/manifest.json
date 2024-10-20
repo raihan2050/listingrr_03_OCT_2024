@@ -68,7 +68,7 @@
     ]
   },
   "resources/assets/back/js/form_beforeunload.js": {
-    "file": "assets/form_beforeunload-Dm9Sp9Qk.js",
+    "file": "assets/form_beforeunload-Kdmn9lMg.js",
     "name": "form_beforeunload",
     "src": "resources/assets/back/js/form_beforeunload.js",
     "isEntry": true
@@ -222,7 +222,7 @@
     "isEntry": true
   },
   "resources/assets/js/common.js": {
-    "file": "assets/common-D4f1fRS7.js",
+    "file": "assets/common-CQkYicBc.js",
     "name": "common",
     "src": "resources/assets/js/common.js",
     "isEntry": true,

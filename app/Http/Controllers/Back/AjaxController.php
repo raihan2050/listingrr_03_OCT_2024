@@ -184,7 +184,13 @@ class AjaxController extends Controller
 
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
-    private function socialLoginFormInput($request){
+    private function socialLoginFBFormInput($request){
+        $filteredData = $request->except(['action', 'target_form']);
+        $uniqueId = 1;
+        $msg = __('super.social_login_only');
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
+    private function socialLoginGFormInput($request){
         $filteredData = $request->except(['action', 'target_form']);
         $uniqueId = 1;
         $msg = __('super.social_login_only');
