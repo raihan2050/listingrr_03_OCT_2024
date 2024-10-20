@@ -140,15 +140,47 @@ class AjaxController extends Controller
         $msg = __('super.basic_information');
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
-    private function logoMediaFormInput($request) {
+    private function logoMediaLogoFormInput($request) {
         $files = [
             'logo_main_light',
             'logo_main_dark',
             'logo_sm_light',
-            'logo_sm_dark',
-            'favicon',
+            'logo_sm_dark'
+        ];
+        $uploadedFiles = $this->uploadFile($request, $files);
+
+        $filteredData = $uploadedFiles;
+        $uniqueId = 1;
+        $msg = __('super.logo_other_media');
+
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
+    private function logoMediaFaviconFormInput($request) {
+        $files = [
+            'favicon'
+        ];
+        $uploadedFiles = $this->uploadFile($request, $files);
+
+        $filteredData = $uploadedFiles;
+        $uniqueId = 1;
+        $msg = __('super.logo_other_media');
+
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
+    private function logoMediaLoaderFormInput($request) {
+        $files = [
             'loader'
         ];
+        $uploadedFiles = $this->uploadFile($request, $files);
+
+        $uploadedFiles['is_loader'] = $request->is_loader;
+        $filteredData = $uploadedFiles;
+        $uniqueId = 1;
+        $msg = __('super.logo_other_media');
+
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
+    private function uploadFile($request, $files) {
         $uploadedFiles = [];
         $setting = Setting::first();
         foreach ($files as $file) {
@@ -164,12 +196,7 @@ class AjaxController extends Controller
                 $uploadedFiles[$file] = $path;
             }
         }
-        $uploadedFiles['is_loader'] = $request->is_loader;
-        $filteredData = $uploadedFiles;
-        $uniqueId = 1;
-        $msg = __('super.logo_other_media');
-
-        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+        return $uploadedFiles;
     }
     private function seoFormInput($request) {
         $keywordsArray = json_decode($request->meta_keywords, true);
@@ -202,7 +229,7 @@ class AjaxController extends Controller
         $msg = __('super.email_settings_only');
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
-    private function smsSettingsFormInput($request){
+    private function smsSettingsTwilioFormInput($request){
         $filteredData = $request->except(['action', 'target_form']);
         $uniqueId = 1;
         $msg = __('super.sms_settings');

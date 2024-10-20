@@ -1,4 +1,17 @@
-<form data-target_pulse="emailSettingsPulse" class="emailSettingsForm">
+@php
+$targetLeftTabPulse = "noTab";
+$pulseClass = 'emailSettingsPulse';
+$targetForm = 'emailSettingsForm';
+$btnDetails = [
+    'btn_class' => 'btn btn-primary-gradient label-btn label-end mt-3 '.$pulseClass.' submitForm',
+    'targetForm' => $targetForm,
+    'target_left_tab_pulse' => $targetLeftTabPulse,
+    'lavel' => __('super.save_basic_information'),
+];
+@endphp
+<form data-target_pulse="{{ $pulseClass }}"
+    data-target_left_tab_pulse="{{ $targetLeftTabPulse }}"
+    class="{{ $targetForm }}">
     <div class="row gy-4">
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
             @php
@@ -24,6 +37,7 @@
                         value="{{ $setting->email_host }}"
                     @endisset
                     placeholder="@lang('super.smtp_host')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 withSMTPService">
@@ -38,6 +52,7 @@
                         value="{{ $setting->email_port }}"
                     @endisset
                     placeholder="@lang('super.smtp_port')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 withSMTPService">
@@ -52,6 +67,7 @@
                         value="{{ $setting->email_encryption }}"
                     @endisset
                     placeholder="@lang('super.smtp_encryption')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 withSMTPService">
@@ -66,6 +82,7 @@
                         value="{{ $setting->email_user }}"
                     @endisset
                     placeholder="@lang('super.smtp_username')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 withSMTPService">
@@ -80,6 +97,7 @@
                         value="{{ $setting->email_pass }}"
                     @endisset
                     placeholder="@lang('super.smtp_password')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 withSMTPService">
@@ -94,6 +112,7 @@
                         value="{{ $setting->email_from }}"
                     @endisset
                     placeholder="@lang('super.smtp_from')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 withSMTPService">
@@ -108,6 +127,7 @@
                         value="{{ $setting->email_from_name }}"
                     @endisset
                     placeholder="@lang('super.smtp_from_name')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -122,20 +142,11 @@
                         value="{{ $setting->contact_email }}"
                     @endisset
                     placeholder="@lang('super.smtp_contact_mail')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-5 text-align-right">
-            <button type="button"
-                    class="btn btn-primary-gradient label-btn label-end mt-3 emailSettingsPulse submitForm"
-                    data-targetForm="emailSettingsForm">
-                @lang('super.save_mail_settings')
-                <span class="btnSubmitIcon">
-                    <i class="ri-save-line label-btn-icon ms-2"></i>
-                </span>
-                <span class="label-btn-icon ms-2 btnSubmitLoader" style="display: none;">
-                    <span class="spinner-grow spinner-grow-sm align-middle" role="status" aria-hidden="true"></span>
-                </span>
-            </button>
+            @include('back.system.settings.include.submig_button')
         </div>
         <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12 mt-5"></div>
     </div>

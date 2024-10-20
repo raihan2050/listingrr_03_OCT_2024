@@ -1,4 +1,17 @@
-<form data-target_pulse="basicInfoPulse" class="basicInfoForm">
+@php
+$targetLeftTabPulse = "noTab";
+$pulseClass = 'basicInfoPulse';
+$targetForm = 'basicInfoForm';
+$btnDetails = [
+    'btn_class' => 'btn btn-primary-gradient label-btn label-end mt-3 '.$pulseClass.' submitForm',
+    'targetForm' => $targetForm,
+    'target_left_tab_pulse' => $targetLeftTabPulse,
+    'lavel' => __('super.save_basic_information'),
+];
+@endphp
+<form data-target_pulse="{{ $pulseClass }}"
+    data-target_left_tab_pulse="{{ $targetLeftTabPulse }}"
+    class="{{ $targetForm }}">
     <div class="row gy-4">
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
             <label for="appName">@lang('super.app_name')</label>
@@ -103,17 +116,7 @@
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
 
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mt-5 text-align-right">
-            <button type="button"
-                    class="btn btn-primary-gradient label-btn label-end mt-3 basicInfoPulse submitForm"
-                    data-targetForm="basicInfoForm">
-                @lang('super.save_basic_information')
-                <span class="btnSubmitIcon">
-                    <i class="ri-save-line label-btn-icon ms-2"></i>
-                </span>
-                <span class="label-btn-icon ms-2 btnSubmitLoader" style="display: none;">
-                    <span class="spinner-grow spinner-grow-sm align-middle" role="status" aria-hidden="true"></span>
-                </span>
-            </button>
+            @include('back.system.settings.include.submig_button')
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5"></div>
     </div>

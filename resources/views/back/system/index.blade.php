@@ -31,7 +31,7 @@
                                 @lang('super.basic_information')
                             </div>
                         </a>
-                        <a class="nav-link logoMediaPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#logoMediaTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link logoMediaPulse logoMediaLogoPulse logoMediaFaviconPulse logoMediaLoaderPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#logoMediaTab" aria-selected="false" tabindex="-1">
                             <i class="ri-image-2-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.logo_other_media')
@@ -55,7 +55,7 @@
                                 @lang('super.email_settings')
                             </div>
                         </a>
-                        <a class="nav-link smsSettingsPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#smsSettingsTab" aria-selected="false" tabindex="-1">
+                        <a class="nav-link smsSettingsPulse smsSettingsTwilioPulse mt-3" data-bs-toggle="tab" role="tab" aria-current="page" href="#smsSettingsTab" aria-selected="false" tabindex="-1">
                             <i class="ri-smartphone-line me-2 fs-18 align-middle"></i>
                             <div class="text-align-left">
                                 @lang('super.sms_settings')

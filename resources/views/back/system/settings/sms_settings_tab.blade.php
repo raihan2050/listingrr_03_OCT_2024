@@ -1,4 +1,4 @@
-<form data-target_pulse="smsSettingsPulse" class="smsSettingsForm">
+
     <div class="row gy-4">
 
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -11,25 +11,34 @@
                     </a>
                 </li>
             </ul>
+            @php
+                $targetLeftTabPulse = "smsSettingsPulse";
+            @endphp
+            <input type="hidden" id="{{ $targetLeftTabPulse }}" value=""> {{-- from data-target_left_tab_pulse --}}
             <div class="tab-content">
                 <div class="tab-pane show active text-muted" id="smsTwilioTab" role="tabpanel">
-                    @include('back.system.settings.sms_settings.sms_setting_twilio')
+                    @php
+                        $pulseClass = 'smsSettingsTwilioPulse';
+                        $targetForm = 'smsSettingsTwilioForm';
+                        $btnDetails = [
+                            'btn_class' => 'btn btn-primary-gradient label-btn label-end mt-3 '.$pulseClass.' submitForm',
+                            'targetForm' => $targetForm,
+                            'target_left_tab_pulse' => $targetLeftTabPulse,
+                            'lavel' => __('super.save_social_login'),
+                        ];
+                    @endphp
+                    <form data-target_pulse="{{ $pulseClass }}"
+                            data-target_left_tab_pulse="{{ $targetLeftTabPulse }}"
+                            class="{{ $targetForm }}">
+                        @include('back.system.settings.sms_settings.sms_setting_twilio')
+                        @include('back.system.settings.include.submig_button')
+                    </form>
                 </div>
             </div>
         </div>
 
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-5 text-align-right">
-            <button type="button"
-                    class="btn btn-primary-gradient label-btn label-end mt-3 smsSettingsPulse submitForm"
-                    data-targetForm="smsSettingsForm">
-                @lang('super.sms_setting_save')
-                <span class="btnSubmitIcon">
-                    <i class="ri-save-line label-btn-icon ms-2"></i>
-                </span>
-                <span class="label-btn-icon ms-2 btnSubmitLoader" style="display: none;">
-                    <span class="spinner-grow spinner-grow-sm align-middle" role="status" aria-hidden="true"></span>
-                </span>
-            </button>
+
         </div>
         <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12 mt-5"></div>
     </div>

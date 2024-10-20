@@ -17,48 +17,45 @@
                     </a>
                 </li>
             </ul>
-            <input type="hidden" id="socialLoginPulse" value=""> {{-- from data-target_left_tab_pulse --}}
+            @php
+                $targetLeftTabPulse = "logoMediaPulse";
+            @endphp
+            <input type="hidden" id="{{ $targetLeftTabPulse }}" value=""> {{-- from data-target_left_tab_pulse --}}
             <div class="tab-content">
                 <div class="tab-pane show active text-muted" id="facebookLoginTab" role="tabpanel">
-                    <form data-target_pulse="socialLoginFBPulse"
-                            data-target_left_tab_pulse="socialLoginPulse"
-                            class="socialLoginFBForm">
+                    @php
+                        $pulseClass = 'socialLoginFBPulse';
+                        $targetForm = 'socialLoginFBForm';
+                        $btnDetails = [
+                            'btn_class' => 'btn btn-primary-gradient label-btn label-end mt-3 '.$pulseClass.' submitForm',
+                            'targetForm' => $targetForm,
+                            'target_left_tab_pulse' => $targetLeftTabPulse,
+                            'lavel' => __('super.save_social_login'),
+                        ];
+                    @endphp
+                    <form data-target_pulse="{{ $pulseClass }}"
+                            data-target_left_tab_pulse="{{ $targetLeftTabPulse }}"
+                            class="{{ $targetForm }}">
                         @include('back.system.settings.social_login.sl_facebook')
-
-                        <button type="button"
-                                class="btn btn-primary-gradient label-btn label-end mt-3 socialLoginFBPulse submitForm"
-                                data-targetForm="socialLoginFBForm"
-                                data-targetTabForm="socialLoginForm"
-                                data-target_left_tab_pulse="socialLoginPulse">
-                            @lang('super.save_social_login')
-                            <span class="btnSubmitIcon">
-                                <i class="ri-save-line label-btn-icon ms-2"></i>
-                            </span>
-                            <span class="label-btn-icon ms-2 btnSubmitLoader" style="display: none;">
-                                <span class="spinner-grow spinner-grow-sm align-middle" role="status" aria-hidden="true"></span>
-                            </span>
-                        </button>
+                        @include('back.system.settings.include.submig_button')
                     </form>
                 </div>
                 <div class="tab-pane text-muted" id="googleLoginTab" role="tabpanel">
-                    <form data-target_pulse="socialLoginGPulse"
-                            data-target_left_tab_pulse="socialLoginPulse"
-                            class="socialLoginGForm">
+                    @php
+                        $pulseClass = 'socialLoginGPulse';
+                        $targetForm = 'socialLoginGForm';
+                        $btnDetails = [
+                            'btn_class' => 'btn btn-primary-gradient label-btn label-end mt-3 '.$pulseClass.' submitForm',
+                            'targetForm' => $targetForm,
+                            'target_left_tab_pulse' => $targetLeftTabPulse,
+                            'lavel' => __('super.save_social_login'),
+                        ];
+                    @endphp
+                    <form data-target_pulse="{{ $pulseClass }}"
+                            data-target_left_tab_pulse="{{ $targetLeftTabPulse }}"
+                            class="{{ $targetForm }}">
                         @include('back.system.settings.social_login.sl_google')
-
-                        <button type="button"
-                                class="btn btn-primary-gradient label-btn label-end mt-3 socialLoginGPulse submitForm"
-                                data-targetForm="socialLoginGForm"
-                                data-targetTabForm="socialLoginForm"
-                                data-target_left_tab_pulse="socialLoginPulse">
-                            @lang('super.save_social_login')
-                            <span class="btnSubmitIcon">
-                                <i class="ri-save-line label-btn-icon ms-2"></i>
-                            </span>
-                            <span class="label-btn-icon ms-2 btnSubmitLoader" style="display: none;">
-                                <span class="spinner-grow spinner-grow-sm align-middle" role="status" aria-hidden="true"></span>
-                            </span>
-                        </button>
+                        @include('back.system.settings.include.submig_button')
                     </form>
                 </div>
             </div>

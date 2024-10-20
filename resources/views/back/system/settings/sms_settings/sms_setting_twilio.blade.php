@@ -24,6 +24,7 @@
                         value="{{ $setting->twilio_sid }}"
                     @endisset
                     placeholder="@lang('super.twilio_sid_help')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -38,6 +39,7 @@
                         value="{{ $setting->twilio_token }}"
                     @endisset
                     placeholder="@lang('super.twilio_token_help')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -52,6 +54,7 @@
                         value="{{ $setting->twilio_form_number }}"
                     @endisset
                     placeholder="@lang('super.twilio_form_number_help')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -66,6 +69,7 @@
                         value="{{ $setting->twilio_country_code }}"
                     @endisset
                     placeholder="@lang('super.twilio_country_code_help')">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
