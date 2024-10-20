@@ -39,8 +39,8 @@
                     type="color"
                     name="primary_color"
                     data-is_required="1"
-                    @isset($setting->slogan)
-                        value="{{ $setting->slogan }}"
+                    @isset($setting->primary_color)
+                        value="{{ $setting->primary_color }}"
                     @else
                         value="#136bd0"
                     @endisset
