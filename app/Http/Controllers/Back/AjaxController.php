@@ -241,6 +241,13 @@ class AjaxController extends Controller
         $msg = __('super.api_integration');
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
+    private function cookiesAlertFormInput($request){
+        $filteredData = $request->except(['action', 'target_form']);
+        $uniqueId = 1;
+        $msg = __('super.cookies_alert');
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
+
     private function updateInsertSettings($msg, $uniqueId, $filteredData){
         try {
             $setting = Setting::updateOrCreate(
