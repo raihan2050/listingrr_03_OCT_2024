@@ -235,6 +235,12 @@ class AjaxController extends Controller
         $msg = __('super.sms_settings');
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
+    private function apiIntegrationFormInput($request){
+        $filteredData = $request->except(['action', 'target_form']);
+        $uniqueId = 1;
+        $msg = __('super.api_integration');
+        return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
+    }
     private function updateInsertSettings($msg, $uniqueId, $filteredData){
         try {
             $setting = Setting::updateOrCreate(
