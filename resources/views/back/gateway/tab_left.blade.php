@@ -1,6 +1,6 @@
 <nav class="nav nav-tabs flex-column nav-style-5" role="tablist">
     @foreach ($gatewayList as $gateway)
-    <a class="nav-link px-1 py-2 @if ($gateway['status'] == 1) active @endif"
+    <a class="nav-link px-1 py-2 d-flex {{ $gateway['identity'] }}Spinner enableTabSpinner1 justify-content-between align-items-center  @if ($gateway['status'] == 1) active @endif"
         data-bs-toggle="tab"
         role="tab"
         aria-current="page"
@@ -12,6 +12,7 @@
         @endif>
         {{-- <i class="{{ $gateway['icon'] }} me-2 align-middle d-inline-block"></i> --}}
         {{ $gateway['title'] }}
+        <span class="spinner-grow spinner-grow-sm align-middle" style="display: none;" role="status" aria-hidden="true"></span>
     </a>
     @endforeach
 </nav>
