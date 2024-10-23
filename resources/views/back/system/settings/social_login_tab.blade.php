@@ -37,7 +37,7 @@
                             data-target_left_tab_pulse="{{ $targetLeftTabPulse }}"
                             class="{{ $targetForm }}">
                         @include('back.system.settings.social_login.sl_facebook')
-                        @include('back.system.settings.include.submig_button')
+                        @include('back.layouts.components.form.submig_button')
                     </form>
                 </div>
                 <div class="tab-pane text-muted" id="googleLoginTab" role="tabpanel">
@@ -55,7 +55,7 @@
                             data-target_left_tab_pulse="{{ $targetLeftTabPulse }}"
                             class="{{ $targetForm }}">
                         @include('back.system.settings.social_login.sl_google')
-                        @include('back.system.settings.include.submig_button')
+                        @include('back.layouts.components.form.submig_button')
                     </form>
                 </div>
             </div>

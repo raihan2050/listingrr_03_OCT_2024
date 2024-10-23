@@ -13,6 +13,9 @@ if (!function_exists('inputSwitchHtml')) {
         if(isset($row->$name)){
             $current_value = ($row->$name == 1)? 1 : 0;
             $open_class = ($row->$name == 1)? 'on' : '';
+        } else {
+            $current_value = $row;
+            $open_class = isset($inputFileDetails['open_class'])? $inputFileDetails['open_class'] : '';
         }
         return '
             <input type="hidden"

@@ -31,7 +31,7 @@
                             data-target_left_tab_pulse="{{ $targetLeftTabPulse }}"
                             class="{{ $targetForm }}">
                         @include('back.system.settings.sms_settings.sms_setting_twilio')
-                        @include('back.system.settings.include.submig_button')
+                        @include('back.layouts.components.form.submig_button')
                     </form>
                 </div>
             </div>

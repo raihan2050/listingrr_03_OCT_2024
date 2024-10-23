@@ -20,8 +20,13 @@
     </div>
 </div>
 @php
+    $gatewayInformation = [];
+    foreach ($paymentSettings as $paymentSettingKey => $paymentSetting) {
+        $gatewayInformation[$paymentSetting->unique_keyword] = $paymentSetting->information;
+    }
     $gatewayList = [
         [
+            'unique_keyword' => 'cod',
             'title' => 'COD',
             'status' => 1,
             'href' => 'tab_cod',
@@ -29,6 +34,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'stripe',
             'title' => 'Stripe',
             'status' => 0,
             'href' => 'tab_stripe',
@@ -36,6 +42,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'paypal',
             'title' => 'PayPal',
             'status' => 0,
             'href' => 'tab_paypal',
@@ -43,6 +50,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'mollie',
             'title' => 'Mollie',
             'status' => 0,
             'href' => 'tab_mollie',
@@ -50,6 +58,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'paytm',
             'title' => 'Paytm',
             'status' => 0,
             'href' => 'tab_paytm',
@@ -57,6 +66,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'razorpay',
             'title' => 'Razorpay',
             'status' => 0,
             'href' => 'tab_razorpay',
@@ -64,6 +74,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'sslcommerz',
             'title' => 'SSL Commerz',
             'status' => 0,
             'href' => 'tab_ssl_commerz',
@@ -71,6 +82,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'mercadopago',
             'title' => 'Mercadopago',
             'status' => 0,
             'href' => 'tab_mercadopago',
@@ -78,6 +90,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'authorize',
             'title' => 'Authorize.Net',
             'status' => 0,
             'href' => 'tab_authorizenet',
@@ -85,6 +98,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'paystack',
             'title' => 'Paystack',
             'status' => 0,
             'href' => 'tab_paystack',
@@ -92,6 +106,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'flutterwave',
             'title' => 'Flutterwave',
             'status' => 0,
             'href' => 'tab_flutterwave',
@@ -99,6 +114,7 @@
             'icon' => 'ri-arrow-drop-right-line',
         ],
         [
+            'unique_keyword' => 'bank',
             'title' => 'Bank Transfer',
             'status' => 0,
             'href' => 'tab_bank_transfer',
@@ -125,4 +141,5 @@
 
 @section('scripts')
     @vite('resources/assets/back/js/gateway_manager.js')
+    @vite('resources/assets/back/js/form_beforeunload.js')
 @endsection

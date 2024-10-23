@@ -13,7 +13,13 @@
             <input type="text"
                     class="form-control"
                     id="gatewayKey{{ $gateway['identity'] }}"
+                    name="information[secret]"
+                    data-is_required="1"
+                    @isset($gatewaySetting['secret'])
+                        value="{{ $gatewaySetting['secret'] }}"
+                    @endisset
                     placeholder="{{ sprintf(__('super.payc_gateway_key'), $gateway['title']) }}">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
     </div>
 
@@ -23,7 +29,14 @@
             <input type="text"
                     class="form-control"
                     id="gatewaySecret{{ $gateway['identity'] }}"
+                    autocomplete="off"
+                    name="information[key]"
+                    data-is_required="1"
+                    @isset($gatewaySetting['key'])
+                        value="{{ $gatewaySetting['key'] }}"
+                    @endisset
                     placeholder="{{ sprintf(__('super.payc_gateway_secret'), $gateway['title']) }}">
+            <span class="error-message" style="color: red; display: none;"></span>
         </div>
     </div>
 </div>

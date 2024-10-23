@@ -42,7 +42,7 @@ $btnDetails = [
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
 
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mt-5 text-align-right">
-            @include('back.system.settings.include.submig_button')
+            @include('back.layouts.components.form.submig_button')
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5"></div>
     </div>

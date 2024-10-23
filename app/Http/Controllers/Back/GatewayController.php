@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\PaymentSetting;
 use Illuminate\Support\Facades\Artisan;
 
 class GatewayController extends Controller
@@ -13,6 +14,7 @@ class GatewayController extends Controller
     }
     public function list()
     {
-        return view('back.gateway.list');
+        $paymentSettings = PaymentSetting::get();
+        return view('back.gateway.list', compact('paymentSettings'));
     }
 }
