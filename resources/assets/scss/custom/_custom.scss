@@ -4871,3 +4871,13 @@ button.loader span.btnSubmitIcon {
 button.loader span.btnSubmitLoader {
     display: flex !important;
 }
+// .ql-toolbar.ql-snow {
+//     display: flex;
+// }
+.ql-toolbar.ql-snow .ql-formats {
+    margin-inline-end: 0px !important;
+    height: 37px !important;
+}
+.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+    margin-block-start: 12px !important;
+}

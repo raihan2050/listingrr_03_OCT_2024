@@ -23,9 +23,9 @@ const toolbarOptions = [
     ['clean']                                         // remove formatting button
   ];
 
-var gatewayDescriptionTabBankTransfer = new Quill('#gatewayDescriptionTabBankTransfer', {
-    modules: {
-        toolbar: toolbarOptions
-    },
-    theme: 'snow'
-});
+// var gatewayDescriptionTabBankTransfer = new Quill('#gatewayDescriptionTabBankTransfer', {
+//     modules: {
+//         toolbar: toolbarOptions
+//     },
+//     theme: 'snow'
+// });

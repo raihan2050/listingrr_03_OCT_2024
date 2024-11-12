@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 if (!function_exists('inputSwitchHtml')) {
     function inputSwitchHtml($row, $inputFileDetails) {
@@ -17,6 +19,7 @@ if (!function_exists('inputSwitchHtml')) {
             $current_value = $row;
             $open_class = isset($inputFileDetails['open_class'])? $inputFileDetails['open_class'] : '';
         }
+        $current_value = $current_value == ''? 0 : $current_value;
         return '
             <input type="hidden"
                     name="'.$name.'"
@@ -34,7 +37,25 @@ if (!function_exists('inputSwitchHtml')) {
         ';
     }
 }
-
+if (!function_exists('uploadFile')) {
+    function uploadFile($request, $fileFieldNames, $model) {
+        $uploadedFiles = [];
+        foreach ($fileFieldNames as $file) {
+            if ($request->hasFile($file)) {
+                $currentFilePath = isset($model->$file)? $model->$file : false;
+                if ($currentFilePath && Storage::disk('public')->exists($currentFilePath)) {
+                    Storage::disk('public')->delete($currentFilePath);
+                }
+                $extension = $request->file($file)->getClientOriginalExtension();
+                $timestamp = time();
+                $customFileName = Str::uuid() . '_' . $timestamp . '.' . $extension;
+                $path = $request->file($file)->storeAs('uploads', $customFileName, 'public');
+                $uploadedFiles[$file] = $path;
+            }
+        }
+        return $uploadedFiles;
+    }
+}
 if (!function_exists('getImgInputPreviewHtml')) {
     function getImgInputPreviewHtml($row, $inputFileDetails) {
         return '
@@ -47,11 +68,11 @@ if (!function_exists('getImgInputPreviewHtml')) {
                 style="display: none;">
             <div class="border cursor-pointer d-flex justify-items-center '.$inputFileDetails['parent_bg'].' clickToUpload"
                 data-target_file_input="' . htmlspecialchars($inputFileDetails['file_id']) . '"
-                style="width: ' . (int)$inputFileDetails['width_parent'] . 'px; height: ' . (int)$inputFileDetails['height_parent'] . 'px; padding: 4px;">
+                style="width: 100%; max-width: ' . (int)$inputFileDetails['width_parent'] . 'px; height: 100%; max-height: ' . (int)$inputFileDetails['height_parent'] . 'px; padding: 4px;">
                 <div class="d-flex justify-items-center"
                     id="' . htmlspecialchars($inputFileDetails['file_id']) . 'Preview"
-                    style="width: ' . (int)$inputFileDetails['width'] . 'px; height: ' . (int)$inputFileDetails['height'] . 'px;">
-                    ' . (isset($row->{$inputFileDetails['name']}) ? '
+                    style="width: 100%; max-width: ' . (int)$inputFileDetails['width'] . 'px; height: 100%; max-height: ' . (int)$inputFileDetails['height'] . 'px;">
+                    ' . ((isset($row->{$inputFileDetails['name']}) && $row->{$inputFileDetails['name']} != "") ? '
                         <img src="' . asset('storage/' . $row->{$inputFileDetails['name']}) . '"
                             style="width: ' . (int)$inputFileDetails['width'] . 'px; height: ' . (int)$inputFileDetails['height'] . 'px;">
                     ' : '

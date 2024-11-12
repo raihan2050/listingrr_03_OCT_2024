@@ -20,108 +20,215 @@
     </div>
 </div>
 @php
-    $gatewayInformation = [];
-    foreach ($paymentSettings as $paymentSettingKey => $paymentSetting) {
-        $gatewayInformation[$paymentSetting->unique_keyword] = $paymentSetting->information;
-    }
     $gatewayList = [
-        [
+        'cod' => [
+            'id' => 0,
             'unique_keyword' => 'cod',
-            'title' => 'COD',
-            'status' => 1,
+            'title' => __('super.payc_cod'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 1,
             'href' => 'tab_cod',
             'identity' => 'TabCod',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'stripe' => [
+            'id' => 0,
             'unique_keyword' => 'stripe',
-            'title' => 'Stripe',
-            'status' => 0,
+            'title' => __('super.payc_stripe'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_stripe',
             'identity' => 'TabStripe',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'paypal' => [
+            'id' => 0,
             'unique_keyword' => 'paypal',
-            'title' => 'PayPal',
-            'status' => 0,
+            'title' => __('super.payc_paypal'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_paypal',
             'identity' => 'TabPayPal',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'mollie' => [
+            'id' => 0,
             'unique_keyword' => 'mollie',
-            'title' => 'Mollie',
-            'status' => 0,
+            'title' => __('super.payc_mollie'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_mollie',
             'identity' => 'TabMollie',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'paytm' => [
+            'id' => 0,
             'unique_keyword' => 'paytm',
-            'title' => 'Paytm',
-            'status' => 0,
+            'title' => __('super.payc_paytm'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_paytm',
             'identity' => 'TabPaytm',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'razorpay' => [
+            'id' => 0,
             'unique_keyword' => 'razorpay',
-            'title' => 'Razorpay',
-            'status' => 0,
+            'title' => __('super.payc_razorpay'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_razorpay',
             'identity' => 'TabRazorpay',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'sslcommerz' => [
+            'id' => 0,
             'unique_keyword' => 'sslcommerz',
-            'title' => 'SSL Commerz',
-            'status' => 0,
+            'title' => __('super.payc_ssl_commerz'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_ssl_commerz',
             'identity' => 'TabSSLCommerz',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'mercadopago' => [
+            'id' => 0,
             'unique_keyword' => 'mercadopago',
-            'title' => 'Mercadopago',
-            'status' => 0,
+            'title' => __('super.payc_mercadopago'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_mercadopago',
             'identity' => 'TabMercadopago',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'authorize' => [
+            'id' => 0,
             'unique_keyword' => 'authorize',
-            'title' => 'Authorize.Net',
-            'status' => 0,
+            'title' => __('super.payc_authorize_net'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_authorizenet',
             'identity' => 'TabAuthorizeNet',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'paystack' => [
+            'id' => 0,
             'unique_keyword' => 'paystack',
-            'title' => 'Paystack',
-            'status' => 0,
+            'title' => __('super.payc_paystack'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_paystack',
             'identity' => 'TabPaystack',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'flutterwave' => [
+            'id' => 0,
             'unique_keyword' => 'flutterwave',
-            'title' => 'Flutterwave',
-            'status' => 0,
+            'title' => __('super.payc_flutterwave'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_flutterwave',
             'identity' => 'TabFlutterwave',
             'icon' => 'ri-arrow-drop-right-line',
         ],
-        [
+        'bank' => [
+            'id' => 0,
             'unique_keyword' => 'bank',
-            'title' => 'Bank Transfer',
-            'status' => 0,
+            'title' => __('super.payc_bank_transfer'),
+            'name' => '',
+            'description' => '',
+            'logo_light' => '',
+            'logo_dark' => '',
+            'information' => '',
+            'status' => 'disable',
+            'tab_status' => 0,
             'href' => 'tab_bank_transfer',
             'identity' => 'TabBankTransfer',
             'icon' => 'ri-arrow-drop-right-line',
         ],
     ];
+
+    foreach ($paymentSettings as $paymentSettingKey => $paymentSetting) {
+        if(!isset($gatewayList[$paymentSetting->unique_keyword])){
+            continue;
+        }
+        $tmpGatewayList = $gatewayList[$paymentSetting->unique_keyword];
+        $gatewayList[$paymentSetting->unique_keyword] = [
+            'id' => $paymentSetting->id,
+            'unique_keyword' => $paymentSetting->unique_keyword,
+            'title' => $tmpGatewayList['title'],
+            'name' => $paymentSetting->name,
+            'description' => $paymentSetting->description,
+            'logo_light' => $paymentSetting->logo_light,
+            'logo_dark' => $paymentSetting->logo_dark,
+            'information' => $paymentSetting->information,
+            'status' => $paymentSetting->status,
+            'tab_status' => $tmpGatewayList['tab_status'],
+            'href' => $tmpGatewayList['href'],
+            'identity' => $tmpGatewayList['identity'],
+            'icon' => $tmpGatewayList['icon'],
+            'paymentSetting' => $paymentSetting
+        ];
+    }
+
+    $gatewayList = array_map(function($gateway) {
+        return (object) $gateway;
+    }, $gatewayList);
 @endphp
 <div class="card custom-card">
     <div class="card-body">

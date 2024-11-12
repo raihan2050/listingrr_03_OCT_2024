@@ -123,6 +123,7 @@ return [
     'cookies_text' => 'Cookies Text',
     'save_cookie_alert' => 'Save Cookie Alert',
 
+    // Payment Settings
     'payment_config' => 'Payment Config',
     'coupon_manager' => 'Coupon Manager',
     'state_tax' => 'State Tax',
@@ -235,6 +236,22 @@ return [
     'payc_gateway_' => 'Close',
     'payc_gateway_' => 'Close',
     'payc_gateway_' => 'Close',
+
+    'payc_setting_created' => 'Payment Setting created',
+    'payc_setting_update' => 'Payment Setting update',
+    'payc_cod' => 'COD',
+    'payc_cod_full' => 'Cash on delivery',
+    'payc_stripe' => 'Stripe',
+    'payc_paypal' => 'PayPal',
+    'payc_mollie' => 'Mollie',
+    'payc_paytm' => 'Paytm',
+    'payc_razorpay' => 'Razorpay',
+    'payc_ssl_commerz' => 'SSL Commerz',
+    'payc_mercadopago' => 'Mercadopago',
+    'payc_authorize_net' => 'Authorize.Net',
+    'payc_paystack' => 'Paystack',
+    'payc_flutterwave' => 'Flutterwave',
+    'payc_bank_transfer' => 'Bank Transfer',
 
     'maintenance' => 'Maintenance',
     'maintenance_on' => 'Maintenance On',

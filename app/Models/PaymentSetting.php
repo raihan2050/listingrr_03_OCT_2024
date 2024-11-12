@@ -15,7 +15,8 @@ class PaymentSetting extends Model
         'unique_keyword',
         'name',
         'description',
-        'logo',
+        'logo_light',
+        'logo_dark',
         'information',
         'status',
     ];

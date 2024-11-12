@@ -4,10 +4,9 @@ namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 use App\Models\Admin;
+use App\Models\PaymentSetting;
 use App\Models\Setting;
 
 use function PHPSTORM_META\map;
@@ -141,13 +140,14 @@ class AjaxController extends Controller
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
     private function logoMediaLogoFormInput($request) {
-        $files = [
+        $file_field_names = [
             'logo_main_light',
             'logo_main_dark',
             'logo_sm_light',
             'logo_sm_dark'
         ];
-        $uploadedFiles = $this->uploadFile($request, $files);
+        $setting = Setting::first();
+        $uploadedFiles = uploadFile($request, $file_field_names, $setting);
 
         $filteredData = $uploadedFiles;
         $uniqueId = 1;
@@ -156,10 +156,11 @@ class AjaxController extends Controller
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
     private function logoMediaFaviconFormInput($request) {
-        $files = [
+        $file_field_names = [
             'favicon'
         ];
-        $uploadedFiles = $this->uploadFile($request, $files);
+        $setting = Setting::first();
+        $uploadedFiles = uploadFile($request, $file_field_names, $setting);
 
         $filteredData = $uploadedFiles;
         $uniqueId = 1;
@@ -168,10 +169,11 @@ class AjaxController extends Controller
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
     private function logoMediaLoaderFormInput($request) {
-        $files = [
+        $file_field_names = [
             'loader'
         ];
-        $uploadedFiles = $this->uploadFile($request, $files);
+        $setting = Setting::first();
+        $uploadedFiles = uploadFile($request, $file_field_names, $setting);
 
         $uploadedFiles['is_loader'] = $request->is_loader;
         $filteredData = $uploadedFiles;
@@ -180,24 +182,7 @@ class AjaxController extends Controller
 
         return $this->updateInsertSettings($msg, $uniqueId, $filteredData);
     }
-    private function uploadFile($request, $files) {
-        $uploadedFiles = [];
-        $setting = Setting::first();
-        foreach ($files as $file) {
-            if ($request->hasFile($file)) {
-                $currentFilePath = isset($setting->$file)? $setting->$file : false;
-                if ($currentFilePath && Storage::disk('public')->exists($currentFilePath)) {
-                    Storage::disk('public')->delete($currentFilePath);
-                }
-                $extension = $request->file($file)->getClientOriginalExtension();
-                $timestamp = time();
-                $customFileName = Str::uuid() . '_' . $timestamp . '.' . $extension;
-                $path = $request->file($file)->storeAs('uploads', $customFileName, 'public');
-                $uploadedFiles[$file] = $path;
-            }
-        }
-        return $uploadedFiles;
-    }
+
     private function seoFormInput($request) {
         $keywordsArray = json_decode($request->meta_keywords, true);
         $meta_keywords = array_map(function($item) {
@@ -264,6 +249,111 @@ class AjaxController extends Controller
                 $result = [
                     'type' => 'success',
                     'msg' => $msg." ".__('super.setting_update'),
+                ];
+            }
+
+            return $result;
+        } catch (\Exception $e) {
+            return [
+                'type' => 'error',
+                'msg' => __('super.operation_failed'),
+                'error' => $e->getMessage(),
+            ];
+        }
+    }
+
+    // Payment Settings
+    private function TabCodFormInput($request) {
+        $uniqueKeyword = 'cod';
+        $msg = __('super.payc_cod_full');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabStripeFormInput($request) {
+        $uniqueKeyword = 'stripe';
+        $msg = __('super.payc_stripe');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabPayPalFormInput($request) {
+        $uniqueKeyword = 'paypal';
+        $msg = __('super.payc_paypal');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabMollieFormInput($request) {
+        $uniqueKeyword = 'mollie';
+        $msg = __('super.payc_mollie');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabPaytmFormInput($request) {
+        $uniqueKeyword = 'paytm';
+        $msg = __('super.payc_paytm');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabRazorpayFormInput($request) {
+        $uniqueKeyword = 'razorpay';
+        $msg = __('super.payc_razorpay');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabSSLCommerzFormInput($request) {
+        $uniqueKeyword = 'sslcommerz';
+        $msg = __('super.payc_ssl_commerz');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabMercadopagoFormInput($request) {
+        $uniqueKeyword = 'mercadopago';
+        $msg = __('super.payc_mercadopago');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabAuthorizeNetFormInput($request) {
+        $uniqueKeyword = 'authorize';
+        $msg = __('super.payc_authorize_net');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabPaystackFormInput($request) {
+        $uniqueKeyword = 'paystack';
+        $msg = __('super.payc_paystack');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabFlutterwaveFormInput($request) {
+        $uniqueKeyword = 'flutterwave';
+        $msg = __('super.payc_flutterwave');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function TabBankTransferFormInput($request) {
+        $uniqueKeyword = 'bank';
+        $msg = __('super.payc_bank_transfer');
+        return $this->initPaymentSettings($request, $msg, $uniqueKeyword);
+    }
+    private function initPaymentSettings($request, $msg, $uniqueKeyword) {
+        $filteredData = $request->except(['action', 'target_form']);
+
+        $file_field_names = [
+            'logo_light',
+            'logo_dark'
+        ];
+        $paymentSetting = PaymentSetting::where('unique_keyword', $uniqueKeyword)->first();
+        $uploadedFiles = uploadFile($request, $file_field_names, $paymentSetting);
+
+        $filteredData = $request->except(['action', 'target_form', 'logo_light', 'logo_dark']);
+        $filteredData = array_merge($filteredData, $uploadedFiles);
+
+        return $this->updatePaymentSettings($msg, $uniqueKeyword, $filteredData);
+    }
+    private function updatePaymentSettings($msg, $uniqueKeyword, $filteredData){
+        try {
+            $setting = PaymentSetting::updateOrCreate(
+                ['unique_keyword' => $uniqueKeyword],
+                $filteredData
+            );
+
+            if ($setting->wasRecentlyCreated) {
+                $result = [
+                    'type' => 'success',
+                    'msg' => $msg." ".__('super.payc_setting_created'),
+                ];
+            } else {
+                $result = [
+                    'type' => 'success',
+                    'msg' => $msg." ".__('super.payc_setting_update'),
                 ];
             }
 

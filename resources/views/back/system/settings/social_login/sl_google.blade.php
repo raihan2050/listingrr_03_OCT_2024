@@ -25,6 +25,7 @@
                     value="{{ $setting->google_client_id }}"
                 @endisset
                 placeholder="@lang('super.sl_google_client_id_help')">
+        <span class="error-message" style="color: red; display: none;">This field is required</span>
     </div>
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
 
@@ -40,6 +41,7 @@
                     value="{{ $setting->google_client_secret }}"
                 @endisset
                 placeholder="@lang('super.sl_google_client_secret_help')">
+        <span class="error-message" style="color: red; display: none;">This field is required</span>
     </div>
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
 

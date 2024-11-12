@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('unique_keyword')->nullable();
             $table->string('name')->nullable();
             $table->text('description')->nullable();
-            $table->string('logo')->nullable();
+            $table->string('logo_light')->nullable();
+            $table->string('logo_dark')->nullable();
             $table->json('information')->nullable();
             $table->enum('status', ['enable', 'disable']);
             $table->timestamps();
