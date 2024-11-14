@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\Currency;
 use App\Models\PaymentSetting;
 use App\Models\Setting;
+use Yajra\DataTables\Facades\DataTables;
 
 use function PHPSTORM_META\map;
 
@@ -32,6 +34,9 @@ class AjaxController extends Controller
     {
         $im = Auth::guard('admin')->user();
         switch ($request->action) {
+            case 'load_currencies':
+                return $this->loadCurrencies($request);
+                break;
             case 'save_update_data':
                 $targetForm = $request->target_form;
                 $targetMethod = $targetForm . 'Input';
@@ -132,7 +137,85 @@ class AjaxController extends Controller
                 break;
         }
     }
+    private function loadCurrencies($request) {
+        $currencies = Currency::query();
+        return DataTables::of($currencies)
+        ->addColumn('curr_name', function ($currency) {
+            return $currency->name;
+        })
+        ->addColumn('curr_sign', function ($currency) {
+            return $currency->sign;
+        })
+        ->addColumn('curr_value', function ($currency) {
+            return $currency->value;
+        })
+        ->addColumn('curr_default', function ($currency) {
+            $satusList = '';
+            $satusList .= '
+                <ul class="dropdown-menu" style="" data-currency_id="'.$currency->id.'">
+                    <li>
+                        <a class="dropdown-item" href="javascript:void(0);" value="1">Enabled</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="javascript:void(0);" value="0">Disable</a>
+                    </li>
+                </ul>
+            ';
+            $currentStatus = "";
+            if($currency->is_default == 1){
+                $currentStatus = '
+                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle rounded-pill" data-bs-toggle="dropdown" aria-expanded="false">
+                        Enabled
+                    </button>
+                ';
+            } else {
+                $currentStatus = '
+                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle rounded-pill" data-bs-toggle="dropdown" aria-expanded="false">
+                        Disable
+                    </button>
+                ';
+            }
+            $status = '';
+            $status .= '<div class="btn-group">';
+            $status .= $satusList;
+            $status .= $currentStatus;
+            $status .= '</div>';
+            return $status;
+        })
+        ->addColumn('action', function ($currency) {
+            $editBtn = '';
+            $editBtn .= '
+                <a class="modalCurrencyFormBtn btn btn-primary btn-wave waves-effect waves-light"
+                    data-bs-effect="effect-scale"
+                    data-bs-toggle="modal"
+                    data-currency_id="'.$currency->id.'"
+                    href="#modalCurrencyForm">
+            ';
+            $editBtn .= '
+                <i class="ri-pencil-line"></i>
+            ';
+            $editBtn .= '
+                </a>
+            ';
 
+            $deleteBtn = '';
+            $deleteBtn .= '
+                <button type="button"
+                        class="btn btn-danger btn-wave waves-effect waves-light"
+                        data-currency_id="'.$currency->id.'"
+                        >
+                    <i class="ri-delete-bin-6-line"></i>
+                </button>
+            ';
+
+            return $editBtn . $deleteBtn;
+        })
+        ->rawColumns([
+            'curr_default',
+            'action',
+        ])
+        ->make(true);
+    }
     private function basicInfoFormInput($request) {
         $filteredData = $request->except(['action', 'target_form']);
         $uniqueId = 1;

@@ -11,7 +11,7 @@
     </tr>
 @elseif ($table_part == "body")
     @for ($i = 1; $i < 20; $i++)
-        <tr>
+        {{-- <tr>
             <td>
                 Currency {{ $i }}
             </td>
@@ -48,6 +48,6 @@
                     <i class="ri-delete-bin-6-line"></i>
                 </button>
             </td>
-        </tr>
+        </tr> --}}
     @endfor
 @endif

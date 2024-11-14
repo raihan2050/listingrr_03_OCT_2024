@@ -9,7 +9,9 @@
 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" id="modalCurrencySubmit">@lang('super.payc_curr_please_wait')</button>
+                <button class="btn btn-primary"
+                        id="modalCurrencySubmit"
+                        data-targetform="modalCurrencyForm">@lang('super.payc_curr_please_wait')</button>
                 <button class="btn btn-light" data-bs-dismiss="modal">@lang('super.payc_curr_close')</button>
             </div>
         </div>
