@@ -1,9 +1,21 @@
 <?php
 
 return [
+    'enable' => 'সক্রিয়',
+    'enabled' => 'সক্রিয়',
+    'disable' => 'নিষ্ক্রিয়',
+    'disabled' => 'নিষ্ক্রিয়',
+    'delete' => 'মুছে দিন',
+    'deleted' => 'মুছে ফেলা হয়েছে',
+    'close' => 'বন্ধ করুন',
+    'please_wait' => 'অপেক্ষা করুন',
     'welcome' => 'স্বাগতম',
     'goodbye' => 'বিদায়',
     'dashboard' => 'ড্যাশবোর্ড',
+    'not_found' => 'পাওয়া যায়নি',
+    'no_records_to_display' => 'প্রদর্শনের জন্য কোন রেকর্ড নেই',
+    'no_currency_to_display' => 'প্রদর্শনের জন্য কোন মুদ্রা নেই',
+    'do_you_want_to_delete' => 'আপনি মুছে দিতে চান?',
     'something_wrong' => 'কিছু ভুল আছে',
     'operation_failed' => 'অপারেশন ব্যর্থ হয়েছে',
     'method_not_exists' => 'মেথড পাওয়া যায়নি',
@@ -11,6 +23,7 @@ return [
     'please_fill_in_all_required_fields' => 'প্রয়োজনীয় ফিল্ড গুলো ফাঁকা রাখা যাবে না',
     'setting_created' => 'সেটিং তৈরি করা হয়েছে',
     'setting_update' => 'সেটিং আপডেট করা হয়েছে',
+    'successfully_deleted' => 'সফলভাবে মুছে ফেলা হয়েছে',
 
     // System Settings
     'manage_site' => 'সাইট রক্ষণাবেক্ষণ',
@@ -198,6 +211,7 @@ return [
     'payc_curr_action' => 'অ্যাকশন',
     'payc_curr_please_wait' => 'অপেক্ষা করুন',
     'payc_curr_close' => 'বন্ধ করুন',
+    'payc_curr_currency' => 'কারেন্সি',
     'payc_curr_currency_name' => 'কারেন্সি নাম',
     'payc_curr_currency_sign' => 'কারেন্সি সাইন',
     'payc_curr_currency_value' => 'কারেন্সি মূল্য',

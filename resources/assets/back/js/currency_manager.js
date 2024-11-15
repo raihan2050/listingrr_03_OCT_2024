@@ -1,6 +1,7 @@
 import {showToast} from "../../js/show_toast"
 import {mkAjaxRequest} from "../../js/ajax"
 import DataTable from 'datatables.net-dt';
+import Swal from 'sweetalert2';
 
 let currencyListTable = new DataTable('#currencyListTable', {
     responsive: true,
@@ -16,7 +17,10 @@ let currencyListTable = new DataTable('#currencyListTable', {
             d.action = 'load_currencies';
         }
     },
-    "order": [[0, "desc"]],
+    // "order": [[0, "desc"]],
+    "language": {
+        "emptyTable": translations.super.no_currency_to_display
+    },
     columns: [
         { data: 'curr_name' },
         { data: 'curr_sign' },
@@ -25,9 +29,23 @@ let currencyListTable = new DataTable('#currencyListTable', {
         { data: 'action' },
     ],
 });
+function reloadCurrencyTable() {
+    currencyListTable.ajax.reload();
+}
 
-$(document).ready(function() {
-    $(".modalCurrencyFormBtn").on('click', function(e) {
+$(function(){
+    $(document).on('click', ".currencyStatus", function(e) {
+        e.preventDefault();
+        var is_default = $(this).data('is_default');
+        var currencyId = $(this).data('currency_id');
+        updateCurrencyStatus(is_default, currencyId);
+    });
+    $(document).on('click', ".currencyDelete", function(e) {
+        e.preventDefault();
+        var currencyId = $(this).data('currency_id');
+        deleteCurrencyStatus(currencyId);
+    });
+    $(document).on('click', ".modalCurrencyFormBtn", function(e) {
         e.preventDefault();
         var currencyId = $(this).data('currency_id');
         let effect = $(this).data('bs-effect');
@@ -36,9 +54,6 @@ $(document).ready(function() {
     });
     $("#modalCurrencySubmit").on('click', function(e) {
         e.preventDefault();
-        var currencyName = $("#currencyName").val();
-        var currencySign = $("#currencySign").val();
-        var currencyValue = $("#currencyValue").val();
         var isValid = true;
 
         var $submitFormBtn = $(this);
@@ -77,11 +92,12 @@ $(document).ready(function() {
                 }
             }
         });
-        return false;
+
         formData.append('action', 'save_update_data');
         formData.append('target_form', targetform);
         $submitFormBtn.addClass('loader');
         $submitFormBtn.prop('disabled', true);
+
         mkAjaxRequest('POST', window.commonAsset.ajax, formData, function(error, response) {
             $submitFormBtn.prop('disabled', false);
             $submitFormBtn.removeClass('loader');
@@ -92,13 +108,8 @@ $(document).ready(function() {
                     showToast(response.msg, response.type);
                     return false;
                 }
-                removeFormChanged(formIndex, $button);
-
-                if($("#"+$targetLeftTabPulse).length > 0){
-                    removeFromTargetLeftTabPulse($targetLeftTabPulse, $targetPulse);
-                    addClassFormChangedByLeftTabPulse($targetLeftTabPulse);
-                }
-
+                $("#modalCurrencyForm").modal('hide');
+                reloadCurrencyTable();
                 showToast(response.msg, response.type);
             }
         });
@@ -112,6 +123,64 @@ $(document).ready(function() {
     });
 });
 
+function deleteCurrencyStatus(currencyId) {
+    Swal.fire({
+        title: translations.super.do_you_want_to_delete,
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: translations.super.close,
+        denyButtonText: translations.super.delete
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+        } else {
+            $(".deleteCurrent_"+currencyId).html('<i class="fa fa-spinner fa-spin" style="font-size:17px"></i>');
+            var formDataObj = new FormData();
+            formDataObj.append('action', 'delete_currency_status');
+            formDataObj.append('id', currencyId);
+            mkAjaxRequest('POST', window.commonAsset.ajax, formDataObj, function(error, response) {
+                $("#modalCurrencySubmit").prop('disabled', false);
+                if (error) {
+                    console.error('Error:', error);
+                } else {
+                    if (response.type == 'error') {
+                        showToast(response.msg, 'warning');
+                        return false;
+                    }
+                    reloadCurrencyTable();
+                    showToast(response.msg, response.type);
+                    return true;
+                }
+            });
+        }
+    });
+}
+
+function updateCurrencyStatus(is_default, currencyId) {
+    $(".currencyCurrentStatus_"+currencyId).html(translations.super.please_wait);
+    var formDataObj = new FormData();
+    formDataObj.append('action', 'update_currency_status');
+    formDataObj.append('id', currencyId);
+    formDataObj.append('is_default', is_default);
+
+    mkAjaxRequest('POST', window.commonAsset.ajax, formDataObj, function(error, response) {
+        $("#modalCurrencySubmit").prop('disabled', false);
+        if (error) {
+            console.error('Error:', error);
+        } else {
+            if (response.type == 'error') {
+                showToast(response.msg, 'warning');
+                return false;
+            }
+            $(".currencyCurrentStatus_"+currencyId).html(response.current_status);
+            $(".currencyCurrentStatus_"+currencyId).removeClass('btn-primary');
+            $(".currencyCurrentStatus_"+currencyId).removeClass('btn-secondary');
+            $(".currencyCurrentStatus_"+currencyId).addClass(response.class_name);
+            return true;
+        }
+    });
+}
+
 function loadCurrencyCreateEditForm(currencyId){
     $("#modalCurrencySubmit").prop('disabled', true);
     var formDataObj = new FormData();
@@ -121,25 +190,21 @@ function loadCurrencyCreateEditForm(currencyId){
     $("#modalCurrencyBody").html('<div class="text-center"><img src="../../../build/assets/images/svgs/loader.svg" alt=""></div>');
 
     mkAjaxRequest('POST', window.commonAsset.ajax, formDataObj, function(error, response) {
-        loadCurrencyEditCreateForm(error, response);
-    });
-}
-
-function loadCurrencyEditCreateForm(error, response) {
-    $("#modalCurrencySubmit").prop('disabled', false);
-    if (error) {
-        console.error('Error:', error);
-    } else {
-        if (response.type == 'error') {
-            Swal.fire({
-                icon: "error",
-                title: response.msg
-            });
-            return false;
+        $("#modalCurrencySubmit").prop('disabled', false);
+        if (error) {
+            console.error('Error:', error);
+        } else {
+            if (response.type == 'error') {
+                showToast(response.msg, 'warning');
+                setTimeout(function() {
+                    $("#modalCurrencyForm").modal('hide');
+                }, 500);
+                return false;
+            }
+            $("#modalCurrencyTitle").html(response.form_title);
+            $("#modalCurrencySubmit").html(response.form_btn);
+            $("#modalCurrencyBody").html(response.form_body);
+            return true;
         }
-        $("#modalCurrencyTitle").html(response.form_title);
-        $("#modalCurrencySubmit").html(response.form_btn);
-        $("#modalCurrencyBody").html(response.form_body);
-        return true;
-    }
+    });
 }

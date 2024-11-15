@@ -34,6 +34,36 @@ class AjaxController extends Controller
     {
         $im = Auth::guard('admin')->user();
         switch ($request->action) {
+            case 'delete_currency_status':
+                $currencyId = $request->id;
+                Currency::where('id', $currencyId)->delete();
+                $result = [
+                    'type' => 'success',
+                    'msg' => __('super.successfully_deleted')
+                ];
+                return response()->json($result);
+                break;
+            case 'update_currency_status':
+                $currencyId = $request->id;
+                $is_default = $request->is_default;
+                Currency::where('id', $currencyId)->update([
+                    'is_default' => $is_default
+                ]);
+
+                $current_status = __('super.enabled');
+                $class_name = "btn-primary";
+                if($is_default == 0){
+                    $current_status = __('super.disabled');
+                    $class_name = "btn-secondary";
+                }
+                $result = [
+                    'type' => 'success',
+                    'msg' => __('super.method_not_exists'),
+                    'current_status' => $current_status,
+                    'class_name' => $class_name
+                ];
+                return response()->json($result);
+                break;
             case 'load_currencies':
                 return $this->loadCurrencies($request);
                 break;
@@ -59,7 +89,18 @@ class AjaxController extends Controller
                     $formBtn = __('super.payc_curr_update_now');
                 }
 
-                $formBody = view('back.currency.modal_currency_form_element')->render();
+                $currency = false;
+                if($currencyId > 0){
+                    $currency = Currency::find($currencyId);
+                    if(!$currency){
+                        return response()->json([
+                            'type' => 'error',
+                            'msg' => __('super.payc_curr_currency')." ".__('super.not_found'),
+                        ]);
+                    }
+                }
+
+                $formBody = view('back.currency.modal_currency_form_element', compact('currency'))->render();
                 $result = [
                     'type' => 'success',
                     'form_title' => $formTitle,
@@ -138,7 +179,7 @@ class AjaxController extends Controller
         }
     }
     private function loadCurrencies($request) {
-        $currencies = Currency::query();
+        $currencies = Currency::orderBy('id', 'DESC')->get();
         return DataTables::of($currencies)
         ->addColumn('curr_name', function ($currency) {
             return $currency->name;
@@ -151,27 +192,43 @@ class AjaxController extends Controller
         })
         ->addColumn('curr_default', function ($currency) {
             $satusList = '';
+            $enable = __('super.enable');
+            $enabled = __('super.enabled');
+            $disable = __('super.disable');
+            $disabled = __('super.disabled');
             $satusList .= '
                 <ul class="dropdown-menu" style="" data-currency_id="'.$currency->id.'">
                     <li>
-                        <a class="dropdown-item" href="javascript:void(0);" value="1">Enabled</a>
+                        <a class="dropdown-item currencyStatus"
+                                href="javascript:void(0);"
+                                data-is_default="1"
+                                data-currency_id="'.$currency->id.'">'.$enable.'</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="javascript:void(0);" value="0">Disable</a>
+                        <a class="dropdown-item currencyStatus"
+                                href="javascript:void(0);"
+                                data-is_default="0"
+                                data-currency_id="'.$currency->id.'">'.$disable.'</a>
                     </li>
                 </ul>
             ';
             $currentStatus = "";
             if($currency->is_default == 1){
                 $currentStatus = '
-                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle rounded-pill" data-bs-toggle="dropdown" aria-expanded="false">
-                        Enabled
+                    <button type="button"
+                            class="currencyCurrentStatus_'.$currency->id.' btn btn-sm btn-primary dropdown-toggle rounded-pill"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        '.$enabled.'
                     </button>
                 ';
             } else {
                 $currentStatus = '
-                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle rounded-pill" data-bs-toggle="dropdown" aria-expanded="false">
-                        Disable
+                    <button type="button"
+                        class="currencyCurrentStatus_'.$currency->id.' btn btn-sm btn-secondary dropdown-toggle rounded-pill"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        '.$disabled.'
                     </button>
                 ';
             }
@@ -201,7 +258,7 @@ class AjaxController extends Controller
             $deleteBtn = '';
             $deleteBtn .= '
                 <button type="button"
-                        class="btn btn-danger btn-wave waves-effect waves-light"
+                        class="currencyDelete deleteCurrent_'.$currency->id.' btn btn-danger btn-wave waves-effect waves-light"
                         data-currency_id="'.$currency->id.'"
                         >
                     <i class="ri-delete-bin-6-line"></i>
@@ -437,6 +494,43 @@ class AjaxController extends Controller
                 $result = [
                     'type' => 'success',
                     'msg' => $msg." ".__('super.payc_setting_update'),
+                ];
+            }
+
+            return $result;
+        } catch (\Exception $e) {
+            return [
+                'type' => 'error',
+                'msg' => __('super.operation_failed'),
+                'error' => $e->getMessage(),
+            ];
+        }
+    }
+
+    private function modalCurrencyFormInput($request) {
+        $uniqueId = $request->id;
+        $filteredData = $request->except(['id', 'action', 'target_form']);
+        $msg = __('super.payc_curr_currency');
+        $model = Currency::query();
+        return $this->updateInsertCommon($model, $msg, $uniqueId, $filteredData);
+    }
+
+    private function updateInsertCommon($model, $msg, $uniqueId, $filteredData) {
+        try {
+            $targetModel = $model->updateOrCreate(
+                ['id' => $uniqueId],
+                $filteredData
+            );
+
+            if ($targetModel->wasRecentlyCreated) {
+                $result = [
+                    'type' => 'success',
+                    'msg' => $msg." ".__('super.setting_created'),
+                ];
+            } else {
+                $result = [
+                    'type' => 'success',
+                    'msg' => $msg." ".__('super.setting_update'),
                 ];
             }
 

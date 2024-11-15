@@ -1,9 +1,21 @@
 <?php
 
 return [
+    'enable' => 'Enable',
+    'enabled' => 'Enabled',
+    'disable' => 'Disable',
+    'disabled' => 'Disabled',
+    'delete' => 'Delete',
+    'deleted' => 'Deleted',
+    'close' => 'Close',
+    'please_wait' => 'Please Wait',
     'welcome' => 'Welcome',
     'goodbye' => 'Goodbye',
     'dashboard' => 'Dashboard',
+    'not_found' => 'Not Found',
+    'no_records_to_display' => 'No records to display',
+    'no_currency_to_display' => 'No Currency to display',
+    'do_you_want_to_delete' => 'Do you want to delete?',
     'something_wrong' => 'Something wrong',
     'operation_failed' => 'Operation failed',
     'method_not_exists' => 'Method not exists',
@@ -11,6 +23,8 @@ return [
     'please_fill_in_all_required_fields' => 'Please fill in all required fields.',
     'setting_created' => 'Setting created',
     'setting_update' => 'Setting update',
+    'successfully_deleted' => 'Successfully Deleted',
+
 
     // System Settings
     'manage_site' => 'Manage Site',
@@ -199,6 +213,7 @@ return [
     'payc_curr_action' => 'Action',
     'payc_curr_please_wait' => 'Please wait',
     'payc_curr_close' => 'Close',
+    'payc_curr_currency' => 'Currency',
     'payc_curr_currency_name' => 'Currency Name',
     'payc_curr_currency_sign' => 'Currency Sign',
     'payc_curr_currency_value' => 'Currency Value',
