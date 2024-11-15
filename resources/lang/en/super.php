@@ -137,7 +137,6 @@ return [
     'cookies_text' => 'Cookies Text',
     'save_cookie_alert' => 'Save Cookie Alert',
 
-    // Payment Settings
     'payment_config' => 'Payment Config',
     'coupon_manager' => 'Coupon Manager',
     'state_tax' => 'State Tax',
@@ -214,9 +213,12 @@ return [
     'payc_curr_please_wait' => 'Please wait',
     'payc_curr_close' => 'Close',
     'payc_curr_currency' => 'Currency',
+    'payc_curr_country' => 'Country Name',
     'payc_curr_currency_name' => 'Currency Name',
+    'payc_curr_currency_code' => 'Currency Code',
     'payc_curr_currency_sign' => 'Currency Sign',
-    'payc_curr_currency_value' => 'Currency Value',
+    'payc_curr_thousand_separator' => 'Thousand Separator',
+    'payc_curr_decimal_separator' => 'Decimal Separator',
 
     'payc_gateway_status' => 'Status',
     'payc_gateway_status_help' => 'Display %s Gateway',
@@ -246,11 +248,6 @@ return [
     'payc_gateway_email' => '%s Email',
     'payc_gateway_secret_key' => '%s Secret Key',
     'payc_gateway_text' => '%s Text',
-    'payc_gateway_' => 'Close',
-    'payc_gateway_' => 'Close',
-    'payc_gateway_' => 'Close',
-    'payc_gateway_' => 'Close',
-    'payc_gateway_' => 'Close',
 
     'payc_setting_created' => 'Payment Setting created',
     'payc_setting_update' => 'Payment Setting update',

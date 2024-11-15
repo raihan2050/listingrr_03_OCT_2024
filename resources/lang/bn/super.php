@@ -25,6 +25,7 @@ return [
     'setting_update' => 'সেটিং আপডেট করা হয়েছে',
     'successfully_deleted' => 'সফলভাবে মুছে ফেলা হয়েছে',
 
+
     // System Settings
     'manage_site' => 'সাইট রক্ষণাবেক্ষণ',
     'system_settings' => 'সিস্টেম সেটিংস',
@@ -103,6 +104,7 @@ return [
     'smtp_contact_mail' => 'যোগাযোগের ইমেইল এড্রেস',
     'save_mail_settings' => 'ইমেইল সেটিংস সংরক্ষণ করুন',
 
+    'twilio' => 'Twilio',
     'twilio_status' => 'Twilio SMS পরিষেবা',
     'twilio_sid' => 'Twilio Sid',
     'twilio_sid_help' => 'Twilio Sid লিখুন',
@@ -164,7 +166,6 @@ return [
     'payc_coupon_percentage_(%)' => 'শতাংশ (%)',
     'payc_coupon_fixed_amount' => 'নির্দিষ্ট পরিমাণ',
 
-
     'payc_gt_general_tax' => 'সাধারণ ট্যাক্স',
     'payc_gt_new_tax' => 'নতুন ট্যাক্স',
     'payc_gt_create_general_tax' => 'সাধারণ ট্যাক্স তৈরি করুন',
@@ -212,9 +213,12 @@ return [
     'payc_curr_please_wait' => 'অপেক্ষা করুন',
     'payc_curr_close' => 'বন্ধ করুন',
     'payc_curr_currency' => 'কারেন্সি',
+    'payc_curr_country' => 'দেশের নাম',
     'payc_curr_currency_name' => 'কারেন্সি নাম',
+    'payc_curr_currency_code' => 'কারেন্সি কোড',
     'payc_curr_currency_sign' => 'কারেন্সি সাইন',
-    'payc_curr_currency_value' => 'কারেন্সি মূল্য',
+    'payc_curr_thousand_separator' => 'হাজার বিভাজক',
+    'payc_curr_decimal_separator' => 'দশমিক বিভাজক',
 
     'payc_gateway_status' => 'স্ট্যাটাস',
     'payc_gateway_status_help' => '%s গেটওয়ে স্ট্যাটাস',

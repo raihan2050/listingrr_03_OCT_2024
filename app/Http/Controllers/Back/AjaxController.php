@@ -181,16 +181,25 @@ class AjaxController extends Controller
     private function loadCurrencies($request) {
         $currencies = Currency::orderBy('id', 'DESC')->get();
         return DataTables::of($currencies)
-        ->addColumn('curr_name', function ($currency) {
-            return $currency->name;
+        ->addColumn('payc_curr_country', function ($currency) {
+            return $currency->country;
         })
-        ->addColumn('curr_sign', function ($currency) {
-            return $currency->sign;
+        ->addColumn('payc_curr_currency_name', function ($currency) {
+            return $currency->currency;
         })
-        ->addColumn('curr_value', function ($currency) {
-            return $currency->value;
+        ->addColumn('payc_curr_currency_code', function ($currency) {
+            return $currency->code;
         })
-        ->addColumn('curr_default', function ($currency) {
+        ->addColumn('payc_curr_currency_sign', function ($currency) {
+            return $currency->symbol;
+        })
+        ->addColumn('payc_curr_thousand_separator', function ($currency) {
+            return $currency->thousand_separator;
+        })
+        ->addColumn('payc_curr_decimal_separator', function ($currency) {
+            return $currency->decimal_separator;
+        })
+        ->addColumn('payc_curr_default', function ($currency) {
             $satusList = '';
             $enable = __('super.enable');
             $enabled = __('super.enabled');
@@ -268,7 +277,7 @@ class AjaxController extends Controller
             return $editBtn . $deleteBtn;
         })
         ->rawColumns([
-            'curr_default',
+            'payc_curr_default',
             'action',
         ])
         ->make(true);

@@ -22,10 +22,13 @@ let currencyListTable = new DataTable('#currencyListTable', {
         "emptyTable": translations.super.no_currency_to_display
     },
     columns: [
-        { data: 'curr_name' },
-        { data: 'curr_sign' },
-        { data: 'curr_value' },
-        { data: 'curr_default' },
+        { data: 'payc_curr_country' },
+        { data: 'payc_curr_currency_name' },
+        { data: 'payc_curr_currency_code' },
+        { data: 'payc_curr_currency_sign' },
+        { data: 'payc_curr_thousand_separator' },
+        { data: 'payc_curr_decimal_separator' },
+        { data: 'payc_curr_default' },
         { data: 'action' },
     ],
 });

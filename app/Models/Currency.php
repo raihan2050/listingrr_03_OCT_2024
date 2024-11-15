@@ -10,5 +10,18 @@ class Currency extends Model
     use HasFactory;
 
     protected $table = 'currencies';
-    protected $fillable = ['name', 'sign', 'value', 'is_default'];
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'country',
+        'currency',
+        'code',
+        'symbol',
+        'thousand_separator',
+        'decimal_separator',
+        'is_default',
+    ];
+
+    protected $casts = [
+        'is_default' => 'boolean',
+    ];
 }
