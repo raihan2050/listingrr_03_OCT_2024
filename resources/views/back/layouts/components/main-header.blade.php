@@ -29,9 +29,9 @@
             </div> --}}
             @include('back.layouts.components.header.language')
             @include('back.layouts.components.header.dark_light')
-            @include('back.layouts.components.header.cart')
+            {{-- @include('back.layouts.components.header.cart') --}}
             @include('back.layouts.components.header.notifications')
-            @include('back.layouts.components.header.message')
+            {{-- @include('back.layouts.components.header.message') --}}
             @include('back.layouts.components.header.fscreen')
             @include('back.layouts.components.header.user')
         </div>

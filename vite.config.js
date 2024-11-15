@@ -55,9 +55,6 @@ export default defineConfig({
                 'resources/assets/back/js/coupon.js',
                 'resources/assets/back/scss/coupon.scss',
 
-                'resources/assets/back/js/tax_general',
-                'resources/assets/back/js/tax_state',
-
                 'resources/assets/back/js/currency_manager',
                 'resources/assets/back/js/gateway_manager',
 

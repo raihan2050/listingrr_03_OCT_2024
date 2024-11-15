@@ -34,32 +34,6 @@
             </li>
             <li class="
                 slide
-                @if (request()->routeIs('super.payment_config.txt.regular'))
-                    active
-                @endif
-                ">
-                <a href="{{ route('super.payment_config.txt.regular') }}" class="
-                    side-menu__item
-                    @if (request()->routeIs('super.payment_config.txt.regular'))
-                        active
-                    @endif
-                    ">@lang('super.general_tax')</a>
-            </li>
-            <li class="
-                slide
-                @if (request()->routeIs('super.payment_config.txt.state'))
-                    active
-                @endif
-                ">
-                <a href="{{ route('super.payment_config.txt.state') }}" class="
-                    side-menu__item
-                    @if (request()->routeIs('super.payment_config.txt.state'))
-                        active
-                    @endif
-                    ">@lang('super.state_tax')</a>
-            </li>
-            <li class="
-                slide
                 @if (request()->routeIs('super.payment_config.currency.list'))
                     active
                 @endif

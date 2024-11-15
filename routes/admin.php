@@ -33,8 +33,6 @@ Route::group(['prefix' => config('app.super_admin_url'), 'as' => 'super.', 'midd
 
     Route::prefix('payment-config')->name('payment_config.')->group(function () {
         Route::get('coupons/list', [AdminCouponController::class, 'list'])->name('coupon.list');
-        Route::get('tax/regular', [AdminTaxController::class, 'taxGeneral'])->name('txt.regular');
-        Route::get('tax/state', [AdminTaxController::class, 'taxState'])->name('txt.state');
         Route::get('currency', [AdminCurrencyController::class, 'list'])->name('currency.list');
         Route::get('gateway', [AdminGatewayController::class, 'list'])->name('gateway.list');
     });
